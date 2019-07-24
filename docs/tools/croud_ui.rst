@@ -23,7 +23,7 @@ Overview screen
 
 Here's what the CrateDB Cloud dashboard looks like when it first loads:
 
-.. image:: ../overview.png
+.. image:: ../_assets/img/overview.png
 
 You can view the following information about your cluster:
 
@@ -132,7 +132,7 @@ Metrics screen
 Average response time [s]
 -------------------------
 
-.. image:: ../metrics-time.png
+.. image:: ../_assets/img/metrics-time.png
 
 This graph displays the average response time for each type of query being
 executed on your cluster for the last thirty minutes.
@@ -140,7 +140,7 @@ executed on your cluster for the last thirty minutes.
 Average CrateDB queries
 -----------------------
 
-.. image:: ../metrics-queries.png
+.. image:: ../_assets/img/metrics-queries.png
 
 This graph displays the average number of each type of query per unit time
 being executed on your cluster for the last thirty minutes.
@@ -150,7 +150,7 @@ being executed on your cluster for the last thirty minutes.
 Logs screen
 ===========
 
-.. image:: ../logs.png
+.. image:: ../_assets/img/logs.png
 
 On this screen, you can view and interact with a paginated table of aggregated
 cluster `logs`_. You can filter logs on text, dates, and log level.
@@ -160,7 +160,7 @@ cluster `logs`_. You can filter logs on text, dates, and log level.
 Snapshots screen
 ================
 
-.. image:: ../snapshots.png
+.. image:: ../_assets/img/snapshots.png
 
 On this screen, you can view and interact with a paginated table of cluster
 `snapshots`_. You can revert back to a previous cluster state by *restoring* a

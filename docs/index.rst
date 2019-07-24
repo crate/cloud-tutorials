@@ -32,6 +32,6 @@ This step-by-step tutorial will show you how to:
     :maxdepth: 3
     :titlesonly:
 
-    create_account-install/index
-    deploy_first_cratedb_instance/index
-    management_tools/index
+    create/index
+    deploy/index
+    tools/index
