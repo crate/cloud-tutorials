@@ -5,8 +5,6 @@ from crate.theme.rtd.conf.standalone import *
 # so it can't find the file
 html_favicon = None
 
-html_static_path = ['_static']
-
 source_suffix = '.rst'
 
 exclude_patterns = ['.*', '*.lint']
