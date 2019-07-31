@@ -49,7 +49,7 @@ You have successfully installed the CrateDB Croud CLI.
 Update the Croud CLI
 --------------------
 
-To get the latest Croud CLI version and features run:
+To get the latest Croud CLI version and features, run:
 
 .. code-block:: console
 

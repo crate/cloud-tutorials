@@ -11,42 +11,45 @@ Create your first organization
 ==============================
 
 In this section you will learn how to create your first organization.
+In CrateDB, organizations can hold multiple projects.
 
-Run the following command:
+To create an organization, run this command:
 
 .. code-block:: console
 
     sh$ croud organizations create --name CrateOrganization --plan-type 1
 
-Parameters
-^^^^^^^^^^
-
-* With the --name parameter you can specify the name of your organization
-* The --plan-type parameter indicates the support plan you want to use
-
-This example uses support plan 1, which provides regular business hours support
-
-If you have run the command and the Croud CLI returns the an organization id,
-then you hace successfully created your firstorganization.
-
-You’ve also automatically become a member to your organization.
+If the Croud CLI returns an organization ID, then you have successfully created
+your first organization. Also, you automatically have become a member of your
+organization. Congratulations!
 
 Validate organization membership
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-You can validate your organization membership by running the following command
-in the Croud CLI:
+You can validate if you are a member of your organization by running the
+following command in the Croud CLI:
 
 .. code-block:: console
 
     sh$ croud organizations list
 
-The Croud CLI shold now display a list of all organizations your user is a
-member of.
+The Croud CLI shold now display a list of all the organizations that your user
+is a member of.
 
-You have learned how to create create our first organization.  and deploy a CrateDB database as well as an EventHub consumer to ingest data.
+You have learned how to create create your first organization.
 
 Create your first project
 =========================
+
+Now that your first organization is up and running, you can create a project.
+Your project then allows you to deploy your first CrateDB cluster. Also projects
+let you group your resources. An organization can hold multiple projects and a project can contain multiple products, such as CrateDB Clusters or EventHub Consumers. For example, you might want to have one project for development purposes and another one for your production setup. Projects simply allow you to separate your environments (...).
+
+If you aren’t logged in already, run:
+$ croud login
+Once authenticated we can create a new project by entering the following command:
+$ croud projects create --name demoproject --org-id orgid
+Let’s take demoproject for our project name and as --org-id we enter the organization id of the organization we created in the previous video.
+Once you hit enter you get the name and project-id of the newly created project returned (...). Great! You’ve successfully created your first project.
 
 
 Next steps
