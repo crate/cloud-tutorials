@@ -1,21 +1,33 @@
 .. _create_account-install_croud:
 
-=============================================
-Create User Account and Install CrateDB Croud
-=============================================
+=================================================
+Create User Account and Install CrateDB Croud CLI
+=================================================
 
-This section helps you to get started with CrateDB Cloud.
+In this section will show you how to:
 
-In this section, we show you how to install and run CrateDB.
+* Create your CrateDB Cloud user account
+* Verify your CrateDB Cloud user account
+* Log in to CrateDB Cloud for the first time
+* Learn how to install the Croud CLI
 
-.. CAUTION::
+The Croud CLI is the dedicated command line interface tool, you will mainly use
+to interact with CrateDB Cloud.
 
-   These instructions are designed to get you up and running on your personal
-   computer.
+.. Note::
 
-   For putting CrateDB into production, you can learn more about
-   `deploying`_ or `scaling`_ CrateDB in the `CrateDB Guide`_.
+   If you prefer working on a graphical user interface (GUI), you are welcome
+   to use the `CrateDB Cloud Console`_ that is our hosted web administration
+   interface for CrateDB Cloud.
 
-.. _CrateDB Guide: https://crate.io/docs/crate/guide/en/latest/
-.. _deploying: https://crate.io/docs/crate/guide/en/latest/deployment/index.html
-.. _scaling: https://crate.io/docs/crate/guide/en/latest/scaling/index.html
+.. rubric:: Table of contents
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   create_account
+   install_croud_cli
+
+.. _CrateDB Cloud Console: https://crate.io/docs/crate/cloud-getting-started/en/latest/tools/cloud_consoleq.html
+.. Update this reference to direct to new cloud console docs.
