@@ -46,8 +46,8 @@ Continuous integration and deployment
 
 |style| |travis| |rtd|
 
-Travis CI is is `configured`_ to run ``make check`` from the ``docs``
-directory. Please do not merge pull requests until the tests pass.
+Travis CI is `configured`_ to run ``make check`` from the ``docs`` directory.
+Please do not merge pull requests until the tests pass.
 
 `Read the Docs`_ automatically deploys the documentation whenever a configured
 branch is updated.
@@ -58,12 +58,11 @@ branch is updated.
 .. _Read the Docs: http://readthedocs.org
 .. _ReStructuredText: http://docutils.sourceforge.net/rst.html
 .. _Sphinx: http://sphinx-doc.org/
-.. _style guide: https://github.com/crate/crate-docs-style
 
 
-.. |style| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcloud-getting-started%2Fmaster%2Fdocs%2Fstyle.json
-    :alt: Style version
-    :target: https://github.com/crate/cloud-getting-started
+.. |utils| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcloud-getting-started%2Fmaster%2Fdocs%2Futils.json
+    :alt: Utils version
+    :target: https://github.com/crate/cloud-getting-started/blob/master/docs/utils.json
 
 .. |travis| image:: https://img.shields.io/travis/crate/cloud-getting-started.svg?style=flat
     :alt: Travis CI status
