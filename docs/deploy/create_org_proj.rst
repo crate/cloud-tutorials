@@ -10,8 +10,9 @@ have created your `CrateDB Cloud user account`_ and `accessed CrateDB Cloud`_.
 Create your first organization
 ==============================
 
-In this section you will learn how to create your first organization.
-In CrateDB, organizations can hold multiple projects.
+In this section you will learn how to create your first organization. In
+CrateDB, organizations can hold multiple projects and contain multiple CrateDB
+products such as CrateDB clusters and EventHub consumers.
 
 To create an organization, run this command:
 
@@ -41,16 +42,18 @@ Create your first project
 =========================
 
 Now that your first organization is up and running, you can create a project.
-Your project then allows you to deploy your first CrateDB cluster. Also projects
-let you group your resources. An organization can hold multiple projects and a project can contain multiple products, such as CrateDB Clusters or EventHub Consumers. For example, you might want to have one project for development purposes and another one for your production setup. Projects simply allow you to separate your environments (...).
+The project will let you deploy your first CrateDB cluster and allow you to
+group your resources.
 
-If you aren’t logged in already, run:
-$ croud login
-Once authenticated we can create a new project by entering the following command:
-$ croud projects create --name demoproject --org-id orgid
-Let’s take demoproject for our project name and as --org-id we enter the organization id of the organization we created in the previous video.
-Once you hit enter you get the name and project-id of the newly created project returned (...). Great! You’ve successfully created your first project.
+.. NOTE::
 
+  Make sure you are logged into your CrateDB Cloud user account.
+
+Create a new project by giving the following command:
+
+.. code-block:: console
+
+    sh$ croud projects create --name demoproject --org-id orgid
 
 Next steps
 ==========
