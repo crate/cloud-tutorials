@@ -4,13 +4,12 @@ Create CrateDB Cloud Account
 
 .. _creating_cloud_user_account:
 
-Creating your CrateDB Cloud user account
-========================================
+Creating a CrateDB Cloud user account
+=====================================
 
-The first thing you do before you can use CrateDB Cloud is to create your
-CrateDB Cloud user account.
+To use CrateDB Cloud, you need a CrateDB Cloud user account.
 
-To sign up with a new account, fill in the form on our
+To sign up for a new account, fill in the form on our
 `CrateDB Cloud signup page`_.
 
 <SCREENSHOT from safari>
@@ -36,9 +35,9 @@ Next steps
 
 Now that your CrateDB Cloud user account is ready, you can continue by:
 
-* `Installing the Croud CLI`_ to interact with the Cloud using the command line
+* `Installing the Croud CLI`_ to interact with CrateDB Cloud using the command line
   interface (currently recommended) or
-* by `Working with the Cloud Console`_ to interact with the CrateDB Cloud
+* by `Working with the Cloud Console`_ to interact with CrateDB Cloud
 
 .. rubric:: Table of contents
 
@@ -48,4 +47,4 @@ Now that your CrateDB Cloud user account is ready, you can continue by:
 
 .. _CrateDB Cloud signup page: https://crate.auth.eu-west-1.amazoncognito.com/signup?response_type=code&client_id=7gnpivbvackgcmqat9r0m8p4b1&redirect_uri=https%3A%2F%2Feastus.azure.cratedb.cloud%2Foauth2%2Flogin%2Fcallback&state=7f2ddf4e-b5a7-4ddc-b88c-3aa97a4ad8c2
 .. _Installing the Croud CLI: https://crate.io/docs/crate/cloud-getting-started/en/latest/create/install_run_croud.html
-.. _Wokring with the Cloud Console: https://crate.io/docs/crate/cloud-getting-started/en/latest/tools/cloud_console.html
+.. _Working with the Cloud Console: https://crate.io/docs/crate/cloud-getting-started/en/latest/tools/cloud_console.html

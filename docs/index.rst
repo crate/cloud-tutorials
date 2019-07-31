@@ -15,12 +15,10 @@ highly available, supports any type of data and BLOBs, provides
 full-text search, as well as aggregations and Joins.
 
 This step-by-step tutorial helps you to get started with CrateDB Cloud. You
-learn how to:
+will learn how to:
 
-- Create your CrateDB Cloud account
-- Install Croud, the CrateDB Cloud CLI tool used to manage your
-  organizations, projects, and resources
-- Create your first organization
+- Create your CrateDB Cloud user account and install the Croud CLI
+- Use Croud to create your first organization, project, and resources
 - Deploy your first CrateDB cluster
 
 .. NOTE::

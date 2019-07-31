@@ -58,6 +58,7 @@ To get the latest Croud CLI version and features run:
 Next steps
 ==========
 
-
+`Accessing CrateDB Cloud`_.
 
 .. _python.org/downloads: https://www.python.org/downloads/
+.. _Accessing CrateDB Cloud: https://crate.io/docs/crate/cloud-getting-started/en/latest/create/accessing_cdb_cloud.html
