@@ -4,8 +4,8 @@ Create CrateDB Cloud Account
 
 .. _creating_cloud_user_account:
 
-Creating a CrateDB Cloud user account
-=====================================
+Create a CrateDB Cloud user account
+===================================
 
 To use CrateDB Cloud, you need a CrateDB Cloud user account.
 

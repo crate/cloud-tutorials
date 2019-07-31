@@ -19,8 +19,8 @@ Python
 
 Visit `python.org/downloads`_ for the latest Python package.
 
-Installing the Croud CLI
-========================
+Install the Croud CLI
+=====================
 
 At this point you should have Python installed on your system, which makes you
 ready to install the Croud CLI.
@@ -39,15 +39,15 @@ To assure you that the installation was successful, run:
 
     sh$ croud -v
 
-If it all went well, your command line should display the version number of the
-Croud CLI.
+If the installation was successful, your command line application should display
+the version number of the Croud CLI.
 
 <SCREENSHOT>
 
 You have successfully installed the CrateDB Croud CLI.
 
-Updating the Croud CLI
-----------------------
+Update the Croud CLI
+--------------------
 
 To get the latest Croud CLI version and features run:
 
@@ -58,7 +58,7 @@ To get the latest Croud CLI version and features run:
 Next steps
 ==========
 
-`Accessing CrateDB Cloud`_.
+`Access CrateDB Cloud`_.
 
 .. _python.org/downloads: https://www.python.org/downloads/
-.. _Accessing CrateDB Cloud: https://crate.io/docs/crate/cloud-getting-started/en/latest/create/accessing_cdb_cloud.html
+.. _Access CrateDB Cloud: https://crate.io/docs/crate/cloud-getting-started/en/latest/create/accessing_cdb_cloud.html
