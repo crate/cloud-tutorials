@@ -44,7 +44,7 @@ You must install `fswatch`_ to use the ``dev`` target.
 Continuous integration and deployment
 -------------------------------------
 
-|style| |travis| |rtd|
+|utils| |travis| |rtd|
 
 Travis CI is `configured`_ to run ``make check`` from the ``docs`` directory.
 Please do not merge pull requests until the tests pass.
