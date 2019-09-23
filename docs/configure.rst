@@ -53,8 +53,8 @@ Test the installation with a quick version check:
 
 .. _configure-sign-in:
 
-Log in in to CrateDB Cloud
-==========================
+Log in to CrateDB Cloud
+=======================
 
 Log in to CrateDB Cloud, like so:
 
