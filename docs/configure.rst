@@ -66,7 +66,9 @@ This command should open the sign-in screen:
 
 .. image:: _assets/img/cloud-sign-in.png
 
-Enter your details and select *Sign in*. You should see this screen:
+Sign in.
+
+You should see this screen:
 
 .. image:: _assets/img/cloud-logged-in.png
 

@@ -246,7 +246,7 @@ you how to import test data and how to query.
 
 .. SEEALSO::
 
-    Full documentation for `Croud`_ and the `Cloud Console`_
+    Full documentation for `Croud`_ and the `Cloud Console`_ is available.
 
 
 .. _Cloud Console: https://crate.io/docs/cloud/console/en/latest/
