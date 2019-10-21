@@ -14,7 +14,7 @@ This step-by-step tutorial shows you how get started:
 - :ref:`Create and set up a user account <sign-up>`
 - :ref:`Install and configure Croud <configure>`, a *command-line interface*
   (CLI) tool for interacting with CrateDB Cloud
-- :ref:`Deploy your first cluster <deploy>` on CrateDB Cloud
+- :ref:`Deploy your first cluster <deploy>`
 
 .. NOTE::
 

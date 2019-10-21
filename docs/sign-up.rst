@@ -19,18 +19,35 @@ as well as launch CrateDB Cloud clusters and other CrateDB Cloud products.
    :local:
 
 
-.. _sign-up-create:
+.. _choose-sign-in-method:
 
-Create an account
-=================
+Choose a sign-in method
+=======================
 
-To create an account, visit the `sign-in page`_:
+Visit the `sign in page`_:
 
 .. image:: _assets/img/cloud-sign-in.png
 
-Then, select *Sign up* at the bottom of the dialogue box.
+From here, select the sign-in method you want to use. You have two options:
 
-You will be redirected to the sign-up page:
+* :ref:`username-password`
+* :ref:`azure-ad`
+
+
+.. _username-password:
+
+Username and password
+---------------------
+
+If you select the *Username and password* sign-in method, you should be
+presented with a username and password sign in page:
+
+.. image:: _assets/img/cloud-sign-in-user-pass.png
+
+However, before you sign in, you must first sign up for an account.
+
+Select *Sign up* from the bottom of the dialogue box. You will be redirected to
+the sign-up page:
 
 .. image:: _assets/img/cloud-sign-up.png
 
@@ -43,17 +60,37 @@ Next, you should see this screen:
 Check your email, fill in the code, and, finally, select *Confirm Account* to
 finish the process.
 
-The sign-up page will log you in and redirect you to the `Cloud Console`_:
+
+.. _azure-ad:
+
+Azure AD
+--------
+
+If you select the *Azure AD* sign-in method, you should be presented
+with a `Microsoft Azure`_ *Active Directory* (AD) sign in page:
+
+.. image:: _assets/img/cloud-sign-in-azure-ad.png
+
+You must have a Azure account to proceed.
+
+If you do not have an Azure account, you can `sign up`_ for a one at no cost.
+When you're done, come back and continue with the tutorial.
+
+
+.. _sign-in:
+
+Sign in
+=======
+
+Once you're signed in, you should be redirected to the `Cloud Console`_:
 
 .. image:: _assets/img/cloud-first-login.png
 
-.. NOTE::
+There's nothing here yet.
 
-    This screen shows nothing here yet.
-
-    By the end of this tutorial, you will have created your first CrateDB
-    cluster and this page will display important information such as average
-    response times, queries, logs, and so on.
+However, by the end of this tutorial, you will have created your first CrateDB
+cluster and this page will display important information such as average
+response times, queries, logs, and so on.
 
 
 .. _sign-up-next:
@@ -70,4 +107,6 @@ configure Croud <configure>`.
 
 .. _Cloud Console: https://crate.io/docs/cloud/console/
 .. _Croud: https://crate.io/docs/cloud/cli/
-.. _sign-in page: https://eastus2.azure.cratedb.cloud/
+.. _sign in page: https://eastus2.azure.cratedb.cloud/
+.. _Microsoft Azure: https://azure.microsoft.com/en-us/
+.. _sign up: https://azure.microsoft.com/en-us/free/
