@@ -1,20 +1,13 @@
 .. _index:
 
-==================================
-Getting Started With CrateDB Cloud
-==================================
+=======================
+CrateDB Cloud Tutorials
+=======================
 
-`CrateDB Cloud`_ is a fully-managed version of `CrateDB`_ as a service that runs
-in the cloud and is run by experts at `Crate.io`_. CrateDB Cloud provides
+`CrateDB Cloud`_ is a fully-managed version of `CrateDB`_ as a service that
+runs in the cloud and is run by experts at `Crate.io`_. CrateDB Cloud provides
 real-time analytics and visualization specialized for the *Industrial Internet
 of Things* (IIoT) at scale.
-
-This step-by-step tutorial shows you how get started:
-
-- :ref:`Create and set up a user account <sign-up>`
-- :ref:`Install and configure Croud <configure>`, a *command-line interface*
-  (CLI) tool for interacting with CrateDB Cloud
-- :ref:`Deploy your first cluster <deploy>`
 
 .. NOTE::
 
@@ -32,10 +25,10 @@ This step-by-step tutorial shows you how get started:
 .. rubric:: Table of contents
 
 .. toctree::
+    :maxdepth: 3
+    :titlesonly:
 
-    sign-up
-    configure
-    deploy
+    getting-started/index
 
 
 .. _Cloud Console reference: https://crate.io/docs/cloud/console/en/latest/#overview-screen
