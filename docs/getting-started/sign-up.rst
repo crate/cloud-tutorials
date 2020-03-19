@@ -28,10 +28,10 @@ scratch <deploy-azure-to-cluster>`.
 Sign up via Azure AD
 ====================
 
-Visit the Azure Marketplace `sign in page`_. You should be presented with a
-`Microsoft Azure`_ *Active Directory* (AD) sign in page:
+Visit the `CrateDB Cloud Console`_. You should be presented with a
+`Microsoft Azure`_ *Active Directory* (AD) sign in option:
 
-.. image:: ../_assets/img/cloud-sign-in-azure-ad.png
+.. image:: ../_assets/img/cloud-sign-in-azure-new.png
 
 You must have a Azure account to proceed.
 
@@ -88,6 +88,6 @@ Now that you have an account, you can start to interact with CrateDB Cloud.
 
 
 .. _Cloud Console: https://crate.io/docs/cloud/console/
+.. _CrateDB Cloud Console: https://eastus2.azure.cratedb.cloud/
 .. _Microsoft Azure: https://azure.microsoft.com/en-us/
-.. _sign in page: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
 .. _sign up: https://azure.microsoft.com/en-us/free/

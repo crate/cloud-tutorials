@@ -12,8 +12,8 @@ of Things* (IIoT) at scale.
 * Our first tutorial will help you create and set up a user account.
 
 * The next is a step-by-step tutorial that shows you how get started - from
-  signing up through the Azure Marketplace through to spinning up your first
-  cluster on CrateDB Cloud.
+  signing up through AzureAD through spinning up your first cluster on CrateDB
+  Cloud.
 
 
 .. rubric:: Table of contents
