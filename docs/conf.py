@@ -1,4 +1,4 @@
-from crate.theme.rtd.conf.cloud_getting_started import *
+from crate.theme.rtd.conf.cloud_tutorials import *
 
 # crate.theme sets html_favicon to favicon.png which causes a warning because
 # it should be a .ico and in addition there is no favicon.png in this project
@@ -11,7 +11,7 @@ exclude_patterns = ['.*', '*.lint']
 
 master_doc = 'index'
 
-site_url = 'https://crate.io/docs/cloud/getting-started/en/latest/'
+site_url = 'https://crate.io/docs/cloud/tutorials/en/latest/'
 
 extensions = ['sphinx_sitemap']
 
