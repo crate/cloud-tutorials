@@ -11,15 +11,15 @@ of Things* (IIoT) at scale.
 
 .. NOTE::
 
-    This is beginner documentation.
+    These are beginner tutorials.
 
-    Check out the `Cloud Console reference`_ or the `Croud reference`_ for more
-    advanced CrateDB Cloud documentation.
+    Check out the `How-To Guides`_, `Reference`, or `Croud CLI`_ docs for more
+    advanced information.
 
 .. SEEALSO::
 
-    *Getting Started with CrateDB Cloud* is an open source documentation
-    project and is hosted on `GitHub`_.
+    This is an open source documentation project. We host the source code and
+    issue tracker on `GitHub`_.
 
 
 .. rubric:: Table of contents
@@ -31,9 +31,10 @@ of Things* (IIoT) at scale.
     getting-started/index
 
 
-.. _Cloud Console reference: https://crate.io/docs/cloud/console/en/latest/#overview-screen
-.. _Croud reference: https://crate.io/docs/cloud/cli/en/latest/
-.. _GitHub: https://github.com/crate/cloud-getting-started
-.. _CrateDB: https://crate.io/products/cratedb/
 .. _Crate.io: https://crate.io/
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
+.. _CrateDB: https://crate.io/products/cratedb/
+.. _Croud CLI: https://crate.io/docs/cloud/cli/en/latest/
+.. _GitHub: https://github.com/crate/cloud-tutorials
+.. _How-To Guides: https://crate.io/docs/cloud/howtos/en/latest/
+.. _Reference: https://crate.io/docs/cloud/reference/en/latest/

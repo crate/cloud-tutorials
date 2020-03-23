@@ -1,8 +1,8 @@
-==================================
-Getting Started With CrateDB Cloud
-==================================
+=======================
+CrateDB Cloud Tutorials
+=======================
 
-Documentation for getting started with `CrateDB Cloud`_.
+Tutorials for getting started with `CrateDB Cloud`_.
 
 
 Contributing
@@ -27,5 +27,5 @@ Looking for more help?
 .. _Crate.io: http://crate.io/
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
 .. _developer docs: DEVELOP.rst
-.. _live docs: https://crate.io/docs/cloud/getting-started/en/latest/
+.. _live docs: https://crate.io/docs/cloud/tutorials/en/latest/
 .. _support channels: https://crate.io/support/
