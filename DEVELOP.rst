@@ -57,23 +57,23 @@ release version), please contact the `@crate/docs`_ team.
 
 
 .. _@crate/docs: https://github.com/orgs/crate/teams/docs
-.. _configured: https://github.com/crate/cloud-getting-started/blob/master/.travis.yml
+.. _configured: https://github.com/crate/cloud-tutorials/blob/master/.travis.yml
 .. _fswatch: https://github.com/emcrisostomo/fswatch
 .. _Read the Docs: http://readthedocs.org
 .. _ReStructuredText: http://docutils.sourceforge.net/rst.html
 .. _Sphinx: http://sphinx-doc.org/
 
 
-.. |utils| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcloud-getting-started%2Fmaster%2Fdocs%2Futils.json
+.. |utils| image:: https://img.shields.io/endpoint.svg?color=blue&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcrate%2Fcloud-tutorials%2Fmaster%2Fdocs%2Futils.json
     :alt: Utils version
-    :target: https://github.com/crate/cloud-getting-started/blob/master/docs/utils.json
+    :target: https://github.com/crate/cloud-tutorials/blob/master/docs/utils.json
 
-.. |travis| image:: https://img.shields.io/travis/crate/cloud-getting-started.svg?style=flat
+.. |travis| image:: https://img.shields.io/travis/crate/cloud-tutorials.svg?style=flat
     :alt: Travis CI status
     :scale: 100%
-    :target: https://travis-ci.org/crate/cloud-getting-started
+    :target: https://travis-ci.org/crate/cloud-tutorials
 
-.. |rtd| image:: https://readthedocs.org/projects/cloud-getting-started/badge/?version=latest
+.. |rtd| image:: https://readthedocs.org/projects/cloud-tutorials/badge/?version=latest
     :alt: Read The Docs status
     :scale: 100%
-    :target: https://cloud-getting-started.readthedocs.io/en/latest/?badge=latest
+    :target: https://cloud-tutorials.readthedocs.io/en/latest/?badge=latest
