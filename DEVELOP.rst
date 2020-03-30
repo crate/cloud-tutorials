@@ -73,7 +73,7 @@ release version), please contact the `@crate/docs`_ team.
     :scale: 100%
     :target: https://travis-ci.org/crate/cloud-tutorials
 
-.. |rtd| image:: https://readthedocs.org/projects/cloud-tutorials/badge/?version=latest
+.. |rtd| image:: https://readthedocs.org/projects/crate-cloud-tutorials/badge/?version=latest
     :alt: Read The Docs status
     :scale: 100%
-    :target: https://cloud-tutorials.readthedocs.io/en/latest/?badge=latest
+    :target: https://crate-cloud-tutorials.readthedocs.io/en/latest/?badge=latest
