@@ -29,7 +29,7 @@ Sign up via Azure AD
 ====================
 
 Visit the `CrateDB Cloud Console`_. You should be presented with a
-`Microsoft Azure`_ *Active Directory* (AD) sign in option:
+|Microsoft Azure| *Active Directory* (AD) sign in option:
 
 .. image:: ../_assets/img/cloud-sign-in-azure-new.png
 
@@ -89,5 +89,8 @@ Now that you have an account, you can start to interact with CrateDB Cloud.
 
 .. _Cloud Console: https://crate.io/docs/cloud/console/
 .. _CrateDB Cloud Console: https://eastus2.azure.cratedb.cloud/
-.. _Microsoft Azure: https://azure.microsoft.com/en-us/
 .. _sign up: https://azure.microsoft.com/en-us/free/
+
+.. |Microsoft Azure| raw:: html
+
+    <a href="https://azure.microsoft.com/" target="_blank">Microsoft Azure</a>
