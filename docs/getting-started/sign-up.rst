@@ -70,7 +70,7 @@ Sign in
 
 Once you're signed in, you should be redirected to the `Cloud Console`_:
 
-.. image:: ../_assets/img/cloud-first-login.png
+.. image:: ../_assets/img/cloud-first-loginv2.png
 
 There's nothing here yet.
 
