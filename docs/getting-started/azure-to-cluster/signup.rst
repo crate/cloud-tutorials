@@ -22,7 +22,7 @@ than by Crate.io.
 Using the CrateDB Cloud offer on Azure Marketplace
 ==================================================
 
-Visit the CrateDB Cloud offer on Azure Marketplace via `this link`_. Under the
+Visit the CrateDB Cloud offer on Azure Marketplace via |this link|. Under the
 *Plans + Pricing* tab you will find useful information on available cluster
 configurations. The Development plan is suitable as a demo of CrateDB Cloud.
 For production ready use cases, there is a General Purpose plan in either Basic
@@ -71,4 +71,6 @@ wizard and, finally, to deploy your cluster. This will be explained in the
 :ref:`next section of the tutorial <configure-azure-to-cluster>`.
 
 
-.. _this link: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
+.. |this link| raw:: html
+
+    <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview" target="_blank">this link</a>

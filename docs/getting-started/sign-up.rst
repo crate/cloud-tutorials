@@ -72,11 +72,10 @@ Once you're signed in, you should be redirected to the `Cloud Console`_:
 
 .. image:: ../_assets/img/cloud-first-loginv2.png
 
-There's nothing here yet.
-
-However, by the end of :ref:`this tutorial <deploy-azure-to-cluster>`, you will
-have created your first CrateDB cluster and this page will display important
-information such as average response times, queries, logs, and so on.
+There's nothing here yet. However, by the end of :ref:`this tutorial
+<deploy-azure-to-cluster>`, you will have created your first CrateDB cluster
+and this page will display important information such as average response
+times, queries, logs, and so on.
 
 
 .. _sign-up-next:
@@ -89,8 +88,6 @@ Now that you have an account, you can start to interact with CrateDB Cloud.
 
 .. _Cloud Console: https://crate.io/docs/cloud/console/
 .. _CrateDB Cloud Console: https://eastus2.azure.cratedb.cloud/
-.. _sign up: https://azure.microsoft.com/en-us/free/
-
 .. |Microsoft Azure| raw:: html
 
     <a href="https://azure.microsoft.com/" target="_blank">Microsoft Azure</a>
