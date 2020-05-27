@@ -15,6 +15,9 @@ of Things* (IIoT) at scale.
   signing up through AzureAD through spinning up your first cluster on CrateDB
   Cloud.
 
+* Another tutorial shows you two easy ways to delete a cluster, should you wish
+  to do so.
+
 
 .. rubric:: Table of contents
 
@@ -24,6 +27,7 @@ of Things* (IIoT) at scale.
 
     sign-up
     azure-to-cluster/index
+    deletecluster
 
 .. _CrateDB: https://crate.io/products/cratedb/
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
