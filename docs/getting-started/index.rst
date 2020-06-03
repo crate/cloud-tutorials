@@ -27,7 +27,6 @@ of Things* (IIoT) at scale.
 
     sign-up
     azure-to-cluster/index
-    deletecluster
 
 .. _CrateDB: https://crate.io/products/cratedb/
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
