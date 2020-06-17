@@ -9,6 +9,12 @@ runs in the cloud and is run by experts at `Crate.io`_. CrateDB Cloud provides
 real-time analytics and visualization specialized for the *Industrial Internet
 of Things* (IIoT) at scale.
 
+* The first tutorial will help you create and set up a user account.
+
+* The next is a step-by-step tutorial that shows you how get started, from
+  signing up via AzureAD through spinning up your first cluster on CrateDB
+  Cloud.
+
 .. NOTE::
 
     These are beginner tutorials.
@@ -28,7 +34,8 @@ of Things* (IIoT) at scale.
     :maxdepth: 3
     :titlesonly:
 
-    getting-started/index
+    azure-to-cluster/index
+    sign-up
 
 
 .. _Crate.io: https://crate.io/
