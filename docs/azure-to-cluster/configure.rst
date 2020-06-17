@@ -23,7 +23,7 @@ First it must be configured. On the *Home > Software as a Service (SaaS)* page,
 go to *Overview*. Now click on *Configure Account* at the top left of the
 Overview page.
 
-.. image:: ../../_assets/img/configure-account.png
+.. image:: ../_assets/img/configure-account.png
 
 You'll now be redirected to the CrateDB Cloud Console.
 
@@ -46,7 +46,7 @@ defined for it first. Create an organization. (If you have previously created
 an organization it will be pre-selected.) Next, select the region. Finally,
 choose either an already existing project or create a new one.
 
-.. image:: ../../_assets/img/wizard-step1.png
+.. image:: ../_assets/img/wizard-step1.png
 
 
 Wizard step 2
@@ -60,7 +60,7 @@ plan you chose previously, the storage size as well as the ingest and query
 capacities can be adjusted with the slider. Note that the hourly usage price
 will change accordingly.
 
-.. image:: ../../_assets/img/wizard-step2.png
+.. image:: ../_assets/img/wizard-step2.png
 
 
 Wizard step 3
@@ -69,7 +69,7 @@ Wizard step 3
 Step 3 provides a summary of what you are going to deploy. To run the cluster
 and start the billing, click *Deploy*.
 
-.. image:: ../../_assets/img/wizard-step3.png
+.. image:: ../_assets/img/wizard-step3.png
 
 You'll now be redirected to the Console. The new cluster should be visible
 inside the project where you created it in the left hand menu. Please keep in

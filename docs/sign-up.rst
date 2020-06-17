@@ -31,7 +31,7 @@ Sign up via Azure AD
 Visit the `CrateDB Cloud Console`_. You should be presented with a
 |Microsoft Azure| *Active Directory* (AD) sign in option:
 
-.. image:: ../_assets/img/cloud-sign-in-azure-new.png
+.. image:: _assets/img/cloud-sign-in-azure-new.png
 
 You must have a Azure account to proceed.
 
@@ -44,20 +44,20 @@ Sign up with username and password
 If you select the *Username and password* sign-in method, you should be
 presented with a username and password sign in page:
 
-.. image:: ../_assets/img/cloud-sign-in-user-pass.png
+.. image:: _assets/img/cloud-sign-in-user-pass.png
 
 However, before you sign in, you must first sign up for an account.
 
 Select *Sign up* from the bottom of the dialogue box. You will be redirected to
 the sign-up page:
 
-.. image:: ../_assets/img/cloud-sign-up.png
+.. image:: _assets/img/cloud-sign-up.png
 
 Fill in your details, then select *Sign up*.
 
 Next, you should see this screen:
 
-.. image:: ../_assets/img/cloud-verification.png
+.. image:: _assets/img/cloud-verification.png
 
 Check your email, fill in the code, and, finally, select *Confirm Account* to
 finish the process.
@@ -70,7 +70,7 @@ Sign in
 
 Once you're signed in, you should be redirected to the `Cloud Console`_:
 
-.. image:: ../_assets/img/cloud-first-loginv2.png
+.. image:: _assets/img/cloud-first-loginv2.png
 
 There's nothing here yet.
 

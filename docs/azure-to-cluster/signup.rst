@@ -25,8 +25,7 @@ Using the CrateDB Cloud offer on Azure Marketplace
 Visit the CrateDB Cloud offer on Azure Marketplace via |this link|. Under the
 *Plans + Pricing* tab you will find useful information on available cluster
 configurations. The Development plan is suitable as a demo of CrateDB Cloud.
-For production ready use cases, there is a General Purpose plan in either Basic
-or Pro tier, depending on your ingest and query requirements.
+For production ready use cases, there is a General Purpose plan.
 
 Once you know which plan suits your needs, click the blue *Get It Now* button
 to the left to take up the CrateDB Cloud offer. After giving consent to
@@ -34,7 +33,7 @@ Microsoft sharing basic account information, you will be redirected to the
 Azure Portal. The Azure Portal provides a dropdown menu where you can select
 the plan you have chosen previously.
 
-.. image:: ../../_assets/img/portal-offer.png
+.. image:: ../_assets/img/portal-offer.png
 
 Simply select your preferred plan and confirm by clicking *Create*. Note that
 you can still review the plans and pricing again at this stage before creating
@@ -45,7 +44,7 @@ First, name your subscription. Then choose a subscription type that should be
 billed for the total usage. All resources in a single Azure subscription are
 billed together.
 
-.. image:: ../../_assets/img/subscribe-offer.png
+.. image:: ../_assets/img/subscribe-offer.png
 
 Once everything is set, click *Subscribe* in the bottom left corner.
 
