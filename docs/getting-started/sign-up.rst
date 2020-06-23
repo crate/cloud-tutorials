@@ -89,8 +89,6 @@ Now that you have an account, you can start to interact with CrateDB Cloud.
 
 .. _Cloud Console: https://crate.io/docs/cloud/console/
 .. _CrateDB Cloud Console: https://eastus2.azure.cratedb.cloud/
-.. _sign up: https://azure.microsoft.com/en-us/free/
-
 .. |Microsoft Azure| raw:: html
 
     <a href="https://azure.microsoft.com/" target="_blank">Microsoft Azure</a>
