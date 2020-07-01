@@ -1,15 +1,14 @@
 .. _signup-azure-to-cluster:
 
-===================================================
-Sign up for CrateDB Cloud via the Azure Marketplace
-===================================================
+====================================================
+Subscribe to CrateDB Cloud via the Azure Marketplace
+====================================================
 
-Currently the only way to deploy a CrateDB cluster on CrateDB Cloud is via the
-Azure Marketplace. You will therefore need a Microsoft Azure account and Azure
-subscription with a credit card linked to it. By using CrateDB Cloud's service
-on Azure Marketplace, your hourly usage is billed directly by Microsoft rather
-than by Crate.io.
-
+One way to deploy a CrateDB cluster on CrateDB Cloud is via the Microsoft Azure
+Marketplace. You will need a Microsoft Azure account and an Azure subscription
+with a credit card linked to it. By using CrateDB Cloud's service on Azure
+Marketplace, your hourly usage is billed directly by Microsoft, not by
+Crate.io.
 
 .. rubric:: Table of contents
 
