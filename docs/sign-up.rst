@@ -11,11 +11,25 @@ As a CrateDB Cloud user, you can create and manage organizations and projects.
 As an organization administrator, you can also manage other CrateDB Cloud users
 as well as launch CrateDB Cloud clusters and other CrateDB Cloud products.
 
-We currently support two signup methods. However, only one authentication
-method, AzureAD, allows you to deploy clusters on CrateDB Cloud. For a more
-detailed tutorial guiding you through the Azure signup process through to
-starting up a cluster, see the :ref:`tutorial on deploying a cluster from
-scratch <deploy-azure-to-cluster>`.
+We currently support two signup methods: AzureAD and Amazon Cognito. Only
+AzureAD allows you to deploy clusters on CrateDB Cloud through Microsoft Azure
+Marketplace. Similarly, for cluster deployment through our other cloud
+provider, AWS, you should use the Amazon Cognito signup service. The Cognito
+authentication service is indicated in the UI as *Username & Password*. Both
+signup processes are described below.
+
+.. NOTE::
+    Due to these restrictions, it is possible that you will only see one of
+    these signup options in the signup UI at a given moment.
+
+Although you can also sign up for a CrateDB Cloud user account after completing
+the first set of steps in the cluster deployment tutorial, for clarity we
+recommend you do the CrateDB Cloud signup first, then follow the steps in the
+deployment tutorial.
+
+To go directly to the latter tutorial, see the :ref:`tutorial on deploying a
+cluster from scratch <deploy-to-cluster>`.
+
 
 .. rubric:: Table of contents
 
@@ -38,11 +52,11 @@ You must have a Azure account to proceed.
 
 .. _sign-up-username-password:
 
-Sign up with username and password
-==================================
+Sign up with Username & Password (Cognito)
+==========================================
 
-If you select the *Username and password* sign-in method, you should be
-presented with a username and password sign in page:
+If you select the *Username & Password* sign-in method (supported by Amazon
+Cognito), you should be presented with a username and password sign in page:
 
 .. image:: _assets/img/cloud-sign-in-user-pass.png
 
@@ -74,8 +88,8 @@ Once you're signed in, you should be redirected to the `Cloud Console`_:
 
 There's nothing here yet.
 
-However, by the end of :ref:`this tutorial <deploy-azure-to-cluster>`, you will
-have created your first CrateDB cluster and this page will display important
+However, by the end of :ref:`this tutorial <deploy-to-cluster>`, you will have
+created your first CrateDB cluster and this page will display important
 information such as average response times, queries, logs, and so on.
 
 
@@ -84,7 +98,9 @@ information such as average response times, queries, logs, and so on.
 Next steps
 ==========
 
-Now that you have an account, you can start to interact with CrateDB Cloud.
+Now that you have an account, you can choose a cloud provider. Follow the
+:ref:`relevant tutorial steps <deploy-to-cluster>` to subscribe and deploy your
+first cluster.
 
 
 .. _Cloud Console: https://crate.io/docs/cloud/console/
