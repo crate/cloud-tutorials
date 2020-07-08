@@ -1,8 +1,8 @@
 .. _configure-aws-to-cluster:
 
-===========================================
-Configure and deploy your cluster (via AWS)
-===========================================
+=================================
+Configure and deploy your cluster
+=================================
 
 After having subscribed to the AWS Marketplace offer, you can now start to
 deploy your first cluster by going through the CrateDB Cloud Console
@@ -28,7 +28,7 @@ future, the number and nature of the subscription plans may change. To learn
 more about our subscription plans, including the seamless scaling options, see
 the `reference`_ on the subject.
 
-.. image:: ../_assets/img/aws-config-plans.png
+.. image:: ../../_assets/img/aws-config-plans.png
 
 Choose the plan of your liking by clicking the relevant *Choose* button and
 proceed.
@@ -53,7 +53,7 @@ step, you must first define an organization, if you have not already done so.
 for your project (within which the cluster will be deployed), and either name
 a new project or choose an existing one if you have one.
 
-.. image:: ../_assets/img/aws-wizard-step1.png
+.. image:: ../../_assets/img/aws-wizard-step1.png
 
 You may also notice a popup in the right bottom corner. This is to welcome you
 after your signup for CrateDB Cloud. In it, you will find a link to our help
@@ -72,7 +72,7 @@ define your cluster name as well as the username and password used to directly
 access the cluster via its URL. The password must be at least 24 characters
 long.
 
-.. image:: ../_assets/img/aws-wizard-step2.png
+.. image:: ../../_assets/img/aws-wizard-step2.png
 
 You can also already set the scale unit of the cluster to the level you want
 here. As you move the slider horizontally, the different capacities
@@ -101,7 +101,7 @@ Finally, the pricing information shows you the relevant costs of running the
 cluster. Note that Crate.io always bills for usage on an hourly basis, and only
 actual usage is ever billed.
 
-.. image:: ../_assets/img/aws-wizard-step3.png
+.. image:: ../../_assets/img/aws-wizard-step3.png
 
 Take a moment to review. If you are satisfied, click *Deploy*, and the cluster
 will be deployed. Eventually, you will be forwarded to the `CrateDB Cloud
