@@ -28,7 +28,9 @@ recommend you do the CrateDB Cloud signup first, then follow the steps in the
 deployment tutorial.
 
 To go directly to the latter tutorial, see the :ref:`tutorial on deploying a
-cluster from scratch <deploy-to-cluster>`.
+cluster from scratch via Azure <deploy-to-cluster-azure>` or the
+:ref:`tutorial on deploying a cluster from scratch via AWS
+<deploy-to-cluster-aws>` respectively.
 
 
 .. rubric:: Table of contents
@@ -88,9 +90,11 @@ Once you're signed in, you should be redirected to the `Cloud Console`_:
 
 There's nothing here yet.
 
-However, by the end of :ref:`this tutorial <deploy-to-cluster>`, you will have
-created your first CrateDB cluster and this page will display important
-information such as average response times, queries, logs, and so on.
+However, by the end of our tutorials for :ref:`deploying a cluster via Azure
+<deploy-to-cluster-azure>` or :ref:`deploying a cluster via AWS
+<deploy-to-cluster-aws>`, you will have created your first CrateDB cluster and
+this page will display important information such as average response times,
+queries, logs, and so on.
 
 
 .. _sign-up-next:
@@ -99,7 +103,7 @@ Next steps
 ==========
 
 Now that you have an account, you can choose a cloud provider. Follow the
-:ref:`relevant tutorial steps <deploy-to-cluster>` to subscribe and deploy your
+:ref:`relevant tutorial steps <cluster-deployment>` to subscribe and deploy your
 first cluster.
 
 

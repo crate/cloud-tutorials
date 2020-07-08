@@ -30,11 +30,11 @@ specialized for the *Industrial Internet of Things* (IIoT).
 .. rubric:: Table of contents
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 2
     :titlesonly:
 
     sign-up
-    deploy-to-cluster/index
+    cluster-deployment/index
 
 
 .. _Crate.io: https://crate.io/

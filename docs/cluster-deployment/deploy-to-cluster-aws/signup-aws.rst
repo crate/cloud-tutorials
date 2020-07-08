@@ -26,7 +26,7 @@ Cloud offer page. You can either search "CrateDB Cloud" in the search bar at
 the top of the AWS Marketplace front page, or follow `this link`_ to the offer.
 The top of the offer page should look as follows:
 
-.. image:: ../_assets/img/aws-offer.png
+.. image:: ../../_assets/img/aws-offer.png
 
 The offer page provides all the information about the CrateDB Cloud offer on
 AWS you might need: a product overview, brief descriptions of the subscription
@@ -37,14 +37,14 @@ the offer page.
 When you do, you will be referred to a page with pricing details and a request
 for confirmation, like so:
 
-.. image:: ../_assets/img/aws-subscribe-offer.png
+.. image:: ../../_assets/img/aws-subscribe-offer.png
 
 After reviewing the details, click *Subscribe*.
 
 A notice will pop up, confirming your subscription and referring you to the
 configuration on the CrateDB Cloud end.
 
-.. image:: ../_assets/img/aws-subscribe-confirm.png
+.. image:: ../../_assets/img/aws-subscribe-confirm.png
 
 Click on the *Set Up Your Account* button to proceed.
 
