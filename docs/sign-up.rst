@@ -107,8 +107,8 @@ Now that you have an account, you can choose a cloud provider. Follow the
 first cluster.
 
 
-.. _Cloud Console: https://crate.io/docs/cloud/console/
-.. _CrateDB Cloud Console: https://eastus2.azure.cratedb.cloud/
+.. _Cloud Console: https://crate.io/docs/cloud/reference/en/latest/overview.html
+.. _CrateDB Cloud Console: https://console.cratedb.cloud/
 .. |Microsoft Azure| raw:: html
 
     <a href="https://azure.microsoft.com/" target="_blank">Microsoft Azure</a>
