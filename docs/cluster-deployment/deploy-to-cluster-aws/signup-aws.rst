@@ -61,5 +61,5 @@ which is described in the :ref:`next part <configure-aws-to-cluster>` of this
 tutorial. This will allow deployment of your cluster.
 
 
-.. _here: https://portal.aws.amazon.com/billing/signup#/start
+.. _here: https://portal.aws.amazon.com/billing/signup
 .. _this link: https://aws.amazon.com/marketplace/pp/B089M4B1ND

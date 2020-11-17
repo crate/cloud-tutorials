@@ -124,4 +124,4 @@ can start using your cluster. For more information, visit `our Help page`_.
 
 .. _CrateDB Cloud  Console: https://crate.io/docs/cloud/reference/en/latest/overview.html
 .. _our Help page: https://help.crate.io/en/articles/1771425-accessing-cratedb-s-admin-ui
-.. _reference: https://crate.io/docs/cloud/reference/en/latest/azure-plans.html
+.. _reference: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
