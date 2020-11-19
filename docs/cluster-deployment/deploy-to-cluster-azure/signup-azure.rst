@@ -24,7 +24,11 @@ Using the CrateDB Cloud offer on Azure Marketplace
 Visit the CrateDB Cloud offer on Azure Marketplace via |this link|. Under the
 *Plans + Pricing* tab you will find useful information on available cluster
 configurations. The Development plan is suitable as a demo of CrateDB Cloud.
-For production ready use cases, there is a General Purpose plan.
+For production ready use cases, there is a General Purpose plan, as well as
+IO Optimized and Storage Optimized plans. Finally, there is the CrateDB Cloud
+Contract for paying yearly in advance on the basis of direct negotiation with
+our Sales team. For details on these plans, see our `documentation on
+subscription plans`_.
 
 Once you know which plan suits your needs, click the blue *Get It Now* button
 to the left to take up the CrateDB Cloud offer. After giving consent to
@@ -34,9 +38,9 @@ the plan you have chosen previously.
 
 .. image:: ../../_assets/img/portal-offer.png
 
-Simply select your preferred plan and confirm by clicking *Create*. Note that
-you can still review the plans and pricing again at this stage before creating
-one.
+Simply select your preferred plan and confirm by clicking *Set up + Subscribe*.
+Note that you can still review the plans and pricing again at this stage before
+creating a subscription.
 
 The next page allows you to configure the subscription you have just chosen.
 First, name your subscription. Then choose a subscription type that should be
@@ -69,6 +73,7 @@ wizard and, finally, to deploy your cluster. This will be explained in the
 :ref:`next section of the tutorial <configure-azure-to-cluster>`.
 
 
+.. _documentation on subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. |this link| raw:: html
 
     <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview" target="_blank">this link</a>
