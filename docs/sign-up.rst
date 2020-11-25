@@ -44,12 +44,12 @@ cluster from scratch via Azure <deploy-to-cluster-azure>` or the
 Sign up via Azure AD
 ====================
 
-Visit the `CrateDB Cloud Console`_. You should be presented with a
-|Microsoft Azure| *Active Directory* (AD) sign in option:
+Visit the `CrateDB Cloud Console`_. You should be presented with a Microsoft
+Azure *Active Directory* (AD) sign in option:
 
 .. image:: _assets/img/cloud-sign-in-azure-new.png
 
-You must have a Azure account to proceed.
+You must have an Azure account to proceed.
 
 
 .. _sign-up-username-password:
@@ -109,6 +109,3 @@ first cluster.
 
 .. _Cloud Console: https://crate.io/docs/cloud/reference/en/latest/overview.html
 .. _CrateDB Cloud Console: https://console.cratedb.cloud/
-.. |Microsoft Azure| raw:: html
-
-    <a href="https://azure.microsoft.com/" target="_blank">Microsoft Azure</a>
