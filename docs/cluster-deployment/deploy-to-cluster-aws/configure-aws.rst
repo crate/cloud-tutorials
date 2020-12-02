@@ -5,14 +5,32 @@ Configure and deploy your cluster
 =================================
 
 After having subscribed to the AWS Marketplace offer, you can now start to
-deploy your first cluster by going through the CrateDB Cloud Console
-configuration wizard. Here you will find a step-by-step description of the
-process.
+use your first cluster. This involves two steps: the deployment of the cluster
+in the CrateDB Cloud Console, and the configuration of the cluster (including
+choosing the subscription plan) by going through the CrateDB Cloud Console
+wizard. Here you will find a step-by-step description of the process.
 
 .. rubric:: Table of contents
 
 .. contents::
    :local:
+
+
+.. _configure-aws-to-cluster-deploy:
+
+Deploy your cluster
+===================
+
+After having subscribed, you should arrive (possibly involving a subsequent
+login process) at the CrateDB Cloud Console. The Console will display the
+subscriptions tab of the Organization overview page, where you can see any and
+all subscriptions that your organization has.
+
+.. image:: ../../_assets/img/aws-subscription-overview.png
+
+Under the relevant subscription, click the *Deploy cluster* button. This will
+take you to the CrateDB Cloud configuration wizard, starting with the choice
+of subscription plan.
 
 
 .. _configure-aws-to-cluster-plans:
@@ -21,12 +39,14 @@ Choose a plan
 =============
 
 You choose a subscription plan at this stage of configuration. CrateDB Cloud
-currently offers two different subscription plans: *Development* and *General
-Purpose*. The Development plan is intended for trying out the service. The
-General Purpose plan is designed to meet production-ready use cases. In the
-future, the number and nature of the subscription plans may change. To learn
-more about our subscription plans, including the seamless scaling options, see
-the `reference`_ on the subject.
+currently offers four different standard subscription plans: *Development*,
+intended for trying out the service, *General Purpose*, designed to meet
+production-ready use cases, *IO Optimized* for use cases where query speed is
+the main focus, and *Storage Optimized* for cases where large amounts of (hot)
+storage are essential. Finally, there is the `CrateDB Cloud Contract`_,
+offering an annual subscription to our cloud service by paying in advance. To
+learn more about our subscription plans, see the `reference on subscription
+plans`_.
 
 .. image:: ../../_assets/img/aws-config-plans.png
 
@@ -83,7 +103,8 @@ cluster changes its price.
 
 Do not worry, however: clusters can be scaled up or down as needed, for example
 if your use case changes, at any point later on. To understand more about
-subscription plans and scale units, refer to our `reference`_ on the subject.
+subscription plans and scale units, refer to our `reference on subscription
+plans`_.
 
 When you have filled out the required lines and chosen a scale unit, click
 *Next* to proceed.
@@ -119,9 +140,11 @@ To test if your cluster is available, go to *Cluster Overview* in the Console
 and click on the cluster URL. Once the cluster is up and running you should be
 presented with a login form. Enter the database user and password defined in
 step 2 of the wizard. After authentication the CrateDB Admin UI opens and you
-can start using your cluster. For more information, visit `our Help page`_.
+can start using your cluster. For more information on accessing the Admin UI,
+visit `our Admin UI help page`_.
 
 
 .. _CrateDB Cloud  Console: https://crate.io/docs/cloud/reference/en/latest/overview.html
-.. _our Help page: https://help.crate.io/en/articles/1771425-accessing-cratedb-s-admin-ui
-.. _reference: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
+.. _CrateDB Cloud Contract: https://aws.amazon.com/marketplace/pp/B08KHK34RK
+.. _our Admin UI help page: https://help.crate.io/en/articles/1771425-accessing-cratedb-s-admin-ui
+.. _reference on subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
