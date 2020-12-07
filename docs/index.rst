@@ -35,6 +35,7 @@ specialized for the *Industrial Internet of Things* (IIoT).
 
     sign-up
     cluster-deployment/index
+    free-trial
 
 
 .. _Crate.io: https://crate.io/
