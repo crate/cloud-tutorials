@@ -27,6 +27,7 @@ subscriptions tab of the Organization overview page, where you can see any and
 all subscriptions that your organization has.
 
 .. image:: ../../_assets/img/aws-subscription-overview.png
+  :alt: CrateDB Cloud Console organization overview page
 
 Under the relevant subscription, click the *Deploy cluster* button. This will
 take you to the CrateDB Cloud configuration wizard, starting with the choice
@@ -49,6 +50,7 @@ learn more about our subscription plans, see the `reference on subscription
 plans`_.
 
 .. image:: ../../_assets/img/aws-config-plans.png
+   :alt: CrateDB Cloud plans
 
 Choose the plan of your liking by clicking the relevant *Choose* button and
 proceed.
@@ -74,6 +76,7 @@ for your project (within which the cluster will be deployed), and either name
 a new project or choose an existing one if you have one.
 
 .. image:: ../../_assets/img/aws-wizard-step1.png
+   :alt: CrateDB Cloud configuration wizard step 1
 
 You may also notice a popup in the right bottom corner. This is to welcome you
 after your signup for CrateDB Cloud. In it, you will find a link to our help
@@ -93,6 +96,7 @@ access the cluster via its URL. The password must be at least 24 characters
 long.
 
 .. image:: ../../_assets/img/aws-wizard-step2.png
+   :alt: CrateDB Cloud configuration wizard step 2
 
 You can also already set the scale unit of the cluster to the level you want
 here. As you move the slider horizontally, the different capacities
@@ -123,6 +127,7 @@ cluster. Note that Crate.io always bills for usage on an hourly basis, and only
 actual usage is ever billed.
 
 .. image:: ../../_assets/img/aws-wizard-step3.png
+   :alt: CrateDB Cloud configuration wizard step 3
 
 Take a moment to review. If you are satisfied, click *Deploy*, and the cluster
 will be deployed. Eventually, you will be forwarded to the `CrateDB Cloud
