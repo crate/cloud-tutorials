@@ -48,6 +48,7 @@ Visit the `CrateDB Cloud Console`_. You should be presented with a Microsoft
 Azure *Active Directory* (AD) sign in option:
 
 .. image:: _assets/img/cloud-sign-in-azure-new.png
+   :alt: Azure sign-in screen
 
 You must have an Azure account to proceed.
 
@@ -58,22 +59,25 @@ Sign up with Username & Password (Cognito)
 ==========================================
 
 If you select the *Username & Password* sign-in method (supported by Amazon
-Cognito), you should be presented with a username and password sign in page:
+Cognito), you should be presented with a username and password sign-in page:
 
 .. image:: _assets/img/cloud-sign-in-user-pass.png
+   :alt: Cognito sign-in screen
 
-However, before you sign in, you must first sign up for an account.
+However, before you sign *in*, you must first sign *up* for an account.
 
 Select *Sign up* from the bottom of the dialogue box. You will be redirected to
 the sign-up page:
 
 .. image:: _assets/img/cloud-sign-up.png
+   :alt: Cognito sign-up screen
 
 Fill in your details, then select *Sign up*.
 
 Next, you should see this screen:
 
 .. image:: _assets/img/cloud-verification.png
+   :alt: Cognito verification screen
 
 Check your email, fill in the code, and, finally, select *Confirm Account* to
 finish the process.
@@ -84,9 +88,10 @@ finish the process.
 Sign in
 =======
 
-Once you're signed in, you should be redirected to the `Cloud Console`_:
+Once you're signed in, you should be redirected to the CrateDB Cloud Console:
 
 .. image:: _assets/img/cloud-first-loginv2.png
+   :alt: Cloud Console without subscription
 
 There's nothing here yet.
 
@@ -95,6 +100,9 @@ However, by the end of our tutorials for :ref:`deploying a cluster via Azure
 <deploy-to-cluster-aws>`, you will have created your first CrateDB cluster and
 this page will display important information such as average response times,
 queries, logs, and so on.
+
+For more information on the CrateDB Cloud Console, refer to `our Console
+documentation`_.
 
 
 .. _sign-up-next:
@@ -107,5 +115,5 @@ Now that you have an account, you can choose a cloud provider. Follow the
 first cluster.
 
 
-.. _Cloud Console: https://crate.io/docs/cloud/reference/en/latest/overview.html
+.. _our Console documentation: https://crate.io/docs/cloud/reference/en/latest/overview.html
 .. _CrateDB Cloud Console: https://console.cratedb.cloud/

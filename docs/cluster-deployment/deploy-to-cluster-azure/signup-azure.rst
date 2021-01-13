@@ -37,6 +37,7 @@ Azure Portal. The Azure Portal provides a dropdown menu where you can select
 the plan you have chosen previously.
 
 .. image:: ../../_assets/img/portal-offer.png
+   :alt: Azure Portal CrateDB Cloud offer
 
 Simply select your preferred plan and confirm by clicking *Set up + Subscribe*.
 Note that you can still review the plans and pricing again at this stage before
@@ -48,6 +49,7 @@ billed for the total usage. All resources in a single Azure subscription are
 billed together.
 
 .. image:: ../../_assets/img/subscribe-offer.png
+   :alt: CrateDB Cloud on Azure subscription
 
 Once everything is set, click *Subscribe* in the bottom left corner.
 
