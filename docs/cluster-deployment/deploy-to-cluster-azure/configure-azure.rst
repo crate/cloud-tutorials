@@ -20,9 +20,10 @@ configuration wizard. Here we will walk you through the process.
 Configuration
 =============
 
-To deploy your cluster, first it must be configured. On the *Home > Software
-as a Service (SaaS)* page, go to *Overview*. Now click on *Configure Account*
-at the top left of the Overview page.
+To recap from the previous tutorial: to deploy your cluster, first it must be
+configured. If you have not yet done so, go to the Azure Portal's *Home >
+(SaaS)* page. Inside it, select the subscription you created. Now click on
+*Configure Account* on the Overview menu.
 
 .. image:: ../../_assets/img/configure-account.png
    :alt: Azure SaaS configuration screen
@@ -30,7 +31,9 @@ at the top left of the Overview page.
 You'll now be redirected to the CrateDB Cloud Console.
 
 Once in the Console, authenticate with the Azure account you used to create the
-offer in the previous step. Select *Sign in with Azure AD* and continue.
+offer in the previous step. (If you are authenticated with a different account,
+a warning message will appear, directing you to log out and to log in with your
+Azure account instead.) Select *Sign in with Azure AD* and continue.
 
 Now complete the three-step wizard to deploy the cluster.
 
@@ -48,14 +51,14 @@ done so. (If you have, it will be pre-selected for you.) You must also select a
 region for your project (within which the cluster will be deployed), and either
 name a new project or choose an existing one if you have one.
 
-.. image:: ../../_assets/img/wizard-step1.png
+.. image:: ../../_assets/img/azure-wizard-step1.png
    :alt: CrateDB Cloud configuration wizard step 1
 
 You may also notice a popup in the right bottom corner. This is to welcome you
-after your signup for CrateDB Cloud. In it, you will find a link to our help
-document on cluster deployment, which provides a quick summary of the same
-process described in this tutorial. If you want, you can also respond. This
-gets you in contact with the Crate.io team.
+after your signup to CrateDB Cloud. In it, you will find a link to our `help
+document on cluster deployment`_, which provides a quick summary of the same
+process described in this tutorial. If you want, you can also reply to it. This
+puts you in contact with the Crate.io team.
 
 Fill out the required lines and click *Next* to continue.
 
@@ -64,11 +67,19 @@ Wizard step 2
 -------------
 
 In the second step of the CrateDB Cloud Console configuration wizard, you can
-define your cluster name as well as the username and password used to directly
-access the cluster via its URL. The password must be at least 24 characters
-long.
+define your cluster name. You must also set the username and password used to
+directly access the cluster via its URL. The password must be at least 24
+characters long; any characters are accepted, including special characters. If
+you want, click the *Auto-generate password* button to automatically generate
+a secure 24 character password.
 
-.. image:: ../../_assets/img/wizard-step2.png
+.. WARNING::
+
+    The password will not be retrievable past this point. You may want to copy
+    the password from the password field into a secure location (e.g., a
+    password manager).
+
+.. image:: ../../_assets/img/azure-wizard-step2.png
    :alt: CrateDB Cloud configuration wizard step 2
 
 You can also already set the scale unit of the cluster to the level you want
@@ -98,7 +109,7 @@ Finally, the pricing information shows you the relevant costs of running the
 cluster. Note that Crate.io always bills for usage on an hourly basis, and only
 actual usage is ever billed.
 
-.. image:: ../../_assets/img/wizard-step3.png
+.. image:: ../../_assets/img/azure-wizard-step3.png
    :alt: CrateDB Cloud configuration wizard step 3
 
 Take a moment to review. If you are satisfied, click *Deploy*, and the cluster
@@ -123,5 +134,6 @@ can start using your cluster. For more information, visit `our Help page`_.
 
 
 .. _CrateDB Cloud Console: https://crate.io/docs/cloud/reference/en/latest/overview.html
+.. _help document on cluster deployment: http://help.crate.io/en/articles/3967131-how-do-i-deploy-a-cluster-via-the-azure-marketplace
 .. _our Help page: https://help.crate.io/en/articles/1771425-accessing-cratedb-s-admin-ui
 .. _reference: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html

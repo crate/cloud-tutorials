@@ -91,9 +91,17 @@ Wizard step 2
 -------------
 
 In the second step of the CrateDB Cloud Console configuration wizard, you can
-define your cluster name as well as the username and password used to directly
-access the cluster via its URL. The password must be at least 24 characters
-long.
+define your cluster name. You must also set the username and password used to
+directly access the cluster via its URL. The password must be at least 24
+characters long; any characters are accepted, including special characters. If
+you want, click the *Auto-generate password* button to automatically generate
+a secure 24 character password.
+
+.. WARNING::
+
+    The password will not be retrievable past this point. You may want to copy
+    the password from the password field into a secure location (e.g., a
+    password manager).
 
 .. image:: ../../_assets/img/aws-wizard-step2.png
    :alt: CrateDB Cloud configuration wizard step 2
