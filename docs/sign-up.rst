@@ -11,7 +11,15 @@ As a CrateDB Cloud user, you can create and manage organizations and projects.
 As an organization administrator, you can also manage other CrateDB Cloud users
 as well as launch CrateDB Cloud clusters and other CrateDB Cloud products.
 
-We currently support two signup methods: AzureAD and Amazon Cognito. Only
+We currently support two signup methods: AzureAD and Amazon Cognito.
+Consequently, the signup screen should look as follows:
+
+.. image:: _assets/img/cloud-signup.png
+   :alt: CrateDB Cloud signup screen
+
+If you intend to subscribe and deploy a cluster using a credit card - our
+recommended procedure - either of these signup methods will work. To the
+Software as a Service (SaaS) marketplaces, however, restrictions apply. Only
 AzureAD allows you to deploy clusters on CrateDB Cloud through Microsoft Azure
 Marketplace. Similarly, for cluster deployment through our other cloud
 provider, AWS, you should use the Amazon Cognito signup service. The Cognito
@@ -23,21 +31,20 @@ signup processes are described below.
     these signup options in the signup UI at a given moment.
 
 Although you can also sign up for a CrateDB Cloud user account after completing
-the first set of steps in the cluster deployment tutorial, for clarity we
+the first set of steps in the cluster deployment tutorials, for clarity we
 recommend you do the CrateDB Cloud signup first, then follow the steps in the
-deployment tutorial.
+deployment tutorials.
 
-To go directly to the latter tutorial, see the :ref:`tutorial on deploying a
-cluster from scratch via Azure <deploy-to-cluster-azure>` or the
-:ref:`tutorial on deploying a cluster from scratch via AWS
-<deploy-to-cluster-aws>` respectively.
+To go directly to the latter tutorials, see the :ref:`tutorial on deploying a
+cluster using a credit card <cluster-deployment-stripe>` or the :ref:`tutorials
+on deploying a cluster via the SaaS Marketplaces
+<cluster-deployment-marketplace>` respectively.
 
 
 .. rubric:: Table of contents
 
 .. contents::
    :local:
-
 
 .. _sign-up-azure:
 
@@ -88,18 +95,23 @@ finish the process.
 Sign in
 =======
 
-Once you're signed in, you should be redirected to the CrateDB Cloud Console:
+Once you're signed in, you should be redirected to the CrateDB Cloud Console.
+If you somehow do not have an organization defined yet in the signup process,
+it will look like this:
 
 .. image:: _assets/img/cloud-first-loginv2.png
    :alt: Cloud Console without subscription
 
-There's nothing here yet.
+Otherwise, you will probably see this:
 
-However, by the end of our tutorials for :ref:`deploying a cluster via Azure
-<deploy-to-cluster-azure>` or :ref:`deploying a cluster via AWS
-<deploy-to-cluster-aws>`, you will have created your first CrateDB cluster and
-this page will display important information such as average response times,
-queries, logs, and so on.
+.. image:: _assets/img/cloud-first-login-org.png
+   :alt: Cloud Console without subscription but with organization
+
+In either case, there's nothing much here yet.
+
+However, by the end of one of our cluster deployment tutorials, you will have
+created your first CrateDB Cloud cluster and this page will display an
+overview of your subscriptions and options for deploying further services.
 
 For more information on the CrateDB Cloud Console, refer to `our Console
 documentation`_.
@@ -111,8 +123,8 @@ Next steps
 ==========
 
 Now that you have an account, you can choose a cloud provider. Follow the
-:ref:`relevant tutorial steps <cluster-deployment>` to subscribe and deploy your
-first cluster.
+:ref:`relevant tutorial steps <cluster-deployment>` to subscribe and deploy
+your first cluster.
 
 
 .. _our Console documentation: https://crate.io/docs/cloud/reference/en/latest/overview.html

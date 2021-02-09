@@ -12,7 +12,7 @@ and finally the deployment of your cluster.
 .. rubric:: Table of contents
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
    signup-azure
    configure-azure
