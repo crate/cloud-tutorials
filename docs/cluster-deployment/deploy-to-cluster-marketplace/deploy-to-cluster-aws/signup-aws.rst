@@ -26,7 +26,7 @@ Cloud offer page. You can either search "CrateDB Cloud" in the search bar at
 the top of the AWS Marketplace front page, or go directly to `the AWS offer`_.
 The top of the offer page should look as follows:
 
-.. image:: ../../_assets/img/aws-offer.png
+.. image:: ../../../_assets/img/aws-offer.png
    :alt: AWS Marketplace CrateDB Cloud offer
 
 The offer page provides all the information about the CrateDB Cloud offer on
@@ -38,7 +38,7 @@ the offer page.
 When you do, you will be referred to a page with pricing details and a request
 for confirmation, like so:
 
-.. image:: ../../_assets/img/aws-subscribe-offer.png
+.. image:: ../../../_assets/img/aws-subscribe-offer.png
    :alt: CrateDB Cloud on AWS subscription
 
 After reviewing the details, click *Subscribe*.
@@ -46,7 +46,7 @@ After reviewing the details, click *Subscribe*.
 A notice will pop up, confirming your subscription and referring you to the
 configuration on the CrateDB Cloud end.
 
-.. image:: ../../_assets/img/aws-subscribe-confirm.png
+.. image:: ../../../_assets/img/aws-subscribe-confirm.png
    :alt: CrateDB Cloud on AWS subscription confirmation
 
 Click on the *Set Up Your Account* button to proceed.
@@ -62,7 +62,7 @@ for our cloud service through the CrateDB Cloud Contract. On AWS Marketplace,
 the contract is a separate product for subscription purposes. You can access it
 by going to the `CrateDB Cloud Contract landing page`_.
 
-.. image:: ../../_assets/img/aws-cloud-contract.png
+.. image:: ../../../_assets/img/aws-cloud-contract.png
    :alt: AWS Marketplace CrateDB Cloud Contract
 
 Simply subscribe to it as you would to the CrateDB Cloud subscription. A screen

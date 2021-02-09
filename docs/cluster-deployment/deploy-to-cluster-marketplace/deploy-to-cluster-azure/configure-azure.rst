@@ -25,7 +25,7 @@ configured. If you have not yet done so, go to the Azure Portal's *Home >
 (SaaS)* page. Inside it, select the subscription you created. Now click on
 *Configure Account* on the Overview menu.
 
-.. image:: ../../_assets/img/configure-account.png
+.. image:: ../../../_assets/img/configure-account.png
    :alt: Azure SaaS configuration screen
 
 You'll now be redirected to the CrateDB Cloud Console.
@@ -51,7 +51,7 @@ done so. (If you have, it will be pre-selected for you.) You must also select a
 region for your project (within which the cluster will be deployed), and either
 name a new project or choose an existing one if you have one.
 
-.. image:: ../../_assets/img/azure-wizard-step1.png
+.. image:: ../../../_assets/img/azure-wizard-step1.png
    :alt: CrateDB Cloud configuration wizard step 1
 
 You may also notice a popup in the right bottom corner. This is to welcome you
@@ -73,25 +73,20 @@ characters long; any characters are accepted, including special characters. If
 you want, click the *Auto-generate password* button to automatically generate
 a secure 24 character password.
 
-.. WARNING::
-
-    The password will not be retrievable past this point. You may want to copy
-    the password from the password field into a secure location (e.g., a
-    password manager).
-
-.. image:: ../../_assets/img/azure-wizard-step2.png
+.. image:: ../../../_assets/img/azure-wizard-step2.png
    :alt: CrateDB Cloud configuration wizard step 2
 
-You can also already set the scale unit of the cluster to the level you want
-here. As you move the slider horizontally, the different capacities
-corresponding to each scale unit within the subscription plan will be
-displayed. Currently, within each subscription plan clusters can be scaled
-between scale units 1-3. The default scale unit is 1. Note that scaling the
-cluster changes its price.
+Finally, you can also set the scale unit of the cluster to the desired level
+here. As you move the slider horizontally, you will move up (or down) the scale
+levels within the subscription plan you previously selected. As you will see,
+the hardware capacities of the cluster will change correspondingly. Currently,
+within each subscription plan clusters can be scaled between scale units 1-3.
+The default scale unit is 1. Note that scaling the cluster changes its price.
 
-Do not worry, however: clusters can be scaled up or down as needed, for example
-if your use case changes, at any point later on. To understand more about
-subscription plans and scale units, refer to our `reference`_ on the subject.
+Do not worry, however: clusters can be scaled up or down as needed - for
+example if your use case changes - at any point later on. To understand more
+about subscription plans, scaling, and scale units, refer to our `reference on
+subscription plans`_ and our `scaling guide`_.
 
 When you have filled out the required lines and chosen a scale unit, click
 *Next* to proceed.
@@ -109,7 +104,7 @@ Finally, the pricing information shows you the relevant costs of running the
 cluster. Note that Crate.io always bills for usage on an hourly basis, and only
 actual usage is ever billed.
 
-.. image:: ../../_assets/img/azure-wizard-step3.png
+.. image:: ../../../_assets/img/azure-wizard-step3.png
    :alt: CrateDB Cloud configuration wizard step 3
 
 Take a moment to review. If you are satisfied, click *Deploy*, and the cluster
@@ -121,6 +116,10 @@ Console`_.
 
 Deploy and connect
 ==================
+
+A popup menu will remind you of the username and password you selected for
+connecting to the cluster. Make sure you copy this information to a safe place
+(e.g., a password manager), as it will not be retrievable past this point.
 
 The new cluster should be visible inside the project where you created it in
 the left hand menu. Please keep in mind that the deployment can take some time
@@ -136,4 +135,5 @@ can start using your cluster. For more information, visit `our Help page`_.
 .. _CrateDB Cloud Console: https://crate.io/docs/cloud/reference/en/latest/overview.html
 .. _help document on cluster deployment: http://help.crate.io/en/articles/3967131-how-do-i-deploy-a-cluster-via-the-azure-marketplace
 .. _our Help page: https://help.crate.io/en/articles/1771425-accessing-cratedb-s-admin-ui
-.. _reference: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
+.. _reference on subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
+.. _scaling guide: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html

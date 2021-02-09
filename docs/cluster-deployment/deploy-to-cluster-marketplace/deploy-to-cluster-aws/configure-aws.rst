@@ -26,7 +26,7 @@ login process) at the CrateDB Cloud Console. The Console will display the
 subscriptions tab of the Organization overview page, where you can see any and
 all subscriptions that your organization has.
 
-.. image:: ../../_assets/img/aws-subscription-overview.png
+.. image:: ../../../_assets/img/aws-subscription-overview.png
   :alt: CrateDB Cloud Console organization overview page
 
 Under the relevant subscription, click the *Deploy cluster* button. This will
@@ -49,7 +49,7 @@ offering an annual subscription to our cloud service by paying in advance. To
 learn more about our subscription plans, see the `reference on subscription
 plans`_.
 
-.. image:: ../../_assets/img/aws-config-plans.png
+.. image:: ../../../_assets/img/aws-config-plans.png
    :alt: CrateDB Cloud plans
 
 Choose the plan of your liking by clicking the relevant *Choose* button and
@@ -75,7 +75,7 @@ step, you must first define an organization, if you have not already done so.
 for your project (within which the cluster will be deployed), and either name
 a new project or choose an existing one if you have one.
 
-.. image:: ../../_assets/img/aws-wizard-step1.png
+.. image:: ../../../_assets/img/aws-wizard-step1.png
    :alt: CrateDB Cloud configuration wizard step 1
 
 You may also notice a popup in the right bottom corner. This is to welcome you
@@ -97,26 +97,20 @@ characters long; any characters are accepted, including special characters. If
 you want, click the *Auto-generate password* button to automatically generate
 a secure 24 character password.
 
-.. WARNING::
-
-    The password will not be retrievable past this point. You may want to copy
-    the password from the password field into a secure location (e.g., a
-    password manager).
-
-.. image:: ../../_assets/img/aws-wizard-step2.png
+.. image:: ../../../_assets/img/aws-wizard-step2.png
    :alt: CrateDB Cloud configuration wizard step 2
 
-You can also already set the scale unit of the cluster to the level you want
-here. As you move the slider horizontally, the different capacities
-corresponding to each scale unit within the subscription plan will be
-displayed. Currently, within each subscription plan clusters can be scaled
-between scale units 1-3. The default scale unit is 1. Note that scaling the
-cluster changes its price.
+Finally, you can also set the scale unit of the cluster to the desired level
+here. As you move the slider horizontally, you will move up (or down) the scale
+levels within the subscription plan you previously selected. As you will see,
+the hardware capacities of the cluster will change correspondingly. Currently,
+within each subscription plan clusters can be scaled between scale units 1-3.
+The default scale unit is 1. Note that scaling the cluster changes its price.
 
-Do not worry, however: clusters can be scaled up or down as needed, for example
-if your use case changes, at any point later on. To understand more about
-subscription plans and scale units, refer to our `reference on subscription
-plans`_.
+Do not worry, however: clusters can be scaled up or down as needed - for
+example if your use case changes - at any point later on. To understand more
+about subscription plans, scaling, and scale units, refer to our `reference on
+subscription plans`_ and our `scaling guide`_.
 
 When you have filled out the required lines and chosen a scale unit, click
 *Next* to proceed.
@@ -134,7 +128,7 @@ Finally, the pricing information shows you the relevant costs of running the
 cluster. Note that Crate.io always bills for usage on an hourly basis, and only
 actual usage is ever billed.
 
-.. image:: ../../_assets/img/aws-wizard-step3.png
+.. image:: ../../../_assets/img/aws-wizard-step3.png
    :alt: CrateDB Cloud configuration wizard step 3
 
 Take a moment to review. If you are satisfied, click *Deploy*, and the cluster
@@ -144,6 +138,10 @@ Console`_.
 
 Deploy and connect
 ==================
+
+A popup menu will remind you of the username and password you selected for
+connecting to the cluster. Make sure you copy this information to a safe place
+(e.g., a password manager), as it will not be retrievable past this point.
 
 The new cluster should be visible inside the project where you created it in
 the left hand menu. Please keep in mind that the deployment can take some time
@@ -161,3 +159,4 @@ visit `our Admin UI help page`_.
 .. _CrateDB Cloud Contract: https://aws.amazon.com/marketplace/pp/B08KHK34RK
 .. _our Admin UI help page: https://help.crate.io/en/articles/1771425-accessing-cratedb-s-admin-ui
 .. _reference on subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
+.. _scaling guide: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html

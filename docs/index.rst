@@ -24,7 +24,7 @@ specialized for the *Industrial Internet of Things* (IIoT).
 .. SEEALSO::
 
     This is an open source documentation project. We host the source code and
-    issue tracker on |GitHub|.
+    issue tracker on `GitHub`_.
 
 
 .. rubric:: Table of contents
@@ -42,8 +42,6 @@ specialized for the *Industrial Internet of Things* (IIoT).
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
 .. _CrateDB: https://crate.io/products/cratedb/
 .. _Croud CLI: https://crate.io/docs/cloud/cli/en/latest/
+.. _GitHub: https://github.com/crate/cloud-tutorials
 .. _How-To Guides: https://crate.io/docs/cloud/howtos/en/latest/
 .. _Reference: https://crate.io/docs/cloud/reference/en/latest/
-.. |GitHub| raw:: html
-
-    <a href="https://github.com/crate/cloud-tutorials" target="_blank">Github</a>
