@@ -54,7 +54,7 @@ Sign up via Azure AD
 Visit the `CrateDB Cloud Console`_. You should be presented with a Microsoft
 Azure *Active Directory* (AD) sign in option:
 
-.. image:: _assets/img/cloud-sign-in-azure-new.png
+.. image:: _assets/img/cloud-sign-in-azure.png
    :alt: Azure sign-in screen
 
 You must have an Azure account to proceed.
@@ -68,7 +68,7 @@ Sign up with Username & Password (Cognito)
 If you select the *Username & Password* sign-in method (supported by Amazon
 Cognito), you should be presented with a username and password sign-in page:
 
-.. image:: _assets/img/cloud-sign-in-user-pass.png
+.. image:: _assets/img/cloud-signin-cognito.png
    :alt: Cognito sign-in screen
 
 However, before you sign *in*, you must first sign *up* for an account.
@@ -76,14 +76,14 @@ However, before you sign *in*, you must first sign *up* for an account.
 Select *Sign up* from the bottom of the dialogue box. You will be redirected to
 the sign-up page:
 
-.. image:: _assets/img/cloud-sign-up.png
+.. image:: _assets/img/cloud-signup-cognito.png
    :alt: Cognito sign-up screen
 
 Fill in your details, then select *Sign up*.
 
 Next, you should see this screen:
 
-.. image:: _assets/img/cloud-verification.png
+.. image:: _assets/img/cloud-verification-cognito.png
    :alt: Cognito verification screen
 
 Check your email, fill in the code, and, finally, select *Confirm Account* to
@@ -99,7 +99,7 @@ Once you're signed in, you should be redirected to the CrateDB Cloud Console.
 If you somehow do not have an organization defined yet in the signup process,
 it will look like this:
 
-.. image:: _assets/img/cloud-first-loginv2.png
+.. image:: _assets/img/cloud-first-login.png
    :alt: Cloud Console without subscription
 
 Otherwise, you will probably see this:

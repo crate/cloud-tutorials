@@ -36,7 +36,7 @@ Microsoft sharing basic account information, you will be redirected to the
 Azure Portal. The Azure Portal provides a dropdown menu where you can select
 the plan you have chosen previously.
 
-.. image:: ../../../_assets/img/portal-offer.png
+.. image:: ../../../_assets/img/azure-portal-offer.png
    :alt: Azure Portal CrateDB Cloud offer
 
 Simply select your preferred plan and confirm by clicking *Set up + Subscribe*.
@@ -52,7 +52,7 @@ policies. For more information on these, refer to the `Azure documentation on
 resource groups`_. Optionally, you can also set tags for this resource. More
 information about tags can be found in the `Azure documentation on tags`_.
 
-.. image:: ../../../_assets/img/subscribe-offer.png
+.. image:: ../../../_assets/img/azure-subscribe-offer.png
    :alt: CrateDB Cloud on Azure subscription
 
 Once everything is set, click *Review + Subscribe* in the bottom left corner
