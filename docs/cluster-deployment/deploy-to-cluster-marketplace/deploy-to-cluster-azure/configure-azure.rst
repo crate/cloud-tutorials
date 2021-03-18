@@ -25,7 +25,7 @@ configured. If you have not yet done so, go to the Azure Portal's *Home >
 (SaaS)* page. Inside it, select the subscription you created. Now click on
 *Configure Account* on the Overview menu.
 
-.. image:: ../../../_assets/img/configure-account.png
+.. image:: ../../../_assets/img/azure-config-account.png
    :alt: Azure SaaS configuration screen
 
 You'll now be redirected to the CrateDB Cloud Console.
