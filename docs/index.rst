@@ -36,7 +36,7 @@ specialized for the *Industrial Internet of Things* (IIoT).
     sign-up
     cluster-deployment/index
     promo
-
+    edge
 
 .. _Crate.io: https://crate.io/
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
