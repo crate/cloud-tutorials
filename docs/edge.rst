@@ -128,6 +128,36 @@ above. If one or more prerequisites fail, the script will notify you of this,
 and you will have to install them to proceed. (We recommend `Helm`_ for
 tracking and installing dependencies on Kubernetes.)
 
+Two prerequisites are not currently managed by the script directly, and may
+require additional CLI commands: the nginx ingress and the certificate manager.
+We provide here some tips for installing each of these prerequisites as needed.
+
+
+Ingress nginx
+'''''''''''''
+
+For installing nginx, we recommend reading the `installation instructions`_ on
+the nginx website. A sample command, depending on the Kubernetes provider you
+are using, might be:
+
+.. code-block:: console
+
+    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.46.0/deploy/static/provider/cloud/deploy.yaml
+
+
+Certificate manager
+'''''''''''''''''''
+
+The command for installing the certificate manager is as follows:
+
+.. code-block:: console
+
+    kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.3.1/cert-manager.yaml
+
+
+Manifest and verification
+'''''''''''''''''''''''''
+
 Once you satisfy the prerequisites, the script will ask for your confirmation
 to install CrateDB Edge. Type Y or y to continue. The script will then
 download the manifest files for the CrateDB Edge service and apply them.
@@ -248,8 +278,29 @@ Select your desired plan and proceed to the :ref:`configuration wizard
 <edge-config>` as described above.
 
 
+.. _edge-delete-region:
+
+Delete a custom region
+======================
+
+In order to delete a custom region, click the trashcan icon at the bottom right
+of the custom region panel. A confirmation screen will appear warning that
+deletion of a custom region disables access to CrateDB Cloud for that region.
+To confirm deletion of the custom region, enter the name of your region into
+the form.
+
+.. image:: _assets/img/cloud-edge-deletion
+   :alt: CrateDB Edge deletion confirmation screen
+
+Deleting a custom region does not delete the resources inside that region. To
+also delete the resources inside the region, run the script provided in the
+deletion confirmation screen in your local CLI. This will uninstall CrateDB
+Cloud Edge from your local Kubernetes cluster.
+
+
 .. _announce CrateDB Edge: https://crate.io/a/announcing-cratedb-edge/
 .. _CrateDB Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/
 .. _Helm: https://helm.sh/docs/intro/quickstart/
 .. _ingress-nginx: https://github.com/kubernetes/ingress-nginx
+.. _installation instructions: https://kubernetes.github.io/ingress-nginx/deploy/
 .. _subscription plan: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
