@@ -14,11 +14,6 @@ Cloud at any time by following the default :ref:`cluster deployment tutorial
 <cluster-deployment>` and choosing the Development plan, which is designed for
 just this purpose.
 
-This guide will first describe the process for making use of our 14-day free
-trial offer. Subsequently, you can find out how to use free or discounted
-promotional offers. These will be offered regularly by Crate.io and constitute
-a separate category of promotion from the 14-day free trials.
-
 .. NOTE::
     Free trials and other promos are currently not supported for subscription
     plans offered through the SaaS marketplaces (AWS and Azure Marketplace).
@@ -67,18 +62,38 @@ Organization overview, where you can start deploying your free or discounted
 cluster.
 
 
-.. _promo-free-trial:
+.. _promo-promotion-cluster:
 
-Deploy a 14 day free trial cluster
-==================================
+Deploy a promotional cluster
+============================
 
-Once you have created your organization, you will arrive at the Dashboard tab
-of the Organization overview screen. From here, move to the rightmost tab
-labeled Subscriptions. Click the big blue *Launch free 14-day trial cluster*
-button.
+Crate.io offers two types of promotional clusters from time to time: free and
+discounted clusters. The processes for deploying either are described below.
 
-.. image:: _assets/img/cloud-subscriptions.png
-   :alt: Create a new subscription
+
+Free promotional cluster
+------------------------
+
+To deploy a free promotional cluster on CrateDB Cloud, follow the signup
+process and create and organization as described above. Then, once arrived once
+more at the Dashboard tab of the Organization overview screen, click on the
+*Deploy cluster* button.
+
+You will be shown all the subscription plans CrateDB Cloud currently offers.
+Whenever any of the plans are free or discounted, this will be shown in the
+subscription plan UI. Choose the promo plan you want. In the case shown in the
+screenshot below, you could for example choose a free trial of the Development
+plan.
+
+.. image:: _assets/img/free-trial-plans.png
+   :alt: Choose a promoted subscription plan
+
+You can also scale your cluster here between the three available scale units
+of each subscription plan. Note that discounts and free trial offers may apply
+to a particular scale unit only, and may apply for a limited time. The UI will
+show that the relevant scale unit is discounted, by how much, and for how long.
+For example, in the example below, the first scale unit of the Development plan
+is free for one month. Click *Choose* to proceed.
 
 This will take you to the cluster configuration wizard. In the first step of
 the wizard, you will be asked to choose a region in which to deploy the cluster
@@ -110,51 +125,11 @@ here by looking at the Pricing section. When you are satisfied, click *Deploy*.
 If all is well, you will be shown a popup confirming the deployment is in
 progress and showing you once again your cluster username and password. Since
 this is the last time you will be shown the cluster access credentials, you
-may want to copy them into a safe location (e.g., a password manager). Beyond
+may want to copy them into a safe location (e.g. a password manager). Beyond
 the popup, you will see the Cluster Overview screen in the CrateDB Cloud
 Console. The section *Status* on the left-hand side will show you that the
 cluster is being set up. Once it is done, this will show *Available* and you
 will be able to see cluster metrics.
-
-After 14 days, the free trial cluster will automatically expire and no longer
-be accessible. You do not have to do anything to cancel or remove it. To
-continue using CrateDB Cloud after the 14 day period, follow the
-:ref:`deployment tutorial <cluster-deployment-stripe>` to deploy a regular
-CrateDB Cloud cluster.
-
-
-.. _promo-promotion-cluster:
-
-Deploy a promotional cluster
-============================
-
-
-Free promotional cluster
-------------------------
-
-The process for using a free or discounted promotional cluster on CrateDB Cloud
-is fundamentally quite similar. Follow the same signup process and create an
-organization as described above. Then, once arrived once more at the Dashboard
-tab of the Organization overview screen, click on the *Deploy cluster* button
-(instead of going to the Subscriptions tab).
-
-You will be shown all the subscription plans CrateDB Cloud currently offers.
-Whenever any of the plans are free or discounted, this will be shown in the
-subscription plan UI. Choose the promo plan you want. In the case shown in the
-screenshot below, you could for example choose a free trial of the Development
-plan.
-
-.. image:: _assets/img/free-trial-plans.png
-   :alt: Choose a promoted subscription plan
-
-You can also scale your cluster here between the three available scale units
-of each subscription plan. Note that discounts and free trial offers may apply
-to a particular scale unit only, and may apply for a limited time. The UI will
-show that the relevant scale unit is discounted, by how much, and for how long.
-For example, in the example below, the first scale unit of the Development plan
-is free for one month. Click *Choose* to proceed.
-
-From this point, follow the configuration wizard as described previously.
 
 
 Discounted promotional cluster
@@ -188,12 +163,12 @@ Console.
 Use your cluster after the promotion
 ------------------------------------
 
-Naturally, when your free trial or discounted cluster period ends, you can
-continue using it. When required, you can simply add your billing information
-in the Billing tab of the Organization overview of the CrateDB Cloud Console.
-(This tab will appear in the overview when payment is required for any
-cluster.) For more information on using the CrateDB Cloud Console, refer to the
-`Console overview in the reference documentation`_.
+Naturally, when your free or discounted cluster period ends, you can continue
+using it. When required, you can simply add your billing information in the
+Billing tab of the Organization overview of the CrateDB Cloud Console. (This
+tab will appear in the overview when payment is required for any cluster.) For
+more information on using the CrateDB Cloud Console, refer to the `Console
+overview in the reference documentation`_.
 
 
 
