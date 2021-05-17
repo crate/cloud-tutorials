@@ -289,7 +289,7 @@ deletion of a custom region disables access to CrateDB Cloud for that region.
 To confirm deletion of the custom region, enter the name of your region into
 the form.
 
-.. image:: _assets/img/cloud-edge-deletion
+.. image:: _assets/img/cloud-edge-deletion.png
    :alt: CrateDB Edge deletion confirmation screen
 
 Deleting a custom region does not delete the resources inside that region. To
