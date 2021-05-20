@@ -4,18 +4,19 @@
 Free trials and promotions
 ==========================
 
-Crate.io regularly offers free trials and promotions on the CrateDB Cloud
-database-as-a-service products. These may involve discounts of up to 100% on
-specific `subscription plans`_, `scale units`_ within those plans, and for
-particular periods of time. In this guide, we explain step by step how to make
-use of such free trials or promotions, as well as when payment information will
-be required during the process. Keep in mind that you can also try out CrateDB
-Cloud at any time by following the default :ref:`cluster deployment tutorial
-<cluster-deployment>` and choosing the Development plan, which is designed for
-just this purpose.
+Crate.io regularly offers promotions, consisting of either free or discounted
+offers on CrateDB Cloud database-as-a-service products. These may involve
+discounts of up to 100% on specific `subscription plans`_, on `scale units`_
+within those plans, and/or for particular periods of time. In this guide, we
+explain step by step how to make use of such promotions, as well as when
+payment information will be required during the process.
+
+Keep in mind that you can also try out CrateDB Cloud at any time by following
+the default :ref:`cluster deployment tutorial <cluster-deployment>` and
+choosing the Development plan, which is designed for just this purpose.
 
 .. NOTE::
-    Free trials and other promos are currently not supported for subscription
+    Free and discounted promos are currently not supported for subscription
     plans offered through the SaaS marketplaces (AWS and Azure Marketplace).
 
 .. rubric:: Table of contents
@@ -29,17 +30,17 @@ just this purpose.
 Sign up
 =======
 
-In order to access a free trial or promotion, you must first sign up with an
-account. You can follow the process described in the :ref:`signup tutorial
-<sign-up>` to do so. Follow the steps and log in (or if you already have a
-username and password for CrateDB Cloud, use those credentials). Once logged
-in, you will be forwarded to the CrateDB Cloud Console Organization overview.
+In order to make use of a promotion, you must first sign up with an account.
+You can follow the process described in the :ref:`signup tutorial <sign-up>` to
+do so. Follow the steps and log in (or if you already have a username and
+password for CrateDB Cloud, use those credentials). Once logged in, you will be
+forwarded to the CrateDB Cloud Console Organization overview.
 
-However, before you can launch your promo cluster, you need to have an
-organization and a project as containers that the cluster can operate in.
-Fortunately, the project will already be created as part of cluster
-configuration. That means there is only one preliminary step: creating an
-organization.
+However, before you can launch your promo cluster, you also need to have an
+organization and a project (which are organizational containers that the
+cluster must operate in). Fortunately, the project will already be created as
+part of cluster configuration. That means there is only one more preliminary
+step to take: creating an organization.
 
 
 .. _promo-org:
@@ -47,7 +48,7 @@ organization.
 Create an organization
 ======================
 
-Before the free trial can be deployed, it is necessary to create an
+Before the promoted cluster can be deployed, it is necessary to create an
 organization within the CrateDB Cloud Console. The trial cluster is then
 deployed within this organization. When you arrive for the first time at the
 CrateDB Console Organization overview, you should be prompted to create an
@@ -67,8 +68,9 @@ cluster.
 Deploy a promotional cluster
 ============================
 
-Crate.io offers two types of promotional clusters from time to time: free and
-discounted clusters. The processes for deploying either are described below.
+Crate.io offers two types of promotional offers from time to time: free (trial)
+offers and discounted offers. Below is described how to deploy clusters using
+either kind of promotional offer.
 
 
 Free promotional cluster
