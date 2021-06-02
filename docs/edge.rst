@@ -20,6 +20,23 @@ end-to-end walkthrough of the process and of these prerequisites.
    :local:
 
 
+.. _edge-disclaimer:
+
+Disclaimer
+==========
+
+CrateDB Edge is currently in public beta. CrateDB Edge and related services are
+provided on an "as is" basis and may change at any time. Crate.io provides no
+guarantees or warrant regarding the usability or performance of CrateDB Edge.
+The CrateDB Cloud Service Level Agreement (SLA) is expressly disclaimed for the
+use of CrateDB Edge and related services. By using CrateDB Edge, you agree to
+these terms and conditions.
+
+Should you find any errors, bugs, or functionality problems while using the
+CrateDB Edge public beta, please let us know via `our contact page`_ or our
+`support email`_.
+
+
 .. _edge-prereqs:
 
 Prerequisites
@@ -164,8 +181,8 @@ download the manifest files for the CrateDB Edge service and apply them.
 
 In the final stage, the script will loop over the services and check their
 availability. It continues doing this until all required services have become
-available. Note that this may take some time, depending also on the speed of
-certificate issuance.
+available. Note that this may take some time, which depends among other things
+on how fast a certificate can be issued.
 
 Once the services are up and running, the script will report: "Successfully
 validated installation". At this point, you can return to the CrateDB Cloud
@@ -289,7 +306,7 @@ deletion of a custom region disables access to CrateDB Cloud for that region.
 To confirm deletion of the custom region, enter the name of your region into
 the form.
 
-.. image:: _assets/img/cloud-edge-deletion.png
+.. image:: _assets/img/cloud-edge-delete.png
    :alt: CrateDB Edge deletion confirmation screen
 
 Deleting a custom region does not delete the resources inside that region. To
@@ -299,8 +316,10 @@ Cloud Edge from your local Kubernetes cluster.
 
 
 .. _announce CrateDB Edge: https://crate.io/a/announcing-cratedb-edge/
+.. _our contact page: https://crate.io/contact/
 .. _CrateDB Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/
 .. _Helm: https://helm.sh/docs/intro/quickstart/
 .. _ingress-nginx: https://github.com/kubernetes/ingress-nginx
 .. _installation instructions: https://kubernetes.github.io/ingress-nginx/deploy/
 .. _subscription plan: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
+.. _support email: support@crate.io
