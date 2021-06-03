@@ -184,6 +184,33 @@ availability. It continues doing this until all required services have become
 available. Note that this may take some time, which depends among other things
 on how fast a certificate can be issued.
 
+
+Help and parameters
+'''''''''''''''''''
+
+Use the ``--help`` parameter to find an overview of the available parameters
+for the script.
+
+The parameters are defined as follows:
+
+.. code-block:: console
+
+    Usage:
+    cratedb-cloud-edge.sh <token> [options]
+
+    Here <token> represents the installation token provided on region creation,
+    and the [options] are the optional parameters as shown below.
+
+    Options:
+      --base-url: The URL the manifest should be fetched from
+      -d, --debug: Displays a lot of debug information
+      --dry-run: Will not apply the downloaded manifest file. This can be used
+      for checking the manifest file (edge-manifest.yaml) before applying it.
+      -m, --max-execution-time (600): Maximum time in seconds the script should
+      run
+      --run-prerequisites: Will only run the prerequisites check
+      --run-validation: Will only run the post-install validation
+
 Once the services are up and running, the script will report: "Successfully
 validated installation". At this point, you can return to the CrateDB Cloud
 Console.
