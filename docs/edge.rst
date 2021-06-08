@@ -286,9 +286,8 @@ cluster.
 
 .. NOTE::
     If your Kubernetes cluster does not provide a load balancer with an
-    external IP address, you will not be able to access your cluster
-    from the CrateDB Cloud Console.
-
+    external IP address, you will not be able to access your cluster from the 
+    CrateDB Cloud Console.
 
 
 .. _edge-cloud-region:
