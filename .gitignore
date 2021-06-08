@@ -6,3 +6,5 @@
 .style
 .utils
 *.lint
+.idea/
+.python-version

@@ -48,28 +48,32 @@ Kubernetes cluster, one that meets the following requirements:
 
 .. rst-class:: open
 
-* It must contain at least three nodes (for high availability);
+* It must contain at least three nodes (for high availability).
+  You can also run development workloads on a single-node cluster. Note,
+  however, that you will only be able to provision single-node CrateDB
+  "clusters";
 
 * Sufficient CPU per node to run the CrateDB Cloud software stack and the OS
   (we recommend at least 4 CPU cores for reliable performance);
 
 * A Kubernetes version > 1.15;
 
-* TCP/443 nginx, TCP/4200, TCP/5432 pointing to Kubernetes;
+* A Kubernetes load balancer for accessing CrateDB Clusters;
 
-* An `ingress-nginx`_ controller for Kubernetes;
-
-* A Kubernetes-external load balancer;
-
-* A certificate manager;
-
-* and storage classes named ``crate-premium`` and ``crate-local``.
+* A storage class for persistent data.
 
 Beyond this, using the CrateDB Cloud stack requires creating a CrateDB Cloud
 account and an organization, which will become the owner of the Edge region in
 which the cluster can be deployed. One must also access the CrateDB Cloud
 Console in order to deploy the cluster itself, using the provided script. These
 steps will be explained below.
+
+.. NOTE::
+    A special note about bare metal Kubernetes clusters. CrateDB Edge should
+    work on any bare metal cluster, but the CrateDB instances running within
+    require a load balancer for outside access. If you do not have a load
+    balancer (for example `MetalLB`_), you can still access the CrateDB
+    clusters within, but you will need to figure out the node ports to use.
 
 
 .. _edge-signup:
@@ -144,32 +148,6 @@ script will check whether your local setup conforms to the prerequisites listed
 above. If one or more prerequisites fail, the script will notify you of this,
 and you will have to install them to proceed. (We recommend `Helm`_ for
 tracking and installing dependencies on Kubernetes.)
-
-Two prerequisites are not currently managed by the script directly, and may
-require additional CLI commands: the nginx ingress and the certificate manager.
-We provide here some tips for installing each of these prerequisites as needed.
-
-
-Ingress nginx
-'''''''''''''
-
-For installing nginx, we recommend reading the `installation instructions`_ on
-the nginx website. A sample command, depending on the Kubernetes provider you
-are using, might be:
-
-.. code-block:: console
-
-    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.46.0/deploy/static/provider/cloud/deploy.yaml
-
-
-Certificate manager
-'''''''''''''''''''
-
-The command for installing the certificate manager is as follows:
-
-.. code-block:: console
-
-    kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.3.1/cert-manager.yaml
 
 
 Manifest and verification
@@ -306,6 +284,12 @@ Once the cluster is fully deployed, it can be accessed through the `CrateDB
 Admin UI`_ using the username and password you have defined and the URL of your
 cluster.
 
+.. NOTE::
+    If your Kubernetes cluster does not provide a load balancer with an
+    external IP address, you will not be able to access your cluster
+    from the CrateDB Cloud Console.
+
+
 
 .. _edge-cloud-region:
 
@@ -348,5 +332,6 @@ Cloud Edge from your local Kubernetes cluster.
 .. _Helm: https://helm.sh/docs/intro/quickstart/
 .. _ingress-nginx: https://github.com/kubernetes/ingress-nginx
 .. _installation instructions: https://kubernetes.github.io/ingress-nginx/deploy/
+.. _MetalLB: https://metallb.universe.tf/
 .. _subscription plan: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _support email: support@crate.io
