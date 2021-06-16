@@ -69,7 +69,7 @@ Console in order to deploy the cluster itself, using the provided script. These
 steps will be explained below.
 
 .. NOTE::
-    A special note about bare metal Kubernetes clusters. CrateDB Edge should
+    A special note about bare metal Kubernetes clusters: CrateDB Edge should
     work on any bare metal cluster, but the CrateDB instances running within
     require a load balancer for outside access. If you do not have a load
     balancer (for example `MetalLB`_), you can still access the CrateDB
@@ -286,7 +286,7 @@ cluster.
 
 .. NOTE::
     If your Kubernetes cluster does not provide a load balancer with an
-    external IP address, you will not be able to access your cluster from the 
+    external IP address, you will not be able to access your cluster from the
     CrateDB Cloud Console.
 
 
@@ -318,11 +318,142 @@ the form.
 
 .. image:: _assets/img/cloud-edge-delete.png
    :alt: CrateDB Edge deletion confirmation screen
+   :scale: 50%
 
 Deleting a custom region does not delete the resources inside that region. To
 also delete the resources inside the region, run the script provided in the
 deletion confirmation screen in your local CLI. This will uninstall CrateDB
 Cloud Edge from your local Kubernetes cluster.
+
+
+.. _edge-tools:
+
+Install CrateDB Edge using an on-premise Kubernetes distribution
+================================================================
+
+In the tutorial walkthroughs below, you can read how to install CrateDB Edge
+using two of the most common Kubernetes distributions: `Microk8s`_ and `K3s`_.
+These are third-party tools and not officially supported by Crate.io, nor are
+we responsible for their behavior. That said, we have tested the instructions
+provided below for functionality. Users less familiar with customizing their
+Kubernetes stack on their own may find either of these two guides a practical
+solution for easier CrateDB Edge setup.
+
+
+.. _edge-tools-microk8s:
+
+Microk8s
+--------
+
+Below is a full walkthrough of how to get CrateDB Edge up and running on
+Microk8s. The steps are merely examples of a process validated by us; other
+methods may work also. We provide this information for ease of use and to
+illustrate how to work with CrateDB Edge.
+
+
+Set up Microk8s
+'''''''''''''''
+
+Follow the instructions from the `Microk8s docs`_. For the purposes of this
+tutorial, we assume a `snap`_-based distribution, such as `Ubuntu`_. On this
+occasion, you'll be setting up a three-node Kubernetes cluster. You can also
+use a single node for testing purposes if you wish. Regardless, the
+installation instructions must be run on every node you set up.
+
+.. code-block:: console
+
+    sudo snap install microk8s --classic --channel=1.21
+
+    sudo usermod -a -G microk8s $USER
+    sudo chown -f -R $USER ~/.kube
+
+    microk8s status --wait-ready
+    microk8s kubectl get nodes
+
+    alias kubectl='microk8s kubectl'
+
+    microk8s enable dns storage
+
+
+Set up cluster
+''''''''''''''
+
+On one of the nodes, run the command to get joining instructions. This will
+print the command that you need to run on the other two nodes to create a
+Kubernetes cluster.
+
+.. code-block:: console
+
+    microk8s add-node
+
+
+Join nodes to cluster
+'''''''''''''''''''''
+
+Now SSH into the two remaining nodes and run the command you received on the
+first node.
+
+.. code-block:: console
+
+    root@ub11:~# microk8s join <IP of first node>:25000/<cluster id>
+    Contacting cluster at <IP address>
+    Waiting for this node to finish joining the cluster...
+
+
+Use a storage solution
+''''''''''''''''''''''
+
+The Microk8s setup will require a storage solution. In this case, the tutorial
+shows how to do so using `Longhorn`_, a distributed storage solution for
+Kubernetes. You can follow the `Longhorn installation instructions`_ as
+described below. (Other storage solutions for Kubernetes may work as well.)
+
+First the installation:
+
+.. code-block:: console
+
+    kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.1.1/deploy/longhorn.yaml
+
+Then you need to specify the root directory:
+
+.. code-block:: console
+
+    kubectl -n longhorn-system edit deployment longhorn-driver-deployer
+
+    - name: KUBELET_ROOT_DIR
+    value: /var/snap/microk8s/common/var/lib/kubelet
+
+
+Set up Cloud region
+'''''''''''''''''''
+
+At this stage, you can create an Edge region via the CrateDB Cloud Console.
+Follow the steps outlined above :ref:`from the CrateDB sign up onwards
+<edge-signup>` to proceed.
+
+
+Run the script
+''''''''''''''
+
+Run the script with the following command:
+
+.. code-block:: console
+
+    wget -qO- https://console.cratedb.cloud/edge/cratedb-cloud-edge.sh > edge-installer.sh
+    chmod u+x edge-installer.sh
+    ./edge-installer --dry-run  <token>
+
+Note that ``dry-run`` provides, as the name suggests, a method to test the
+installation by generating the manifests that are going to be applied without
+applying them. This gives you an opportunity to verify them before the full
+install.
+
+The ``<token>`` in question is the token you receive from the CrateDB Console
+Edge region field in the Regions tab of the Organization Overview. For more
+information on this section of the CrateDB Console, refer to our :ref:`CrateDB
+Cloud Console overview <cloud-reference:overview-org-regions>`.
+
+With this, you should be ready to use CrateDB Edge via Microk8s.
 
 
 .. _announce CrateDB Edge: https://crate.io/a/announcing-cratedb-edge/
@@ -331,6 +462,13 @@ Cloud Edge from your local Kubernetes cluster.
 .. _Helm: https://helm.sh/docs/intro/quickstart/
 .. _ingress-nginx: https://github.com/kubernetes/ingress-nginx
 .. _installation instructions: https://kubernetes.github.io/ingress-nginx/deploy/
+.. _K3s: https://k3s.io/
+.. _Longhorn: https://longhorn.io/
+.. _Longhorn installation instructions: https://longhorn.io/docs/1.1.1/deploy/install/install-with-kubectl/
 .. _MetalLB: https://metallb.universe.tf/
+.. _Microk8s: https://microk8s.io/
+.. _Microk8s docs: https://microk8s.io/docs
+.. _snap: https://snapcraft.io/
 .. _subscription plan: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _support email: support@crate.io
+.. _Ubuntu: https://ubuntu.com/
