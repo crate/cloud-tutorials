@@ -456,6 +456,126 @@ Cloud Console overview <cloud-reference:overview-org-regions>`.
 With this, you should be ready to use CrateDB Edge via Microk8s.
 
 
+.. _edge-tools-k3s:
+
+K3S
+---
+
+Below is a full walkthrough of how to get CrateDB Edge up and running on K3S.
+The steps are merely examples of a process validated by us; other methods may
+work also. We provide this information for ease of use and to illustrate how to
+work with CrateDB Edge.
+
+
+Set up K3S
+''''''''''
+
+A simple way to bootstrap the K3S setup is with `k3sup`_. However, this
+tutorial assumes you will use K3S native, which offers more granularity. Also,
+this setup is suitable for a multi-node cluster.
+
+First you have to set up the master node:
+
+.. code-block:: console
+
+    export INSTALL_K3S_VERSION="v1.19.10+k3s1"
+    curl -sfL https://get.k3s.io | sh -s - --disable=traefik
+
+    mkdir ~/.kube
+    cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+    export KUBECONFIG=~/.kube/config
+    kubectl config set-context default
+    kubectl get node -o wide
+
+Next, get the token:
+
+.. code-block:: console
+
+    cat /var/lib/rancher/k3s/server/node-token
+
+Note that the master node will operate both as a master and as a worker.
+
+
+Join nodes to cluster
+'''''''''''''''''''''
+
+Next, you set up other worker nodes (as many as applicable to your use case):
+
+.. code-block:: console
+
+    export token=<token>
+    export INSTALL_K3S_VERSION="v1.19.10+k3s1"
+    curl -sfL https://get.k3s.io | K3S_URL="https://ub1:6443" K3S_TOKEN=$token sh -
+
+
+Uninstall
+'''''''''
+
+If you need to uninstall, run:
+
+.. code-block:: console
+
+    /usr/local/bin/k3s-agent-uninstall.sh
+
+
+Use a storage solution
+''''''''''''''''''''''
+
+The K3S setup for CrateDB Edge will require a storage solution. In this case,
+the tutorial shows how to do so using `Longhorn`_, a distributed storage
+solution for Kubernetes. You can follow the `Longhorn installation
+instructions`_ as described below. (Other storage solutions for Kubernetes may
+work as well.)
+
+First the installation:
+
+.. code-block:: console
+
+    kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.1.1/deploy/longhorn.yaml
+
+Then you need to specify the root directory. Note that unlike in the Microk8s
+example above, you need to redirect the directory:
+
+.. code-block:: console
+
+    kubectl -n longhorn-system edit deployment longhorn-driver-deployer
+
+        - name: KUBELET_ROOT_DIR
+        value: /var/lib/rancher/k3s/agent/kubelet  ..... /var/lib/kubelet
+
+
+Set up Cloud region
+'''''''''''''''''''
+
+At this stage, you can create an Edge region via the CrateDB Cloud Console.
+Follow the steps outlined above :ref:`from the CrateDB sign up onwards
+<edge-signup>` to proceed.
+
+
+Run the script
+''''''''''''''
+
+Run the script with the following command:
+
+.. code-block:: console
+
+    wget -qO- https://console.cratedb.cloud/edge/cratedb-cloud-edge.sh > edge-installer.sh
+    chmod u+x edge-installer.sh
+    ./edge-installer --dry-run  <token>
+
+Note that ``dry-run`` provides, as the name suggests, a method to test the
+installation by generating the manifests that are going to be applied without
+applying them. This gives you an opportunity to verify them before the full
+install.
+
+The ``<token>`` in question is the token you receive from the CrateDB Console
+Edge region field in the Regions tab of the Organization Overview. For more
+information on this section of the CrateDB Console, refer to our :ref:`CrateDB
+Cloud Console overview <cloud-reference:overview-org-regions>`.
+
+With this, you should be ready to use CrateDB Edge via K3S.
+
+
 .. _announce CrateDB Edge: https://crate.io/a/announcing-cratedb-edge/
 .. _our contact page: https://crate.io/contact/
 .. _CrateDB Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/
@@ -463,6 +583,7 @@ With this, you should be ready to use CrateDB Edge via Microk8s.
 .. _ingress-nginx: https://github.com/kubernetes/ingress-nginx
 .. _installation instructions: https://kubernetes.github.io/ingress-nginx/deploy/
 .. _K3s: https://k3s.io/
+.. _k3sup: https://github.com/alexellis/k3sup
 .. _Longhorn: https://longhorn.io/
 .. _Longhorn installation instructions: https://longhorn.io/docs/1.1.1/deploy/install/install-with-kubectl/
 .. _MetalLB: https://metallb.universe.tf/
