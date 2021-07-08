@@ -317,8 +317,8 @@ deletion of a custom region disables access to CrateDB Cloud for that region.
 Deleting a custom region does not delete the resources inside that region. To
 also delete the resources inside the region, run the script provided in the
 deletion confirmation screen in your local CLI before confirming the deletion
-in the console. This will uninstall CrateDB Cloud Edge from your local
-Kubernetes cluster.
+in the console. This will uninstall CrateDB Edge from your local Kubernetes
+cluster.
 
 To finalize the deletion of the custom region, enter the name of your region
 into the form.
