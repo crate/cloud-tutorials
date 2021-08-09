@@ -40,7 +40,7 @@ In order to make use of a promotion, you must first sign up with an account.
 You can follow the process described in the :ref:`signup tutorial <sign-up>` to
 do so. Follow the steps and log in (or if you already have a username and
 password for CrateDB Cloud, use those credentials). Once logged in, you will be
-forwarded to the CrateDB Cloud Console Organization Overview screen.
+forwarded to the CrateDB Cloud Console Organization overview screen.
 
 Before you can launch your promo cluster, you need to have an organization and
 a project (which are organizational containers that the cluster must operate
@@ -57,7 +57,7 @@ Create an organization
 Before the promoted cluster can be deployed, it is necessary to create an
 organization within the CrateDB Cloud Console. The trial cluster is then
 deployed within this organization. When you arrive for the first time at the
-CrateDB Console Organization Overview, you should be prompted to create an
+CrateDB Console Organization overview, you should be prompted to create an
 organization.
 
 .. image:: _assets/img/free-trial-organization.png
@@ -65,7 +65,7 @@ organization.
 
 Enter the desired name for the organization in the field and click *Create
 organization*. Once this is done, you will be returned to the CrateDB Console
-Organization Overview, where you can start deploying your free or discounted
+Organization overview, where you can start deploying your free or discounted
 cluster.
 
 
