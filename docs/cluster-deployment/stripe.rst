@@ -20,134 +20,117 @@ powered by `Stripe`_.
    :local:
 
 
-.. _signup-stripe:
+Deploy cluster
+==============
 
-Subscribe to CrateDB Cloud
-==========================
+When you have finished the signup process mentioned above, you will arrive at
+the CrateDB Cloud Console. The screen will show the Organization overview:
 
-When you have completed the initial signup process, you will see the CrateDB
-Cloud Console organization overview. This normally lists all your subscriptions
-and the clusters that can be deployed in them. In this case, however, you
-probably do not yet have any. You will therefore only see a set of subscription
-options, as well as a popup warning that you need a subscription to deploy
-services on CrateDB Cloud:
+.. image:: ../_assets/img/stripe-console.png
+   :alt: CrateDB Cloud Console Organization overview
 
-.. image:: ../_assets/img/stripe-subscribe.png
-   :alt: CrateDB Cloud Console overview
-
-As you can see, there are two options: either subscribing directly or using
-one of our supported cloud partners. To subscribe directly using your credit
-card, simply click the blue button marked *Create new subscription*.
+From here, click the blue *Deploy new cluster* button. This will take you to
+the cluster deployment screen. This screen consists of three steps: region
+selection, cluster configuration, and account settings.
 
 
-.. _signup-stripe-plans:
-
-Choose a plan
-=============
-
-You will now see an overview of the different subscription plans CrateDB Cloud
-offers. For details on what each plan entails, see our `reference on
-subscription plans`_.
-Choose a plan to your liking by clicking *Choose*.
-
-.. image:: ../_assets/img/stripe-plans.png
-   :alt: CrateDB Cloud subscription plans
-
-
-.. _signup-stripe-configure:
-
-Configure your cluster
-======================
-
-Now comes the stage to finalize the subscription and configure your soon-to-be-
-deployed cluster. The next part will take you through the CrateDB Cloud
-cluster configuration wizard. In four quick steps, you will have everything
-set up.
-
-
-Wizard step 1
+Select region
 -------------
 
-In the first step of the wizard, you are prompted for an organization, a
-project name, and a project region. Fortunately, the organization you have
-created earlier is already pre-selected for you. The region is also set by
-default, but can be changed using the region dropdown menu. All that is needed
-is to name the project within which your cluster will be deployed.
+First, select a `region`_. Your cluster will be deployed in this region.
 
-.. image:: ../_assets/img/stripe-wizard-step1.png
-   :alt: CrateDB Cloud configuration wizard step 1
+.. image:: ../_assets/img/stripe-regions.png
+   :alt: Region selection
 
-Click *Next* to proceed.
+.. NOTE::
+    Currently, your choice of region does not affect the price of the cluster.
+    This may change in future versions of CrateDB Cloud.
 
 
-Wizard step 2
--------------
+Configure cluster
+-----------------
 
-In the next step, we come to the cluster itself. Here the wizard will ask you
-to name the cluster, as well as the username and the password that will
-subsequently be used to access the cluster via the unique cluster URL. The
-password must be at least 24 characters long; any characters are accepted,
-including special characters. If you want, click the *Auto-generate password*
-button to automatically generate a secure 24 character password (if it shows
-a password already, clicking again will generate a new one).
+Next, go through the cluster configuration process. On the left-hand side, you
+can choose a subscription plan. As you select each subscription plan, you will
+see that the values for CPU, RAM, and storage per node change accordingly in
+the middle panel that shows the node specification.
 
-.. image:: ../_assets/img/stripe-wizard-step2.png
-   :alt: CrateDB Cloud configuration wizard step 2
+For most subscription plans, the node specification also allows a further
+choice of tier: Basic, Pro, or Premium. Each higher tier doubles the values per
+node of the previous tier.
 
-Finally, you can also set the scale unit of the cluster to the desired level
-here. As you move the slider horizontally, you will move up (or down) the scale
-levels within the subscription plan you previously selected. As you will see,
-the hardware capacities of the cluster will change correspondingly. Currently,
-within each subscription plan clusters can be scaled between scale units 1-3.
-The default scale unit is 1. Note that scaling the cluster changes its price.
+Finally, on the right the cluster scale overview shows the total values for the
+cluster. This is simply the number of nodes multiplied by the values of the
+subscription plan and tier. The cluster scale panel also allows you to increase
+the number of nodes you want in your cluster.
 
-Do not worry, however: clusters can be scaled up or down as needed - for
-example if your use case changes - at any point later on. To understand more
-about subscription plans, scaling, and scale units, refer to our `reference on
-subscription plans`_ and our `scaling guide`_.
+.. image:: ../_assets/img/stripe-config.png
+   :alt: Cluster configuration panels
 
-When the names and password are generated, click *Next* to continue.
+To sum up: the configuration of the cluster depends on the hardware values per
+node and the number of nodes in the cluster. The hardware values per node are
+determined by the choice of subscription plan and the choice of tier within the
+subscription plan. The number of nodes in the cluster is set in the cluster
+scale panel.
 
+Each of these choices will affect the price of the cluster, and it is possible
+for a subscription plan, a tier, or a number of nodes to be subject to a free
+or discounting promotion. You can always find the total price per hour and per
+month in the blue bar at the bottom of the screen.
 
-Wizard step 3
--------------
+.. image:: ../_assets/img/stripe-price.png
+   :alt: Total price information bar
 
-This step is even easier than the others: it merely summarizes the results
-of your choices. First, it shows the settings for your organization and
-project, with the names you have defined. Next, it shows the cluster
-information, including the version of CrateDB the cluster will be running and
-once again the scale unit capacities the cluster will have. Finally, the
-pricing information shows you the relevant costs of running the cluster. Note
-that Crate.io always bills for usage on an hourly basis, and only actual usage
-is ever billed.
+.. HINT::
+    To identify a promotional offer where a discount is available, look for the
+    % icon under the cluster scale panel. For more information about
+    promotions, see :ref:`our documentation on promoted clusters <promo>`.
 
-.. image:: ../_assets/img/stripe-wizard-step3.png
-   :alt: CrateDB Cloud configuration wizard step 3
-
-As always, simply click *Next* to proceed.
+.. image:: ../_assets/img/stripe-icon.png
+   :alt: Promotional icon
 
 
-Wizard step 4
--------------
+Set up your account
+-------------------
 
-One final step remains, however. At this stage, the wizard will prompt you for
-your credit card information to bill for the cluster. Fill out the number,
-expiry date, and CVC (the three numbers on the back of the card) for the credit
-card you intend to use to pay for the CrateDB Cloud cluster. Additionally,
-provide your billing address. Please do not forget to tick the box to authorize
-Crate.io to take payments from your card.
+At the bottom of the deployment screen you can configure your account settings.
+Since you have already created an organization, it does not need to be set
+here. However, you can now define a project that the cluster can be deployed
+in, as well as the cluster name. You also determine the database username and
+password that you can use to access the cluster `Admin UI`_ later on.
 
-.. image:: ../_assets/img/stripe-wizard-step4.png
-   :alt: CrateDB Cloud configuration wizard step 4
+.. image:: ../_assets/img/stripe-settings.png
+   :alt: Account settings menu
 
-When you are done, click *Next* once more.
+Note that the cluster name has certain validation requirements: it may contain
+only numbers, letters, and the dash symbol -. It must begin with a letter and
+end with a letter or a number, and must be at least three characters long.
+
+Click *Next* at the bottom right to proceed.
+
+
+Provide billing information
+===========================
+
+Finally, you will be taken to a new screen where you can fill out your billing
+information. Our payment processing is supported by `Stripe`_. At the bottom
+right you can find the cards accepted by Crate.io. When you have filled out the
+necessary information, click *Deploy* below it to deploy your cluster. Do not
+forget to accept financial authorization by ticking the box at the bottom.
+
+.. image:: ../_assets/img/stripe-billing.png
+   :alt: Billing information screen
+
+The payment and billing information you have submitted will be saved in the
+Billing tab of the Organization overview screen in the CrateDB Cloud Console
+(i.e., the fifth tab from the left on the same screen you arrived at).
 
 
 Finish
 ======
 
 You will now be returned to the CrateDB Cloud Console, but this time to the
-cluster overview page. A popup menu will remind you of the username and
+Cluster overview page. A popup menu will remind you of the username and
 password you selected for connecting to the cluster. Make sure you copy this
 information to a safe place (e.g., a password manager), as it will not be
 retrievable past this point.
@@ -157,6 +140,8 @@ being set up according to your specifications. Simply wait for it to finish;
 no further action is needed. Thank you for choosing CrateDB Cloud!
 
 
+.. _Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
 .. _reference on subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
+.. _region: https://crate.io/docs/cloud/reference/en/latest/glossary.html#region
 .. _scaling guide: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
 .. _Stripe: https://stripe.com

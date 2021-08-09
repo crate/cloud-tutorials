@@ -91,7 +91,7 @@ Create an organization
 ======================
 
 When you first log in to the CrateDB Cloud Console after having created an
-appropriate account, you will arrive at the organization overview page. Here
+appropriate account, you will arrive at the Organization overview page. Here
 you will be prompted to create an organization.
 
 .. image:: _assets/img/cloud-create-org.png
@@ -101,11 +101,12 @@ Fill out the name of the organization and click the *Create organization*
 button. After a short moment, the organization will be created and you can
 proceed.
 
-You will be taken to the Subscriptions tab of the overview page. You will be
-prompted to create a new subscription. However, for the purposes of CrateDB
-Edge deployment, you want to deploy directly into a given region, either one
-hosted by a cloud provider or a custom region of your own. (Both routes will be
-explained here.) To do so, go to the Regions tab in the same overview.
+You will be taken to the Subscriptions tab of the Organization overview page.
+You will be prompted to create a new subscription. However, for the purposes of
+CrateDB Edge deployment, you want to deploy directly into a given region,
+either one hosted by a cloud provider or a custom region of your own. (Both
+routes will be explained here.) To do so, go to the Regions tab in the same
+overview.
 
 
 .. _edge-create-custom:
@@ -148,6 +149,9 @@ script will check whether your local setup conforms to the prerequisites listed
 above. If one or more prerequisites fail, the script will notify you of this,
 and you will have to install them to proceed. (We recommend `Helm`_ for
 tracking and installing dependencies on Kubernetes.)
+
+.. NOTE::
+    You must have `wget`_ installed for the script to function.
 
 
 Manifest and verification
@@ -193,9 +197,10 @@ Once the services are up and running, the script will report: "Successfully
 validated installation". At this point, you can return to the CrateDB Cloud
 Console.
 
-In the CrateDB Cloud Console, select an appropriate CrateDB Cloud
-`subscription plan`_ to proceed. This will take you to the cluster
-configuration wizard.
+In the CrateDB Cloud Console you can now deploy a cluster from within your
+custom Edge region. Go to the Regions tab of the Organization overview to find
+your custom region and deploy your cluster from there. This will take you to
+the cluster configuration screen.
 
 
 .. _edge-config:
@@ -203,86 +208,77 @@ configuration wizard.
 Configure the cluster
 ---------------------
 
-Now all that remains is to follow the steps in the configuration wizard to
-finalize the setup of your custom CrateDB Edge cluster.
 
-
-Wizard step 1
+Configuration
 '''''''''''''
 
-In the first step of the wizard, you are prompted for an organization, a
-project name, and a project region. Fortunately, the organization and region
-you have created earlier are already pre-selected for you. All that is needed
-is to name the project within which your cluster will be deployed.
+Next, go through the cluster configuration process. On the left-hand side, you
+can choose a subscription plan. As you select each subscription plan, you will
+see that the values for CPU, RAM, and storage per node change accordingly in
+the middle panel that shows the node specification.
 
-.. image:: _assets/img/stripe-wizard-step1.png
-   :alt: CrateDB Cloud configuration wizard step 1
+For most subscription plans, the node specification also allows a further
+choice of tier: Basic, Pro, or Premium. Each higher tier doubles the values per
+node of the previous tier.
 
-Click *Next* to proceed.
+Finally, on the right the cluster scale overview shows the total values for the
+cluster. This is simply the number of nodes multiplied by the values of the
+subscription plan and tier. The cluster scale panel also allows you to increase
+the number of nodes you want in your cluster.
 
+.. image:: _assets/img/stripe-config.png
+   :alt: Cluster configuration panels
 
-Wizard step 2
-'''''''''''''
+To sum up: the configuration of the cluster depends on the hardware values per
+node and the number of nodes in the cluster. The hardware values per node are
+determined by the choice of subscription plan and the choice of tier within the
+subscription plan. The number of nodes in the cluster is set in the cluster
+scale panel.
 
-In the next step, we come to the cluster itself. Here the wizard will ask you
-to name the cluster, as well as the username and the password that will
-subsequently be used to access the cluster via the unique cluster URL. The
-password must be at least 24 characters long; any characters are accepted,
-including special characters. If you want, click the *Auto-generate password*
-button to automatically generate a secure 24 character password (if it shows
-a password already, clicking again will generate a new one).
+At the bottom of the deployment screen you can configure your account settings.
+Since you have already created an organization, it does not need to be set
+here. However, you can now define a project that the cluster can be deployed
+in, as well as the cluster name. You also determine the database username and
+password that you can use to access the cluster `Admin UI`_ later on.
 
-.. image:: _assets/img/stripe-wizard-step2.png
-   :alt: CrateDB Cloud configuration wizard step 2
+.. image:: _assets/img/stripe-settings.png
+   :alt: Account settings menu
 
-Finally, you can also set the scale unit of the cluster to the desired level
-here. As you move the slider horizontally, you will move up (or down) the scale
-levels within the subscription plan you previously selected. As you will see,
-the hardware capacities of the cluster will change correspondingly. Currently,
-within each subscription plan clusters can be scaled between scale units 1-3.
-The default scale unit is 1. Note that scaling the cluster changes its price.
+Note that the cluster name has certain validation requirements: it may contain
+only numbers, letters, and the dash symbol -. It must begin with a letter and
+end with a letter or a number, and must be at least three characters long.
 
-When the names and password are generated, click *Next* to continue.
-
-
-Wizard step 3
-'''''''''''''
-
-This step is even easier than the others: it merely summarizes the results
-of your choices. First, it shows the settings for your organization and
-project, with the names you have defined. Next, it shows the cluster
-information, including the version of CrateDB the cluster will be running and
-once again the scale unit capacities the cluster will have. Finally, the
-pricing information shows you the relevant costs of running the cluster. Note
-that Crate.io always bills for usage on an hourly basis, and only actual usage
-is ever billed.
-
-.. image:: _assets/img/stripe-wizard-step3.png
-   :alt: CrateDB Cloud configuration wizard step 3
-
-As always, click *Next* to proceed.
+Click *Next* at the bottom right to proceed.
 
 
-Wizard step 4
-'''''''''''''
+Billing
+'''''''
 
-One final step remains, however. At this stage, the wizard will prompt you for
-your credit card information to bill for the cluster. Fill out the number,
-expiry date, and CVC (the three numbers on the back of the card) for the credit
-card you intend to use to pay for the CrateDB Edge cluster. Additionally,
-provide your billing address. Please do not forget to tick the box to authorize
-Crate.io to take payments from your card.
+Finally, you will be taken to a new screen where you can fill out your billing
+information. Our payment processing is supported by `Stripe`_. At the bottom
+right you can find the cards accepted by Crate.io. When you have filled out the
+necessary information, click *Deploy* below it to deploy your cluster. Do not
+forget to accept financial authorization by ticking the box at the bottom.
 
-.. image:: _assets/img/stripe-wizard-step4.png
-   :alt: CrateDB Cloud configuration wizard step 4
+.. image:: _assets/img/stripe-billing.png
+   :alt: Billing information screen
 
-When you are done, click *Deploy*. You will receive a final username and
-password reminder. Subsequently, you will be taken to the Cluster overview
-screen, where you will see the cluster deployment in process.
+The payment and billing information you have submitted will be saved in the
+Billing tab of the Organization overview screen in the CrateDB Cloud Console
+(i.e., the fifth tab from the left on the same screen you arrived at).
 
-Once the cluster is fully deployed, it can be accessed through the `CrateDB
-Admin UI`_ using the username and password you have defined and the URL of your
-cluster.
+
+Finish up
+---------
+
+You will now be returned to the CrateDB Cloud Console, but this time to the
+Cluster overview page. A popup menu will remind you of the username and
+password you selected for connecting to the cluster. Make sure you copy this
+information to a safe place (e.g., a password manager), as it will not be
+retrievable past this point.
+
+You can use the Cluster overview page to access your cluster via the Admin UI
+(see, however, the note below).
 
 .. NOTE::
     If your Kubernetes cluster does not provide a load balancer with an
@@ -578,9 +574,10 @@ Cloud Console overview <cloud-reference:overview-org-regions>`.
 With this, you should be ready to use CrateDB Edge via K3S.
 
 
+.. _Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
 .. _announce CrateDB Edge: https://crate.io/a/announcing-cratedb-edge/
 .. _our contact page: https://crate.io/contact/
-.. _CrateDB Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/
+.. _CrateDB Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
 .. _Helm: https://helm.sh/docs/intro/quickstart/
 .. _ingress-nginx: https://github.com/kubernetes/ingress-nginx
 .. _installation instructions: https://kubernetes.github.io/ingress-nginx/deploy/
@@ -592,6 +589,8 @@ With this, you should be ready to use CrateDB Edge via K3S.
 .. _Microk8s: https://microk8s.io/
 .. _Microk8s docs: https://microk8s.io/docs
 .. _snap: https://snapcraft.io/
+.. _Stripe: https://stripe.com
 .. _subscription plan: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _support email: support@crate.io
 .. _Ubuntu: https://ubuntu.com/
+.. _wget: https://www.gnu.org/software/wget/
