@@ -68,6 +68,11 @@ which the cluster can be deployed. One must also access the CrateDB Cloud
 Console in order to deploy the cluster itself, using the provided script. These
 steps will be explained below.
 
+Some Kubernetes knowledge, especially regarding networking and storage, is
+recommended when using CrateDB Edge, especially when using it as-is. If you're
+uncertain, you may benefit from using CrateDB Edge in combination with
+:ref:`tools <edge-tools>` as described at the end of this tutorial.
+
 .. NOTE::
     A special note about bare metal Kubernetes clusters: CrateDB Edge should
     work on any bare metal cluster, but the CrateDB instances running within
@@ -326,33 +331,125 @@ into the form.
 
 .. _edge-tools:
 
-Install CrateDB Edge using an on-premise Kubernetes distribution
-================================================================
+Install CrateDB Edge using tools
+================================
 
-In the tutorial walkthroughs below, you can read how to install CrateDB Edge
-using two of the most common Kubernetes distributions: `Microk8s`_ and `K3s`_.
-These are third-party tools and not officially supported by Crate.io, nor are
-we responsible for their behavior. That said, we have tested the instructions
-provided below for functionality. Users less familiar with customizing their
-Kubernetes stack on their own may find either of these two guides a practical
-solution for easier CrateDB Edge setup.
+You can combine CrateDB Edge with external tools for ease of use, such as
+managed Kubernetes providers and self-hosted Kubernetes distributions. In the
+former category, we have tested AWS, Azure, Digital Ocean, and GCP with the
+CrateDB Edge stack, and for the latter the distributions described below. In
+the walkthroughs below, we provide by way of example a guide for using
+`Digital Ocean`_ as a managed Kubernetes provider with CrateDB Edge, and guides
+for two of the most common Kubernetes distributions: `MicroK8s`_ and `K3s`_.
+
+.. NOTE::
+    These guides are provided as example scenarios only. Other managed
+    Kubernetes providers or preconfigured Kubernetes distributions may also
+    work with CrateDB Edge.
+
+These are third-party tools and Crate.io is not responsible for them. That
+said, we have tested the instructions provided below for functionality. Users
+less familiar with customizing their Kubernetes stack on their own may find
+either of these approaches a practical solution for easier CrateDB Edge setup.
+
+
+.. _edge-tools-digitalocean:
+
+Digital Ocean
+-------------
+
+Below is a step-by-step guide to using Digital Ocean as a managed Kubernetes
+provider in combination with CrateDB Edge. The steps are merely examples of a
+process validated by us; other methods may work also. We provide this
+information for ease of use and to illustrate how to work with CrateDB Edge.
+
+
+Signup
+''''''
+
+First you must sign up with `Digital Ocean`_. On the Kubernetes page, click
+*Sign up* and make an account. Verify your email address to proceed. (Digital
+Ocean may also require a token pre-payment.)
+
+
+Create Kubernetes cluster
+'''''''''''''''''''''''''
+
+Create a Kubernetes cluster using the Digital Ocean cloud interface, under
+"Manage", then "Kubernetes". When configuring the cluster, make sure to choose
+an option with sufficient hardware capacity. For example, when choosing the
+Basic machine type, use the Max plan for that type to ensure sufficient power.
+Then proceed to deploy the cluster.
+
+
+Configuration
+'''''''''''''
+
+While the Kubernetes cluster is installing, use the link provided to locally
+download the configuration YAML file and note the local address of the file.
+Install `kubectl`_ if you have not done so already. Then point the Kubeconfig
+configuration path to where you stored the YAML file:
+
+.. code-block:: console
+
+    export KUBECONFIG=~<file source>
+
+Subsequently, wait for the install to finish and check that the nodes are
+running as intended:
+
+.. code-block:: console
+
+    kubectl get nodes
+
+
+Set up Edge region
+''''''''''''''''''
+
+Now, go to the CrateDB Cloud Console and create a custom CrateDB Edge region.
+Follow the steps outlined :ref:`from the CrateDB sign up onwards <edge-signup>`
+to proceed. Run the script the CrateDB Cloud Console shows in the panel for the
+custom region you just created and install prerequisites as necessary.
+
+
+Define storage class
+''''''''''''''''''''
+
+Eventually, the script will indicate that there is no ``crate-premium`` storage
+class available. To define this storage class correctly, copy the default
+storage class Digital Ocean provides, then change the the ``name`` to
+``crate-premium`` in the copied file. For example, using kubectl and Vim:
+
+.. code-block:: console
+
+    kubectl get sc do-block-storage -o yaml | grep -vi is-default-class | sed -e 's/name: do-block-storage/name: crate-premium/' | kubectl create -f -
+
+Then re-run the script until it is successful.
+
+
+Deploy Edge cluster
+'''''''''''''''''''
+
+Finally, return to the CrateDB Cloud Console and click on *Deploy cluster* in
+the custom region when it is available. Follow the :ref:`steps described above
+<edge-config>` to proceed. At the end of the process, you should have a working
+CrateDB Edge install on Digital Ocean managed Kubernetes.
 
 
 .. _edge-tools-microk8s:
 
-Microk8s
+MicroK8s
 --------
 
 Below is a full walkthrough of how to get CrateDB Edge up and running on
-Microk8s. The steps are merely examples of a process validated by us; other
+MicroK8s. The steps are merely examples of a process validated by us; other
 methods may work also. We provide this information for ease of use and to
 illustrate how to work with CrateDB Edge.
 
 
-Set up Microk8s
+Set up MicroK8s
 '''''''''''''''
 
-Follow the instructions from the `Microk8s docs`_. For the purposes of this
+Follow the instructions from the `MicroK8s docs`_. For the purposes of this
 tutorial, we assume a `snap`_-based distribution, such as `Ubuntu`_. On this
 occasion, you'll be setting up a three-node Kubernetes cluster. You can also
 use a single node for testing purposes if you wish. Regardless, the
@@ -401,7 +498,7 @@ first node.
 Use a storage solution
 ''''''''''''''''''''''
 
-The Microk8s setup will require a storage solution. In this case, the tutorial
+The MicroK8s setup will require a storage solution. In this case, the tutorial
 shows how to do so using `Longhorn`_, a distributed storage solution for
 Kubernetes. You can follow the `Longhorn installation instructions`_ as
 described below. (Other storage solutions for Kubernetes may work as well.)
@@ -422,8 +519,8 @@ Then you need to specify the root directory:
     value: /var/snap/microk8s/common/var/lib/kubelet
 
 
-Set up Cloud region
-'''''''''''''''''''
+Set up Edge region
+''''''''''''''''''
 
 At this stage, you can create an Edge region via the CrateDB Cloud Console.
 Follow the steps outlined above :ref:`from the CrateDB sign up onwards
@@ -542,8 +639,8 @@ example above, you need to redirect the directory:
         value: /var/lib/rancher/k3s/agent/kubelet  ..... /var/lib/kubelet
 
 
-Set up Cloud region
-'''''''''''''''''''
+Set up Edge region
+''''''''''''''''''
 
 At this stage, you can create an Edge region via the CrateDB Cloud Console.
 Follow the steps outlined above :ref:`from the CrateDB sign up onwards
@@ -578,16 +675,18 @@ With this, you should be ready to use CrateDB Edge via K3S.
 .. _announce CrateDB Edge: https://crate.io/a/announcing-cratedb-edge/
 .. _our contact page: https://crate.io/contact/
 .. _CrateDB Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
+.. _Digital Ocean: https://www.digitalocean.com/products/kubernetes/
 .. _Helm: https://helm.sh/docs/intro/quickstart/
 .. _ingress-nginx: https://github.com/kubernetes/ingress-nginx
 .. _installation instructions: https://kubernetes.github.io/ingress-nginx/deploy/
+.. _kubectl: https://kubernetes.io/docs/tasks/tools/
 .. _K3s: https://k3s.io/
 .. _k3sup: https://github.com/alexellis/k3sup
 .. _Longhorn: https://longhorn.io/
 .. _Longhorn installation instructions: https://longhorn.io/docs/1.1.1/deploy/install/install-with-kubectl/
 .. _MetalLB: https://metallb.universe.tf/
-.. _Microk8s: https://microk8s.io/
-.. _Microk8s docs: https://microk8s.io/docs
+.. _MicroK8s: https://microk8s.io/
+.. _MicroK8s docs: https://microk8s.io/docs
 .. _snap: https://snapcraft.io/
 .. _Stripe: https://stripe.com
 .. _subscription plan: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
