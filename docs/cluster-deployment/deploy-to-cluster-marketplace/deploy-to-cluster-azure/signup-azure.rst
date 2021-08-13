@@ -10,6 +10,13 @@ with a credit card linked to it. By using CrateDB Cloud's service on Azure
 Marketplace, your hourly usage is billed directly by Microsoft, not by
 Crate.io.
 
+As a SaaS service, the subscription payment is arranged through Azure. The
+cluster will be hosted in the region you select as part of the configuration
+process. If you are looking for a self-hosted CrateDB Cloud service, check out
+the :ref:`CrateDB Edge tutorial <edge>`. To pay directly for a hosted cluster
+by credit card, see our tutorial for :ref:`direct cluster deployment
+<cluster-deployment-stripe>`.
+
 .. rubric:: Table of contents
 
 .. contents::

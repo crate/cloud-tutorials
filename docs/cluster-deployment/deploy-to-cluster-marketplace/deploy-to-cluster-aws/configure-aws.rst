@@ -152,11 +152,11 @@ and click on the cluster URL. Once the cluster is up and running you should be
 presented with a login form. Enter the database user and password defined in
 step 2 of the wizard. After authentication the CrateDB Admin UI opens and you
 can start using your cluster. For more information on accessing the Admin UI,
-visit `our Admin UI help page`_.
+visit `our Admin UI documentation`_.
 
 
 .. _CrateDB Cloud  Console: https://crate.io/docs/cloud/reference/en/latest/overview.html
 .. _CrateDB Cloud Contract: https://aws.amazon.com/marketplace/pp/B08KHK34RK
-.. _our Admin UI help page: https://help.crate.io/en/articles/1771425-accessing-cratedb-s-admin-ui
+.. _our Admin UI documentation: https://crate.io/docs/crate/admin-ui/en/latest/console.html
 .. _reference on subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _scaling guide: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html

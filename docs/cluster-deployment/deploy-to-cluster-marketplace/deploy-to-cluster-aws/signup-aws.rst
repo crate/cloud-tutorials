@@ -10,6 +10,13 @@ purposes of this tutorial we will assume you have. (If not, you can sign up
 easily on the `Marketplace page`_.) By using CrateDB Cloud's service on AWS
 Marketplace, your hourly usage is billed directly by Amazon, not by Crate.io.
 
+As a SaaS service, the subscription payment is arranged through AWS. The
+cluster will be hosted in the region you select as part of the configuration
+process. If you are looking for a self-hosted CrateDB Cloud service, check out
+the :ref:`CrateDB Edge tutorial <edge>`. To pay directly for a hosted cluster
+by credit card, see our tutorial for :ref:`direct cluster deployment
+<cluster-deployment-stripe>`.
+
 .. rubric:: Table of contents
 
 .. contents::
