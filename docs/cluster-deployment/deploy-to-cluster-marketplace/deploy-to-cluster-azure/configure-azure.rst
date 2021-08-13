@@ -23,7 +23,7 @@ Configuration
 To recap from the previous tutorial: to deploy your cluster, first it must be
 configured. If you have not yet done so, go to the Azure Portal's *Home >
 (SaaS)* page. Inside it, select the subscription you created. Now click on
-*Configure Account* on the Overview menu.
+*Configure Account* on the overview menu.
 
 .. image:: ../../../_assets/img/azure-config-account.png
    :alt: Azure SaaS configuration screen
@@ -129,11 +129,12 @@ To test if your cluster is available, go to *Cluster Overview* in the Console
 and click on the cluster URL. Once the cluster is up and running you should be
 presented with a login form. Enter the database user and password defined in
 step 2 of the wizard. After authentication the CrateDB Admin UI opens and you
-can start using your cluster. For more information, visit `our Help page`_.
+can start using your cluster. For more information, visit `our Admin UI
+documentation`_.
 
 
 .. _CrateDB Cloud Console: https://crate.io/docs/cloud/reference/en/latest/overview.html
 .. _help document on cluster deployment: http://help.crate.io/en/articles/3967131-how-do-i-deploy-a-cluster-via-the-azure-marketplace
-.. _our Help page: https://help.crate.io/en/articles/1771425-accessing-cratedb-s-admin-ui
+.. _our Admin UI documentation: https://crate.io/docs/crate/admin-ui/en/latest/console.html
 .. _reference on subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _scaling guide: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
