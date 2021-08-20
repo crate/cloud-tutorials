@@ -217,10 +217,12 @@ Configure the cluster
 Configuration
 '''''''''''''
 
-Next, go through the cluster configuration process. On the left-hand side, you
-can choose a subscription plan. As you select each subscription plan, you will
-see that the values for CPU, RAM, and storage per node change accordingly in
-the middle panel that shows the node specification.
+Next, go through the cluster configuration process. You will see your custom
+Edge region is selected, so no region selection is necessary. You can move
+directly to the cluster configuration. On the left-hand side, you can choose a
+subscription plan. As you select each subscription plan, you will see that the
+values for CPU, RAM, and storage per node change accordingly in the middle
+panel that shows the node specification.
 
 For most subscription plans, the node specification also allows a further
 choice of tier: Basic, Pro, or Premium. Each higher tier doubles the values per
@@ -252,6 +254,13 @@ password that you can use to access the cluster `Admin UI`_ later on.
 Note that the cluster name has certain validation requirements: it may contain
 only numbers, letters, and the dash symbol -. It must begin with a letter and
 end with a letter or a number, and must be at least three characters long.
+
+You can also here define the backup location of your CrateDB Edge cluster. You
+have the option of either using the default backup location for CrateDB Cloud,
+which is managed by us, or use a custom (local) backup location that is
+convenient to you. This has to be an S3 bucket or a location with an equivalent
+functionality. In the latter case, you can set the access key and secret here
+as well.
 
 Click *Next* at the bottom right to proceed.
 
