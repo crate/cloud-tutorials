@@ -95,6 +95,14 @@ cluster deployment are contained within this screen (and, where relevant, the
 billing information screen). The cluster deployment screen consists of three
 steps: region selection, cluster configuration, and account settings.
 
+.. TIP::
+    To identify a promotional offer where a discount is available, look for the
+    % icon under the cluster scale panel.
+
+.. image:: _assets/img/free-trial-icon.png
+   :alt: Promotional icon
+   :scale: 50%
+
 
 Region selection
 ''''''''''''''''
@@ -142,13 +150,7 @@ month in the blue bar at the bottom of the screen.
 
 .. image:: _assets/img/free-trial-price.png
    :alt: Total price information bar
-
-.. HINT::
-    To identify a promotional offer where a discount is available, look for the
-    % icon under the cluster scale panel.
-
-.. image:: _assets/img/free-trial-icon.png
-   :alt: Promotional icon
+   :scale: 50%
 
 
 Account settings
