@@ -219,28 +219,16 @@ Configuration
 
 Next, go through the cluster configuration process. You will see your custom
 Edge region is selected, so no region selection is necessary. You can move
-directly to the cluster configuration. On the left-hand side, you can choose a
-subscription plan. As you select each subscription plan, you will see that the
-values for CPU, RAM, and storage per node change accordingly in the middle
-panel that shows the node specification.
+directly to the cluster configuration. You can configure your desired hardware
+values for CPU, RAM, and storage per node manually in the panel provided, as
+well as the number of nodes you want in your cluster.
 
-For most subscription plans, the node specification also allows a further
-choice of tier: Basic, Pro, or Premium. Each higher tier doubles the values per
-node of the previous tier.
+.. image:: _assets/img/edge-config.png
+   :alt: Cluster configuration panels for CrateDB Edge
 
-Finally, on the right the cluster scale overview shows the total values for the
-cluster. This is simply the number of nodes multiplied by the values of the
-subscription plan and tier. The cluster scale panel also allows you to increase
-the number of nodes you want in your cluster.
-
-.. image:: _assets/img/stripe-config.png
-   :alt: Cluster configuration panels
-
-To sum up: the configuration of the cluster depends on the hardware values per
-node and the number of nodes in the cluster. The hardware values per node are
-determined by the choice of subscription plan and the choice of tier within the
-subscription plan. The number of nodes in the cluster is set in the cluster
-scale panel.
+On the right the cluster scale overview shows the total hardware values for the
+cluster. This is simply the number of nodes you have chosen, multiplied by the
+values per node you have defined.
 
 At the bottom of the deployment screen you can configure your account settings.
 Since you have already created an organization, it does not need to be set
@@ -257,10 +245,12 @@ end with a letter or a number, and must be at least three characters long.
 
 You can also here define the backup location of your CrateDB Edge cluster. You
 have the option of either using the default backup location for CrateDB Cloud,
-which is managed by us, or use a custom (local) backup location that is
-convenient to you. This has to be an S3 bucket or a location with an equivalent
+which is managed by us, or use a custom backup location that is convenient to
+you. This has to be an S3 bucket or a location with an equivalent
 functionality. In the latter case, you can set the access key and secret here
-as well.
+as well. You can test the connection as well; keep in mind that you cannot
+proceed with a custom backup location unless the connection to it is
+functional.
 
 Click *Next* at the bottom right to proceed.
 
