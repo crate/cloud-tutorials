@@ -32,16 +32,20 @@ Visit the CrateDB Cloud offer on the `Azure Marketplace`_. Under the *Plans +
 Pricing* tab you will find useful information on available cluster
 configurations. The Development plan is suitable as a demo of CrateDB Cloud.
 For production ready use cases, there is a General Purpose plan, as well as
-IO Optimized and Storage Optimized plans. Finally, there is the CrateDB Cloud
+I/O Optimized and Storage Optimized plans. Finally, there is the CrateDB Cloud
 Contract for paying yearly in advance on the basis of direct negotiation with
 our Sales team. For details on these plans, see our `documentation on
 subscription plans`_.
 
+.. image:: ../../../_assets/img/azure-plans.png
+   :alt: Azure Marketplace CrateDB Cloud plans
+
 Once you know which plan suits your needs, click the blue *Get It Now* button
 to the left to take up the CrateDB Cloud offer. After giving consent to
-Microsoft sharing basic account information, you will be redirected to the
-Azure Portal. The Azure Portal provides a dropdown menu where you can select
-the plan you have chosen previously.
+Microsoft sharing basic account information (you may be required to log in with
+Azure), you will be redirected to the Azure Portal page for the CrateDB Cloud
+offer. This page provides a dropdown menu where you can now select the plan you
+have identified previously.
 
 .. image:: ../../../_assets/img/azure-portal-offer.png
    :alt: Azure Portal CrateDB Cloud offer

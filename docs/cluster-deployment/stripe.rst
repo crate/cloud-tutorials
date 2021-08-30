@@ -80,6 +80,7 @@ month in the blue bar at the bottom of the screen.
 
 .. image:: ../_assets/img/stripe-price.png
    :alt: Total price information bar
+   :scale: 50%
 
 .. HINT::
     To identify a promotional offer where a discount is available, look for the
@@ -88,6 +89,7 @@ month in the blue bar at the bottom of the screen.
 
 .. image:: ../_assets/img/stripe-icon.png
    :alt: Promotional icon
+   :scale: 50%
 
 
 Set up your account
