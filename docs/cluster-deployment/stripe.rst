@@ -139,7 +139,19 @@ retrievable past this point.
 
 As the spinning wheel icon in the left-hand menu indicates, the cluster is now
 being set up according to your specifications. Simply wait for it to finish;
-no further action is needed. Thank you for choosing CrateDB Cloud!
+no further action is needed.
+
+When the cluster is up and running, you can connect to it with the CrateDB
+AdminUI, where you can input queries and view additional metrics. To do so, go
+to the cluster overview page of the cluster you just created and click on *Open
+Admin UI*. You can log in with the database username and password you defined
+in the account settings stage.
+
+.. image:: ../_assets/img/stripe-adminui.png
+   :alt: Cluster administration button
+   :scale: 50%
+
+Thank you for choosing CrateDB Cloud!
 
 
 .. _Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
