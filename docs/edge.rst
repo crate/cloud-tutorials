@@ -56,7 +56,8 @@ Kubernetes cluster, one that meets the following requirements:
 * Sufficient CPU per node to run the CrateDB Cloud software stack and the OS
   (we recommend at least 4 CPU cores for reliable performance);
 
-* A Kubernetes version > 1.15;
+* A Kubernetes version > 1.15 and < 1.22 (support for Kubernetes versions 1.22+ 
+  is coming in the near future);
 
 * A Kubernetes load balancer for accessing CrateDB Clusters;
 
