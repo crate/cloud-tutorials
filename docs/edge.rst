@@ -8,11 +8,19 @@ Crate.io is pleased to `announce CrateDB Edge`_, the hybrid cloud database
 solution integrating CrateDB clusters and the CrateDB Cloud software stack with
 on-premise or customer-controlled cloud infrastructure.
 
+The CrateDB Edge concept is simple. You bring your own Kubernetes
+infrastructure - whether in a production site, office, laboratory, or local
+setup, or in your existing managed cloud infrastructure on AWS, Azure, or GCP.
+Wherever it may be, we provide the full experience of CrateDB Cloud to that
+Kubernetes environment. You keep your existing infrastructure setup and you get
+all the benefits of CrateDB Cloud on top: from quick deployment to seamless
+scaling and easy cluster management.
+
 The process of getting CrateDB Edge running is far easier than it may seem,
 thanks to the support for Edge deployment built into the CrateDB Cloud Console,
 our own web UI. Even so, there are some steps involved, and some requirements
 have to be met in order for it to work. This tutorial therefore serves as an
-end-to-end walkthrough of the process and of these prerequisites.
+end-to-end walkthrough of the process and prerequisites.
 
 .. rubric:: Table of contents
 
@@ -56,7 +64,7 @@ Kubernetes cluster, one that meets the following requirements:
 * Sufficient CPU per node to run the CrateDB Cloud software stack and the OS
   (we recommend at least 4 CPU cores for reliable performance);
 
-* A Kubernetes version > 1.15 and < 1.22 (support for Kubernetes versions 1.22+ 
+* A Kubernetes version > 1.15 and < 1.22 (support for Kubernetes versions 1.22+
   is coming in the near future);
 
 * A Kubernetes load balancer for accessing CrateDB Clusters;
