@@ -37,8 +37,8 @@ CrateDB Edge is currently in Pre-Release. CrateDB Edge and related services are
 provided on an "as is" basis and may change at any time. Crate.io provides no
 guarantees or warrant regarding the usability or performance of CrateDB Edge.
 The CrateDB Cloud Service Level Agreement (SLA) is expressly disclaimed for the
-use of CrateDB Edge and related services until further notice. By using CrateDB Edge, you agree to
-these terms and conditions.
+use of CrateDB Edge and related services until further notice. By using CrateDB 
+Edge, you agree to these terms and conditions.
 
 Should you find any errors, bugs, or functionality problems while using the
 CrateDB Edge Pre-Release, please let us know via `our contact page`_ or our
