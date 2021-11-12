@@ -165,7 +165,7 @@ and you will have to install them to proceed. (We recommend `Helm`_ for
 tracking and installing dependencies on Kubernetes.)
 
 .. NOTE::
-    You must have `wget`_ installed for the script to function.
+    You must have `wget`_ & `jq`_ installed for the script to function.
 
 
 Manifest and verification
@@ -701,3 +701,4 @@ With this, you should be ready to use CrateDB Edge via K3S.
 .. _support email: support@crate.io
 .. _Ubuntu: https://ubuntu.com/
 .. _wget: https://www.gnu.org/software/wget/
+.. _jq: https://stedolan.github.io/jq/
