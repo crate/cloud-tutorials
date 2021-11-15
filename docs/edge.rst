@@ -165,7 +165,7 @@ and you will have to install them to proceed. (We recommend `Helm`_ for
 tracking and installing dependencies on Kubernetes.)
 
 .. NOTE::
-    You must have `wget`_ & `jq`_ installed for the script to function.
+    You must have `wget`_ and `jq`_ installed for the script to function.
 
 
 Manifest and verification
@@ -687,6 +687,7 @@ With this, you should be ready to use CrateDB Edge via K3S.
 .. _Helm: https://helm.sh/docs/intro/quickstart/
 .. _ingress-nginx: https://github.com/kubernetes/ingress-nginx
 .. _installation instructions: https://kubernetes.github.io/ingress-nginx/deploy/
+.. _jq: https://stedolan.github.io/jq/
 .. _kubectl: https://kubernetes.io/docs/tasks/tools/
 .. _K3s: https://k3s.io/
 .. _k3sup: https://github.com/alexellis/k3sup
@@ -701,4 +702,3 @@ With this, you should be ready to use CrateDB Edge via K3S.
 .. _support email: support@crate.io
 .. _Ubuntu: https://ubuntu.com/
 .. _wget: https://www.gnu.org/software/wget/
-.. _jq: https://stedolan.github.io/jq/
