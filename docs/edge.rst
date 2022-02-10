@@ -37,7 +37,7 @@ CrateDB Edge is currently in Pre-Release. CrateDB Edge and related services are
 provided on an "as is" basis and may change at any time. Crate.io provides no
 guarantees or warrant regarding the usability or performance of CrateDB Edge.
 The CrateDB Cloud Service Level Agreement (SLA) is expressly disclaimed for the
-use of CrateDB Edge and related services until further notice. By using CrateDB 
+use of CrateDB Edge and related services until further notice. By using CrateDB
 Edge, you agree to these terms and conditions.
 
 Should you find any errors, bugs, or functionality problems while using the
@@ -279,6 +279,12 @@ forget to accept financial authorization by ticking the box at the bottom.
 The payment and billing information you have submitted will be saved in the
 Billing tab of the Organization overview screen in the CrateDB Cloud Console
 (i.e., the fifth tab from the left on the same screen you arrived at).
+
+You can at any time check your current accumulated bill at the bottom left of
+the CrateDB Cloud Console screen:
+
+.. image:: _assets/img/cloud-billing-meter.png
+   :alt: Cloud Console billing meter
 
 
 Finish up
