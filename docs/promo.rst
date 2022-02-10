@@ -186,6 +186,12 @@ filled out the necessary information, click *Deploy* below it.
 The payment and billing information you have submitted will be saved in the
 Billing tab of the Organization Overview page in the CrateDB Cloud Console.
 
+You can at any time check your current accumulated bill at the bottom left of
+the CrateDB Cloud Console screen:
+
+.. image:: _assets/img/cloud-billing-meter.png
+   :alt: Cloud Console billing meter
+
 
 Finish up
 '''''''''

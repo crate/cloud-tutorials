@@ -126,7 +126,8 @@ the cluster information, including the version of CrateDB the cluster will be
 running and once again the scale unit capacities the cluster will have.
 Finally, the pricing information shows you the relevant costs of running the
 cluster. Note that Crate.io always bills for usage on an hourly basis, and only
-actual usage is ever billed.
+actual usage is ever billed. (You can at any time check your current
+accumulated bill at the bottom left of the CrateDB Cloud Console screen.)
 
 .. image:: ../../../_assets/img/aws-wizard-step3.png
    :alt: CrateDB Cloud configuration wizard step 3
