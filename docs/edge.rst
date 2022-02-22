@@ -680,23 +680,26 @@ Cloud Console overview <cloud-reference:overview-org-regions>`.
 
 With this, you should be ready to use CrateDB Edge via K3S.
 
-Using custom TLS certificates
-=============================
 
-By default, CrateDB Edge will issue self-signed certificates for CrateDB instances
-running in your Edge region. It is also possible to use "proper" TLS certificates
-if required. In the examples below, we will configure `letsencrypt`_ to issue
-certificates and use them with CrateDB Edge clusters.
+Custom TLS certificates
+=======================
+
+By default, CrateDB Edge will issue self-signed certificates for CrateDB 
+instances running in your Edge region. It is also possible to use "proper" TLS 
+certificates if required. In the examples below, we will configure 
+`letsencrypt`_ to issue certificates and use them with CrateDB Edge clusters.
+
 
 Create a ``ClusterIssuer``
 --------------------------
 
-CrateDB Edge uses an industry standard app called `cert-manager`_ for managing TLS
-certificates. To issue valid certificates, you would need to follow the cert-manager
-`tutorial for letsencrypt via the DNS solver`_. CrateDB clusters are provisioned
-behind a Load Balancer, and as such the only way to solve letsencrypt challenges
-is via DNS. Your configuration will vary, but if you use ``Route53`` as your DNS
-provider, you will end up with a configuration similar to this:
+CrateDB Edge uses an industry standard app called `cert-manager`_ for managing 
+TLS certificates. To issue valid certificates, you would need to follow the 
+cert-manager `tutorial for letsencrypt via the DNS solver`_. CrateDB clusters 
+are provisioned behind a Load Balancer, and as such the only way to solve 
+letsencrypt challenges is via DNS. Your configuration will vary, but if you use
+``Route53`` as your DNS provider, you will end up with a configuration similar 
+to this:
 
 .. code-block:: yaml
 
@@ -720,11 +723,11 @@ provider, you will end up with a configuration similar to this:
                 name: your_secret
 
 
-Ask for a new Certificate
+Ask for a new certificate
 -------------------------
 
-To ask `letsencrypt`_ for a new certificate, create a ``Certificate`` Kubernetes
-resource:
+To ask `letsencrypt`_ for a new certificate, create a ``Certificate`` 
+Kubernetes resource:
 
 .. code-block:: yaml
 
@@ -752,26 +755,28 @@ resource:
             name: keystore-passwords
       secretName: my-target-secret-for-this-certificate
 
-.. note::
+.. NOTE::
 
-    Note that you must do this inside of a namespace where your CrateDB will be running.
+    Note that you must do this inside of a namespace where your CrateDB will be 
+    running.
 
-The secret called ``keystore-passwords`` will be created automatically when you create
-the CrateDB Cloud Project in this region.
+The secret called ``keystore-passwords`` will be created automatically when you
+create the CrateDB Cloud Project in this region.
 
-Replace the existing Certificate used by your cluster
+
+Replace the existing certificate used by your cluster
 -----------------------------------------------------
 
-As your CrateDB Edge cluster comes with a self-signed certificate, you will need to
-replace it. Fortunately, this is fairly straightforward, and only requires a quick
-edit to the CrateDB Cluster's ``StatefulSet``, i.e.:
+As your CrateDB Edge cluster comes with a self-signed certificate, you will 
+need to replace it. Fortunately, this is fairly straightforward, and only 
+requires a quick edit to the CrateDB Cluster's ``StatefulSet``, i.e.:
 
 .. code-block:: console
 
     $ kubectl -n $YOUR_NAMESPACE edit sts crate-data-hot-$CLUSTER_ID
 
-Then find the following section and replace the secret name with the ``secretName``
-specified when creating the ``Certificate`` entity above, i.e.:
+Then find the following section and replace the secret name with the 
+``secretName`` specified when creating the ``Certificate`` entity above, i.e.:
 
 .. code-block:: yaml
 
@@ -783,16 +788,17 @@ specified when creating the ``Certificate`` entity above, i.e.:
             path: keystore.jks
           secretName: my-target-secret-for-this-certificate
 
-Once this is done, you will have to bounce each of the CrateDB pods for the change
-to be picked up. Once the pods are back up, they will present the configured
-certificate on both the HTTP and PGSQL ports.
+Once this is done, you will have to bounce each of the CrateDB pods for the 
+change to be picked up. Once the pods are back up, they will present the 
+configured certificate on both the HTTP and PGSQL ports.
 
-.. note::
+.. NOTE::
 
     Note that you need to access CrateDB via a valid DNS name for this to work,
     so make sure that ``my-cluster-1.my.fully.qualified.domain.example.com``
-    correctly points to your CrateDB instance (i.e. via an external network load
-    balancer).
+    correctly points to your CrateDB instance (i.e. via an external network 
+    load balancer).
+
 
 .. _Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
 .. _announce CrateDB Edge: https://crate.io/a/announcing-cratedb-edge/
