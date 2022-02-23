@@ -6,11 +6,10 @@ Free trials and promotions
 
 Crate.io regularly offers promotions, consisting of either free or discounted
 offers on CrateDB Cloud database-as-a-service products. Promotions can involve
-discounts of up to 100% on three dimensions of the product: on specific
-`subscription plans`_, on tiers of the subscription plans (essentially
-multipliers for the specified hardware per node), and/or on `scale units`_ (the
-number of nodes selected). Promotions may last indefinitely or for limited
-periods of time.
+discounts of up to 100% on any dimensions of the product: for example, there
+can be promotions on specific `subscription plans`_ or on `scale units`_ (the
+number of nodes in a cluster) within a plan. Promotions may last indefinitely
+or for limited periods of time.
 
 In this guide, we explain step by step how to make use of such promotions, as
 well as when payment information will be required. While we hope the process is
@@ -21,7 +20,7 @@ the default :ref:`cluster deployment tutorial <cluster-deployment>` and
 choosing the Development plan, which is designed for just this purpose.
 
 .. NOTE::
-    Free and discounted promos are currently not supported for subscription
+    Free and discount promos are currently not supported for subscription
     plans offered through the SaaS marketplaces (`AWS`_ and
     `Azure Marketplace`_).
 
@@ -113,40 +112,35 @@ First, select a `region`_. Your cluster will be deployed in this region.
    :alt: Region selection
 
 .. NOTE::
-    Currently, your choice of region does not affect the price of the cluster.
-    This may change in future versions of CrateDB Cloud.
+    Your choice of region may affect the price of the cluster. Refer to the
+    price total indicated at the bottom right of the screen.
 
 
 Configuration
 '''''''''''''
 
 Next, go through the cluster configuration process. On the left-hand side, you
-can choose a subscription plan. As you select each subscription plan, you will
-see that the values for CPU, RAM, and storage per node change accordingly in
-the middle panel that shows the node specification.
-
-For most subscription plans, the node specification also allows a further
-choice of tier: Basic, Pro, or Premium. Each higher tier doubles the values per
-node of the previous tier.
+can choose a subscription plan. You can also select the storage capacity you
+want the cluster to have by means of the dropdown menu in the middle panel.
+As you select each subscription plan and configure your storage capacity, you
+will see that the values for CPU, RAM, and storage per node change accordingly.
 
 Finally, on the right the cluster scale overview shows the total values for the
-cluster. This is simply the number of nodes multiplied by the values of the
-subscription plan and tier. The cluster scale panel also allows you to increase
-the number of nodes you want in your cluster.
+cluster. The cluster scale panel also allows you to increase the number of
+nodes you want in your cluster.
 
 .. image:: _assets/img/free-trial-config.png
    :alt: Cluster configuration panels
 
 To sum up: the configuration of the cluster depends on the hardware values per
 node and the number of nodes in the cluster. The hardware values per node are
-determined by the choice of subscription plan and the choice of tier within the
-subscription plan. The number of nodes in the cluster is set in the cluster
-scale panel.
+determined by the choice of subscription plan and the storage capacity is
+determined by your choice of storage. The number of nodes depends on the scale
+unit chosen with the slider.
 
-Each of these choices will affect the price of the cluster, and it is possible
-for a subscription plan, a tier, or a number of nodes to be subject to a free
-or discounting promotion. You can always find the total price per hour and per
-month in the blue bar at the bottom of the screen.
+Each of these choices will affect the price of the cluster. You can always find
+the total price per hour and per month in the blue bar at the bottom of the
+screen.
 
 .. image:: _assets/img/free-trial-price.png
    :alt: Total price information bar
@@ -201,7 +195,7 @@ progress and showing you once again your database username and password. Since
 this is the last time you will be shown the cluster access credentials, you
 may want to copy them into a safe location (e.g. a password manager). Beyond
 the popup, you will see the Cluster Overview screen in the CrateDB Cloud
-Console. The section *Status* on the left-hand side will show you that the
+Console. The section 'Status' on the left-hand side will show you that the
 cluster is being set up. Once it is done, this will show *Available* and you
 will be able to see cluster metrics.
 
@@ -209,9 +203,9 @@ will be able to see cluster metrics.
 Free promotional cluster
 ------------------------
 
-Just as clusters may be discounted based on subscription plan, tier, or number
-of nodes, so clusters may be offered free based on any of these dimensions. As
-with discounts, the free offer may last indefinitely or for a limited amount
+Just as clusters may be discounted based on different aspects of the product,
+so clusters may be offered free based on any of these dimensions. As with
+discounts, the free offer may last indefinitely or for a limited amount
 of time.
 
 In the case of a free cluster, the process is essentially the same as described
