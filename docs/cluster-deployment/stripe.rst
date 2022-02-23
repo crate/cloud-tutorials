@@ -43,53 +43,61 @@ First, select a `region`_. Your cluster will be deployed in this region.
    :alt: Region selection
 
 .. NOTE::
-    Currently, your choice of region does not affect the price of the cluster.
-    This may change in future versions of CrateDB Cloud.
+    Your choice of region may affect the price of the cluster. Refer to the
+    price total indicated at the bottom right of the screen.
 
 
 Configure cluster
 -----------------
 
 Next, go through the cluster configuration process. On the left-hand side, you
-can choose a subscription plan. As you select each subscription plan, you will
-see that the values for CPU, RAM, and storage per node change accordingly in
-the middle panel that shows the node specification.
-
-For most subscription plans, the node specification also allows a further
-choice of tier: Basic, Pro, or Premium. Each higher tier doubles the values per
-node of the previous tier.
-
-Finally, on the right the cluster scale overview shows the total values for the
-cluster. This is simply the number of nodes multiplied by the values of the
-subscription plan and tier. The cluster scale panel also allows you to increase
-the number of nodes you want in your cluster.
+can choose a `subscription plan`_. As you select each subscription plan, you
+will see that the values for CPU, RAM, and (minimum) storage per node change
+accordingly in the middle panel that shows the node specification.
 
 .. image:: ../_assets/img/stripe-config.png
-   :alt: Cluster configuration panels
+   :alt: Cluster configuration
+
+Each subscription plan comes with a preconfigured compute value per node. The
+compute capacity of your cluster can be scaled horizontally by adding nodes. To
+do this, use the slider under the 'Cluster scale' panel. This overview shows
+the current CPU and RAM values of your cluster, which is simply the compute
+values of the plan you have chosen multiplied by the number of nodes.
+
+CrateDB Cloud separates storage configuration from compute configuration. You
+can separately configure the desired storage for your cluster by using the
+dropdown menu under 'Storage' in the 'Node specification' panel. The range of
+eligible storage sizes varies by subscription plan. The storage you have chosen
+for your cluster is also reflected in the cluster overview in the right-hand
+panel.
+
+.. NOTE::
+    The storage capacity of a cluster cannot currently be changed in the
+    CrateDB Cloud Console once it has been deployed.
 
 To sum up: the configuration of the cluster depends on the hardware values per
-node and the number of nodes in the cluster. The hardware values per node are
-determined by the choice of subscription plan and the choice of tier within the
-subscription plan. The number of nodes in the cluster is set in the cluster
-scale panel.
+node, the storage selected, and the number of nodes in the cluster. The
+hardware values per node are determined by the choice of subscription plan. The
+storage capacity is set in the dropdown menu. The number of nodes in the
+cluster can be configured by using the slider on the right.
 
-Each of these choices will affect the price of the cluster, and it is possible
-for a subscription plan, a tier, or a number of nodes to be subject to a free
-or discounting promotion. You can always find the total price per hour and per
-month in the blue bar at the bottom of the screen.
+Each of these choices will affect the price of the cluster. It is also possible
+that a subscription plan or a number of nodes is eligible for a promotion,
+making it either discounted or free. You can always find the total price per
+hour and per month in the blue bar at the bottom of the screen.
 
 .. image:: ../_assets/img/stripe-price.png
    :alt: Total price information bar
    :scale: 50%
 
-.. HINT::
+.. TIP::
     To identify a promotional offer where a discount is available, look for the
     % icon under the cluster scale panel. For more information about
     promotions, see :ref:`our documentation on promoted clusters <promo>`.
 
-.. image:: ../_assets/img/stripe-icon.png
-   :alt: Promotional icon
-   :scale: 50%
+    .. image:: ../_assets/img/stripe-icon.png
+       :alt: Promotional icon
+       :scale: 50%
 
 
 Set up your account
@@ -165,3 +173,4 @@ Thank you for choosing CrateDB Cloud!
 .. _region: https://crate.io/docs/cloud/reference/en/latest/glossary.html#region
 .. _scaling guide: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
 .. _Stripe: https://stripe.com
+.. _subscription plan: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
