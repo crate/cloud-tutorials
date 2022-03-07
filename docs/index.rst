@@ -4,15 +4,15 @@
 CrateDB Cloud Tutorials
 =======================
 
-`CrateDB Cloud`_ is a fully-managed version of `CrateDB`_, offered as a service
-that is based in the cloud and is run by the experts at `Crate.io`_. CrateDB
-Cloud supports data storage, real-time analytics, and visualization at scale,
-specialized for the *Industrial Internet of Things* (IIoT).
+`CrateDB Cloud`_ is the fully-managed cloud database as a service by
+`CrateDB`_. With CrateDB Cloud you can deploy, monitor, back up, and scale your
+clusters in the cloud – without needing to worry about database management.
 
-* The first tutorial will help you create and set up a user account.
+CrateDB is a distributed, open-source database that combines the performance of
+NoSQL with the power and simplicity of standard SQL.
 
-* The next is a step-by-step tutorial that shows you how get started, from
-  signing up through spinning up your first cluster on CrateDB Cloud.
+Learn how to get started and make the most of your CrateDB cloud subscription
+in the tutorials below.
 
 .. NOTE::
 
@@ -38,7 +38,7 @@ specialized for the *Industrial Internet of Things* (IIoT).
     promo
     edge
 
-.. _Crate.io: https://crate.io/
+
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
 .. _CrateDB: https://crate.io/products/cratedb/
 .. _Croud CLI: https://crate.io/docs/cloud/cli/en/latest/
