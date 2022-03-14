@@ -96,25 +96,20 @@ Sign in
 =======
 
 Once you're signed in, you should be redirected to the CrateDB Cloud Console.
-If you somehow do not have an organization defined yet in the signup process,
-it will look like this:
+Since you somehow do not have an organization defined yet in the signup
+process, it will look like this:
 
-.. image:: _assets/img/cloud-first-login.png
-   :alt: Cloud Console without subscription
+.. image:: _assets/img/cloud-signup-landing.png
+   :alt: CrateDB Cloud Console landing page
 
-Otherwise, you will probably see this:
+There's nothing much here yet. We suggest you turn to our `cluster direct
+deployment tutorial`_ for next steps. By the end of that tutorial, you will
+have created your first CrateDB Cloud cluster and this CrateDB Cloud Console
+landing page will display an overview of your organization and its assets and
+attributes.
 
-.. image:: _assets/img/cloud-first-login-org.png
-   :alt: Cloud Console without subscription but with organization
-
-In either case, there's nothing much here yet.
-
-However, by the end of one of our cluster deployment tutorials, you will have
-created your first CrateDB Cloud cluster and this page will display an
-overview of your subscriptions and options for deploying further services.
-
-For more information on the CrateDB Cloud Console, refer to `our Console
-documentation`_.
+For more information on how the CrateDB Cloud Console works, refer to `our
+Console documentation`_.
 
 
 .. _sign-up-next:
@@ -127,5 +122,6 @@ Now that you have an account, you can choose a cloud provider. Follow the
 your first cluster.
 
 
-.. _our Console documentation: https://crate.io/docs/cloud/reference/en/latest/overview.html
+.. _cluster direct deployment tutorial: https://crate.io/docs/cloud/tutorials/en/latest/cluster-deployment/stripe.html
 .. _CrateDB Cloud Console: https://console.cratedb.cloud/
+.. _our Console documentation: https://crate.io/docs/cloud/reference/en/latest/overview.html
