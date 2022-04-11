@@ -22,6 +22,12 @@ our own web UI. Even so, there are some steps involved, and some requirements
 have to be met in order for it to work. This tutorial therefore serves as an
 end-to-end walkthrough of the process and prerequisites.
 
+In this tutorial, we first introduce the signup and configuration process for
+a local Kubernetes installation. Next, we explain the process end-to-end for
+using AKS and EKS services. Finally, we outline the installation method for
+some lightweight Kubernetes distributions, like K3s and Microk8s.
+
+
 .. rubric:: Table of contents
 
 .. contents::
@@ -343,27 +349,119 @@ into the form.
    :scale: 50%
 
 
-.. _edge-tools:
+.. _edge-providers:
 
-Provider-specific installation instructions
-===========================================
+Managed Kubernetes installation instructions
+============================================
 
-In this section, we provide more specific installation instructions for some managed
-Kubernetes providers, such as `Digital Ocean`_, and self-hosted options,
-such as `MicroK8s`_ and `K3s`_.
+In this section, we provide more specific installation instructions for some
+managed Kubernetes providers, such as `Azure AKS`_, `Amazon EKS`_, and `Digital
+Ocean`_.
 
 .. NOTE::
     These guides are provided as example scenarios only. Other managed
     Kubernetes providers or preconfigured Kubernetes distributions may also
     work with CrateDB Edge.
 
-These are third-party tools and Crate.io is not responsible for them. That
-said, we have tested the instructions provided below for functionality. Users
-less familiar with customizing their Kubernetes stack on their own may find
-either of these approaches a practical solution for easier CrateDB Edge setup.
+These are third-party tools and Crate.io is not responsible for those tools.
+That said, we have tested the instructions provided below for functionality.
+Users less familiar with customizing their Kubernetes stack on their own may
+find any of these approaches a practical solution for easier CrateDB Edge
+setup.
 
 
-.. _edge-tools-digitalocean:
+.. _edge-providers-aks:
+
+Azure AKS
+---------
+
+Below is a step-by-step guide to using Azure AKS as a managed Kubernetes
+provider in combination with CrateDB Edge. The steps are merely examples of a
+process validated by us; other methods may work also. We provide this
+information for ease of use and to illustrate how to work with CrateDB Edge.
+
+
+Sign up
+'''''''
+
+First you must `sign up with Azure AKS`_. On the AKS page, click the *Start
+Free* button or use the pay-as-you-go option. If you have an Azure account
+already, you can use this account to sign up with. Once signed up, continue to
+the Azure portal.
+
+
+Create kubernetes cluster
+'''''''''''''''''''''''''
+
+In the Azure portal, find the "Kubernetes services" option. (You can use the
+search bar at the top to do so.) You will see an overview of any Kubernetes
+services you may already have running. Click on *Create*, then *Create
+Kubernetes cluster*.
+
+In the configuration menu, choose the desired subscription and resource group
+or create a new one. Name your cluster as you wish and select the desired
+region. We recommend using the default Kubernetes version. Finally, pick the
+server availability you want, which affects your AKS pricing.
+
+For the node size, it is important to conform to the :ref:`minimum requirements
+set out above <edge-prereqs>`. For this reason, we strongly recommend choosing
+a VM size that is at least 4 CPUs and 8GiB of RAM, for example the "D4s_v3"
+combination. Additionally, we recommend using at least 3 nodes for a
+production-grade high-availability setup. Other settings may be left on default
+or adjusted as desired depending on your production requirements. (The default
+settings should be fully functional for CrateDB Edge.) Then proceed with
+creating the cluster. This process may take some time.
+
+If you have `kubectl`_ installed, you can check on the node status once it is
+finished by running in the `Azure CLI`_ the command
+
+.. code-block:: console
+
+    az aks get-credentials --resource-group <resource group name> --name <cluster name>
+
+followed by
+
+.. code-block:: console
+
+    kubectl get nodes
+
+which will show you all nodes. When all nodes are set to 'Ready', the cluster
+is functioning properly. (Make sure you are in the right subscription before
+running the commands, or this process will not work.)
+
+After cluster deployment, you can click on *Go to resource* in the Azure Portal
+to check that all configurations are as intended.
+
+
+Set up Edge region
+''''''''''''''''''
+
+Sign up with, or log into, the `CrateDB Cloud Console`_. Go to the Regions tab
+in the Subscription overview and create a custom Edge region by clicking on
+*Create Edge region*. When the region has appeared in the regions list, it
+will show a script that you can copy into your CLI. Do so and confirm
+installation of CrateDB Edge on the correct cluster. The script will prompt you
+for installation of the prerequisite tools as needed. To configure the
+necessary storage classes, follow the instructions given in the script and then
+rerun the script command.
+
+The script, once run, will validate the installation of the CrateDB Edge stack.
+You can also check that everything is operational by going to your Kubernetes
+service in the Azure portal and checking the tab Workloads, under Kubernetes
+Resources.
+
+
+Deploy Edge cluster
+'''''''''''''''''''
+
+Finally, return to the CrateDB Cloud Console and click on *Deploy cluster* in
+the custom region you have created. Follow the :ref:`steps described above
+<edge-config>` to configure your CrateDB Cloud cluster. At the end of the
+process, you should have a working CrateDB Edge install on Azure AKS managed
+Kubernetes.
+
+
+.. _edge-providers-digitalocean:
 
 Digital Ocean
 -------------
@@ -374,8 +472,8 @@ process validated by us; other methods may work also. We provide this
 information for ease of use and to illustrate how to work with CrateDB Edge.
 
 
-Signup
-''''''
+Sign up
+'''''''
 
 First you must sign up with `Digital Ocean`_. On the Kubernetes page, click
 *Sign up* and make an account. Verify your email address to proceed. (Digital
@@ -443,6 +541,19 @@ Finally, return to the CrateDB Cloud Console and click on *Deploy cluster* in
 the custom region when it is available. Follow the :ref:`steps described above
 <edge-config>` to proceed. At the end of the process, you should have a working
 CrateDB Edge install on Digital Ocean managed Kubernetes.
+
+
+.. _edge-self-hosted:
+
+Self-hosted options
+===================
+
+In this section, we outline installation instructions for some third-party
+supported self-hosted options, such as `MicroK8s`_ and `K3s`_. These are
+third-party tools and Crate.io is not responsible for those tools. That said,
+we have tested the instructions provided below for functionality. Users less
+familiar with customizing their Kubernetes stack on their own may find
+any of these approaches a practical solution for easier CrateDB Edge setup.
 
 
 .. _edge-tools-microk8s:
@@ -801,9 +912,13 @@ configured certificate on both the HTTP and PGSQL ports.
 
 
 .. _Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
+.. _Amazon EKS: https://aws.amazon.com/eks/
+.. _Azure AKS: https://azure.microsoft.com/en-us/services/kubernetes-service/
+.. _Azure CLI: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
 .. _announce CrateDB Edge: https://crate.io/a/announcing-cratedb-edge/
 .. _our contact page: https://crate.io/contact/
 .. _CrateDB Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
+.. _CrateDB Cloud Console: https://console.cratedb.cloud
 .. _Digital Ocean: https://www.digitalocean.com/products/kubernetes/
 .. _Helm: https://helm.sh/docs/intro/quickstart/
 .. _ingress-nginx: https://github.com/kubernetes/ingress-nginx
@@ -817,6 +932,7 @@ configured certificate on both the HTTP and PGSQL ports.
 .. _MetalLB: https://metallb.universe.tf/
 .. _MicroK8s: https://microk8s.io/
 .. _MicroK8s docs: https://microk8s.io/docs
+.. _sign up with Azure AKS: https://azure.microsoft.com/en-us/free/services/kubernetes-service/
 .. _snap: https://snapcraft.io/
 .. _Stripe: https://stripe.com
 .. _subscription plan: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
