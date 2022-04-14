@@ -86,7 +86,8 @@ steps will be explained below.
 Some Kubernetes knowledge, especially regarding networking and storage, is
 recommended when using CrateDB Edge, especially when using it as-is. If you're
 uncertain, you may benefit from using CrateDB Edge in combination with
-:ref:`tools <edge-tools>` as described at the end of this tutorial.
+:ref:`cloud providers or third-party tools <edge-providers>` as described
+further down in this tutorial.
 
 .. NOTE::
     A special note about bare metal Kubernetes clusters: CrateDB Edge should
@@ -461,6 +462,122 @@ process, you should have a working CrateDB Edge install on Azure AKS managed
 Kubernetes.
 
 
+.. _edge-providers-eks:
+
+
+Amazon EKS
+----------
+
+Below is a step-by-step guide to using Amazon EKS as a managed Kubernetes
+provider in combination with CrateDB Edge. The steps are merely examples of a
+process validated by us; other methods may work also. We provide this
+information for ease of use and to illustrate how to work with CrateDB Edge.
+
+.. NOTE::
+    Amazon EKS cluster configuration has some complexity relating to the
+    structure of AWS security management. The steps below try to provide a
+    step-by-step guide, but may become outdated as AWS changes its interfaces
+    or functionality. Since Crate.io is not responsible for EKS, we cannot
+    guarantee this documentation remains fully in line with the latest AWS user
+    flow. You can find current details on the `EKS cluster creation docs`_.
+
+
+Sign up
+'''''''
+
+First you must `create an AWS account`_ and log in with it. If you have an AWS
+account already, proceed directly to the `AWS Management Console`_. Find the
+Elastic Kubernetes Service (you can search with the search bar at the top).
+
+
+Create Kubernetes cluster
+'''''''''''''''''''''''''
+
+At the EKS portal, click the *Add cluster* button and hit *Create* to create a
+new cluster. Having done that, you will arrive at the Kubernetes cluster
+configuration. Give it a name and use the latest version of Kubernetes, as
+long as it is < 1.22. Set the service role according to your requirements.
+(Note: you can set the region at the top right, next to the user settings.)
+
+Networking settings can be left to default or adjusted as desired. The same
+applies to logging. Finish with *Create*. The EKS cluster will now be created.
+
+
+Configuration
+'''''''''''''
+
+Once the cluster is set to *active* in the EKS cluster configuration panel, it
+will be ready to be configured (you may still see a banner at the top stating
+it is being created).
+
+Make sure to add the necessary IAM role policies if you created a cluster with
+Kubernetes 1.20 or earlier, or a cluster of 1.21 or later that uses the IPv4
+family (this corresponds to the default settings.) Under Configuration, go to
+*Cluster IAM Role ARN* and click the link below it. This will lead to the IAM
+Management Console. In this console, click *Add permissions*, then *Add
+policies*. Search for "Amazon_EKS_CNI_Policy". Tick the box and then click
+*Attach policies*.
+
+Under cluster Configuration, now go to *Add node group*. Configure the node
+group by adding a name, assigning it a suitable `node IAM role`_ (you can
+create one in the IAM Management Console if necessary). Click *Next*. In the
+compute and scaling configuration, assure that the :ref:`minimum requirements
+set out above <edge-prereqs>` are met. We recommend choosing at least 4 CPUs
+and at least 8GiB of RAM, for example the "t3.xlarge" instance type. Your disk
+size should be adequate to your needs - we recommend at least 8 GiB per node.
+For production-grade clusters, always assure a minimum of 3 nodes. For the
+network configuration, adjust to your preferences or leave it to the default
+settings. Hit *Create* to create the node group.
+
+In the `AWS CLI`_, enter the following command (make sure you are logged in
+properly):
+
+.. code-block:: console
+
+    aws eks update-kubeconfig --region <region code> --name <cluster name>
+
+You can check everything is working correctly with `kubectl`_:
+
+.. code-block:: console
+
+    kubectl get nodes
+
+
+Set up Edge region
+''''''''''''''''''
+
+Sign up with, or log into, the `CrateDB Cloud Console`_. Go to the Regions tab
+in the Subscription overview and create a custom Edge region by clicking on
+*Create Edge region*. When the region has appeared in the regions list, it
+will show a script that you can copy into your CLI. Do so and confirm
+installation of CrateDB Edge on the correct cluster. The script will prompt you
+for installation of the prerequisite tools as needed. To configure the
+necessary storage classes, follow the instructions given in the script and then
+rerun the script command.
+
+Note that for EKS the default storage class is not called ``default`` but will
+have a different name, e.g. ``gp2`` or ``gp3``. You have to adjust the script
+accordingly. For more info, refer to the `documentation on AWS storage
+classes`_. You can find the relevant storage class name with kubectl:
+
+.. code-block:: console
+
+    kubectl get sc
+
+The script, once run, will validate the installation of the CrateDB Edge stack.
+You can check everything is running correctly in the EKS cluster interface.
+
+
+Deploy Edge cluster
+'''''''''''''''''''
+
+Finally, return to the CrateDB Cloud Console and click on *Deploy cluster* in
+the custom region you have created. Follow the :ref:`steps described above
+<edge-config>` to configure your CrateDB Cloud cluster. At the end of the
+process, you should have a working CrateDB Edge install on AWS EKS managed
+Kubernetes.
+
+
 .. _edge-providers-digitalocean:
 
 Digital Ocean
@@ -484,7 +601,7 @@ Create Kubernetes cluster
 '''''''''''''''''''''''''
 
 Create a Kubernetes cluster using the Digital Ocean cloud interface, under
-"Manage", then "Kubernetes". When configuring the cluster, make sure to choose
+*Manage*, then *Kubernetes*. When configuring the cluster, make sure to choose
 an option with sufficient hardware capacity. For example, when choosing the
 Basic machine type, use the Max plan for that type to ensure sufficient power.
 Then proceed to deploy the cluster.
@@ -913,13 +1030,18 @@ configured certificate on both the HTTP and PGSQL ports.
 
 .. _Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
 .. _Amazon EKS: https://aws.amazon.com/eks/
+.. _AWS CLI: https://aws.amazon.com/cli/
+.. _AWS Management Console: https://aws.amazon.com/console/
 .. _Azure AKS: https://azure.microsoft.com/en-us/services/kubernetes-service/
 .. _Azure CLI: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
 .. _announce CrateDB Edge: https://crate.io/a/announcing-cratedb-edge/
 .. _our contact page: https://crate.io/contact/
+.. _create an AWS account: https://portal.aws.amazon.com/billing/signup
 .. _CrateDB Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
 .. _CrateDB Cloud Console: https://console.cratedb.cloud
 .. _Digital Ocean: https://www.digitalocean.com/products/kubernetes/
+.. _documentation on AWS storage classes: https://kubernetes.io/docs/concepts/storage/storage-classes/#aws-ebs
+.. _EKS cluster creation docs: https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html
 .. _Helm: https://helm.sh/docs/intro/quickstart/
 .. _ingress-nginx: https://github.com/kubernetes/ingress-nginx
 .. _installation instructions: https://kubernetes.github.io/ingress-nginx/deploy/
@@ -932,6 +1054,7 @@ configured certificate on both the HTTP and PGSQL ports.
 .. _MetalLB: https://metallb.universe.tf/
 .. _MicroK8s: https://microk8s.io/
 .. _MicroK8s docs: https://microk8s.io/docs
+.. _node IAM role: https://docs.aws.amazon.com/eks/latest/userguide/create-node-role.html
 .. _sign up with Azure AKS: https://azure.microsoft.com/en-us/free/services/kubernetes-service/
 .. _snap: https://snapcraft.io/
 .. _Stripe: https://stripe.com
