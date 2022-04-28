@@ -50,8 +50,8 @@ have identified previously.
 .. image:: ../../../_assets/img/azure-portal-offer.png
    :alt: Azure Portal CrateDB Cloud offer
 
-Simply select your preferred plan and confirm by clicking *Set up + Subscribe*.
-Note that you can still review the plans and pricing again at this stage before
+Simply select your preferred plan and confirm by clicking *Subscribe*. Note
+that you can still review the plans and pricing again at this stage before
 creating a subscription.
 
 The next page allows you to configure the subscription you have just chosen.

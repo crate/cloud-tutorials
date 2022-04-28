@@ -28,12 +28,16 @@ configured. If you have not yet done so, go to the Azure Portal's *Home >
 .. image:: ../../../_assets/img/azure-config-account.png
    :alt: Azure SaaS configuration screen
 
-You'll now be redirected to the CrateDB Cloud Console.
+You will now be redirected to the CrateDB Cloud Console.
 
-Once in the Console, authenticate with the Azure account you used to create the
-offer in the previous step. (If you are authenticated with a different account,
-a warning message will appear, directing you to log out and to log in with your
-Azure account instead.) Select *Sign in with Azure AD* and continue.
+Once in the Console, if necessary, authenticate with the Microsoft Azure
+account you used to create the offer in the previous step.
+
+.. WARNING::
+
+    It is important that you use the Microsoft login option rather than any
+    other, otherwise you will not be able to deploy a cluster with the correct
+    subscription plan.
 
 Now complete the three-step wizard to deploy the cluster.
 
