@@ -11,33 +11,28 @@ As a CrateDB Cloud user, you can create and manage organizations and projects.
 As an organization administrator, you can also manage other CrateDB Cloud users
 as well as launch CrateDB Cloud clusters and other CrateDB Cloud products.
 
-We currently support two signup methods: AzureAD and Amazon Cognito.
-Consequently, the signup screen should look as follows:
+We currently support four signup methods: using an account at Google, Github,
+or Microsoft, and making a separate username and password supported by Amazon
+Cognito.
+
+Consequently, the signup screen will look as follows:
 
 .. image:: _assets/img/cloud-signup.png
    :alt: CrateDB Cloud signup screen
 
 If you intend to subscribe and deploy a cluster using a credit card - our
-recommended procedure - either of these signup methods will work. To the
-Software as a Service (SaaS) marketplaces, however, restrictions apply. Only
-AzureAD allows you to deploy clusters on CrateDB Cloud through Microsoft Azure
-Marketplace. Similarly, for cluster deployment through our other cloud
-provider, AWS, you should use the Amazon Cognito signup service. The Cognito
-authentication service is indicated in the UI as *Username & Password*. Both
-signup processes are described below.
+recommended procedure - any of these signup methods will work. When coming from
+the Software as a Service (SaaS) marketplaces, however, restrictions apply.
+Only the *Microsoft* option allows you to deploy clusters on CrateDB Cloud
+when coming from the Microsoft Azure Marketplace. Similarly, for cluster
+deployment through our other cloud provider, AWS, you should use the Amazon
+Cognito signup service. The Cognito authentication service is indicated in the
+UI as *Username & Password*. Both signup processes are described below.
 
-.. NOTE::
-    Due to these restrictions, it is possible that you will only see one of
-    these signup options in the signup UI at a given moment.
-
-Although you can also sign up for a CrateDB Cloud user account after completing
-the first set of steps in the cluster deployment tutorials, for clarity we
-recommend you do the CrateDB Cloud signup first, then follow the steps in the
-deployment tutorials.
-
-To go directly to the latter tutorials, see the :ref:`tutorial on deploying a
-cluster using a credit card <cluster-deployment-stripe>` or the :ref:`tutorials
-on deploying a cluster via the SaaS Marketplaces
+To go directly to the cluster deployment tutorials, see the
+:ref:`tutorial on deploying a cluster using a credit card
+<cluster-deployment-stripe>` or the
+:ref:`tutorials on deploying a cluster via the SaaS Marketplaces
 <cluster-deployment-marketplace>` respectively.
 
 
@@ -46,18 +41,32 @@ on deploying a cluster via the SaaS Marketplaces
 .. contents::
    :local:
 
+.. _sign-up-github:
+
+Sign up via Github
+==================
+
+Visit the `CrateDB Cloud Console`_. You will be presented with a Github
+*Github* sign up option. You must have a Github account to proceed.
+
+
+.. _sign-up-google:
+
+Sign up via Google
+==================
+
+Visit the `CrateDB Cloud Console`_. You will be presented with a Google
+*Google* sign up option. You must have a Google account to proceed.
+
+
 .. _sign-up-azure:
 
-Sign up via Azure AD
-====================
+Sign up via Microsoft
+=====================
 
-Visit the `CrateDB Cloud Console`_. You should be presented with a Microsoft
-Azure *Active Directory* (AD) sign in option:
-
-.. image:: _assets/img/cloud-signup.png
-   :alt: Azure sign-in screen
-
-You must have an Azure account to proceed.
+Visit the `CrateDB Cloud Console`_. You will be presented with a Microsoft
+Azure *Microsoft* sign up option. You must have a Microsoft Azure account to
+proceed.
 
 
 .. _sign-up-username-password:
