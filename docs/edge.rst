@@ -65,17 +65,30 @@ Kubernetes cluster, one that meets the following requirements:
 * It must contain at least three nodes (for high availability).
   You can also run development workloads on a single-node cluster. Note,
   however, that you will only be able to provision single-node CrateDB
-  "clusters";
+  clusters;
 
-* Sufficient CPU per node to run the CrateDB Cloud software stack and the OS
-  (we recommend at least 4 CPU cores for reliable performance);
+* Sufficient CPU per node to run the CrateDB Cloud software stack as well as
+  sufficient compute to run the CrateDB instances desired. We recommend the use
+  of a K8s autoscaler. For reference, the CrateDB Edge stack - without Grafana
+  or Loki - requires about 2 CPUs and 2500 Mi of memory. We recommend at least
+  4 CPUs per node for reliable performance.
 
-* A Kubernetes version > 1.15 and < 1.22 (support for Kubernetes versions 1.22+
-  is coming in the near future);
+* A Kubernetes version 1.20, 1.21, or 1.22;
 
-* A Kubernetes load balancer for accessing CrateDB Clusters;
+* A storage class for persisting your data (SSD recommended). As outlined in
+  the installation script, CrateDB Edge expects the storage classes
+  ``crate-premium`` (SSD) and ``crate-standard`` (SSD or Spindle). Also ensure
+  that you are able to set the field ``allowVolumeExpansion`` to ``true``.
 
-* A storage class for persistent data.
+* Unless you are experienced with operating Kubernetes clusters, we recommend
+  to start with a dedicated Kubernetes cluster for CrateDB Edge. If you use an
+  existing Kubernetes setup, be aware that the following components will be
+  set up during installation of CrateDB Edge, which may interfere with your
+  existing configuration:
+
+  * cert-manager (version 1.6.1)
+  * ingress-nginx (version 1.2.3)
+  * Optionally, Grafana, Loki, or Promtail (via Helm).
 
 Beyond this, using the CrateDB Cloud stack requires creating a CrateDB Cloud
 account and an organization, which will become the owner of the Edge region in
