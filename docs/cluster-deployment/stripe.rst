@@ -75,6 +75,16 @@ panel.
     The storage capacity of a cluster cannot currently be changed in the
     CrateDB Cloud Console once it has been deployed.
 
+Shared-resources clusters (CR0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Shared-resource clusters are a special category of clusters that allow
+better utilisation of resources. Because of this they offer more cost-effective
+solution for smaller teams and experimental deployments of low-traffic
+applications. They are limited to 2 CPUs, 2 GiB of memory and 4 GiB of storage.
+
+---
+
 To sum up: the configuration of the cluster depends on the hardware values per
 node, the storage selected, and the number of nodes in the cluster. The
 hardware values per node are determined by the choice of subscription plan. The
