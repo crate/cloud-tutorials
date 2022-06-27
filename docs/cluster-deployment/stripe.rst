@@ -79,10 +79,11 @@ Shared-resources clusters (CR0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Shared-resource clusters are a special category of clusters that allow
-better utilisation of resources. These cluster essentially share resources with
-each other. Because of this they offer more cost-effective solution for 
-smaller teams and experimental deployments of low-traffic applications. They
-are limited to one node with 2 CPUs, 2 GiB of memory and 4 GiB of storage.
+better utilisation of resources. These clusters share compute and storage
+resources with other clusters in this category. Because of this they offer more
+cost-effective solution for smaller teams and experimental deployments of
+low-traffic applications. They are limited to one node with 2 CPUs, 2 GiB of
+memory and 4 GiB of storage.
 
 ---
 
