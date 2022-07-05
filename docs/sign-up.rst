@@ -11,7 +11,7 @@ As a CrateDB Cloud user, you can create and manage organizations and projects.
 As an organization administrator, you can also manage other CrateDB Cloud users
 as well as launch CrateDB Cloud clusters and other CrateDB Cloud products.
 
-We currently support four signup methods: using an account at Google, Github,
+We currently support four signup methods: using an account at Github, Google
 or Microsoft, and making a separate username and password supported by Amazon
 Cognito.
 
