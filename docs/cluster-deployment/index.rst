@@ -35,6 +35,7 @@ tutorial to proceed.
 
    stripe
    deploy-to-cluster-marketplace/index
+   croud
 
 
 .. _Stripe: https://stripe.com
