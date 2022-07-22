@@ -8,10 +8,11 @@ Introduction
     You must have `wget`_ and `jq`_ installed for the script to function.
     CrateDB Edge is currently in Pre-Release. CrateDB Edge and related services
     are provided on an "as is" basis and may change at any time. Crate.io
-    provides no guarantees or warrant regarding the usability or performance of
-    CrateDB Edge. The CrateDB Cloud Service Level Agreement (SLA) is expressly
-    disclaimed for the use of CrateDB Edge and related services until further
-    notice. By using CrateDB Edge, you agree to these terms and conditions.
+    provides no guarantees or warranty regarding the usability or performance
+    of CrateDB Edge. The CrateDB Cloud Service Level Agreement (SLA) is
+    expressly disclaimed for the use of CrateDB Edge and related services until
+    further notice. By using CrateDB Edge, you agree to these terms and
+    conditions.
 
     Should you find any errors, bugs, or functionality problems while using the
     CrateDB Edge Pre-Release, please let us know via `our contact page`_ or our
@@ -104,14 +105,8 @@ you will be prompted to create an organization.
 
 Fill out the name of the organization and click the *Create organization*
 button. After a short moment, the organization will be created and you can
-proceed.
-
-You will be taken to the Subscriptions tab of the Organization overview page.
-You will be prompted to create a new subscription. However, for the purposes of
-CrateDB Edge deployment, you want to deploy directly into a given region,
-either one hosted by a cloud provider or a custom region of your own. (Both
-routes will be explained here.) To do so, go to the Regions tab in the same
-overview.
+proceed. After you create your first organization, you will be taken to the
+Dashboard tab of said organization.
 
 
 .. _edge-create-custom:
@@ -241,15 +236,18 @@ password that you can use to access the cluster `Admin UI`_ later on.
 
 Note that the cluster name has certain validation requirements: it may contain
 only numbers, letters, and the dash symbol -. It must begin with a letter and
-end with a letter or a number, and must be at least three characters long.
+end with a letter or a number, and must be at least three characters long. This
+is because the cluster name is used to generate your access URL for the Admin
+UI, thus it needs to be "URL safe".
 
-You can also here define the backup location of your CrateDB Edge cluster. You
+You can also define the backup location of your CrateDB Edge cluster. You
 have the option of either using the default backup location for CrateDB Cloud,
 which is managed by us, or use a custom backup location that is convenient to
 you. This has to be an S3 bucket or a location with an equivalent
 functionality. In the latter case, you can set the access key and secret here
-as well. You can test the connection as well; keep in mind that you cannot
-proceed with a custom backup location unless the connection to it is
+as well. Clicking the the Test Connection button will check whether a
+connection to your backup location can be established. Keep in mind that you
+cannot proceed with a custom backup location unless the connection is
 functional.
 
 Click *Next* at the bottom right to proceed.
@@ -267,7 +265,7 @@ forget to accept financial authorization by ticking the box at the bottom.
 .. image:: ../_assets/img/stripe-billing.png
    :alt: Billing information screen
 
-The payment and billing information you have submitted will be saved in the
+You can view the payment and billing information you have submitted in the
 Billing tab of the Organization overview screen in the CrateDB Cloud Console
 (i.e., the fifth tab from the left on the same screen you arrived at).
 
@@ -301,7 +299,7 @@ You can use the Cluster overview page to access your cluster via the Admin UI
 Use a cloud provider region
 ---------------------------
 
-Besides creating your own custom region, it is also possible to use CrateDB
+Aside from creating your own custom region, it is also possible to use CrateDB
 Edge in combination with an existing cloud provider. To deploy a cluster in
 this way, follow the initial steps described above until you have :ref:`created
 an organization <edge-create-org>`. Then, go to the Regions tab and instead of
@@ -317,7 +315,7 @@ Delete a custom region
 ----------------------
 
 In order to delete a custom region, click the trashcan icon at the bottom right
-of the custom region panel. A confirmation screen will appear warning that
+of the custom region panel. A confirmation dialog will appear warning that
 deletion of a custom region disables access to CrateDB Cloud for that region.
 
 Deleting a custom region does not delete the resources inside that region. To
