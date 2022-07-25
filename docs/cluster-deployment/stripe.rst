@@ -12,8 +12,8 @@ through AzureAD setup or through the Amazon Cognito signup process). The
 simplest way to then deploy a cluster quickly is to subscribe to CrateDB Cloud
 using your credit card. Here we will explain how to do so, from the initial
 subscribing to the deployment itself. Our payment processing and billing are
-powered by `Stripe`_. It is also to use your AWS or Azure subscription as a
-payment.
+powered by `Stripe`_. It is also possible to use your AWS or Azure subscription
+as a payment.
 
 .. rubric:: Table of contents
 
@@ -44,7 +44,7 @@ First, select a `region`_. Your cluster will be deployed in this region.
    :alt: Region selection
 
 .. NOTE::
-    Your choice of the region may affect the price of the cluster. Refer to the
+    Your choice of region may affect the price of the cluster. Refer to the
     price total indicated at the bottom right of the screen.
 
 
@@ -69,7 +69,7 @@ CrateDB Cloud separates storage configuration from compute configuration. You
 can separately configure the desired storage for your cluster by using the
 dropdown menu under 'Storage' in the 'Node specification' panel. The range of
 eligible storage sizes varies by subscription plan. The storage you have chosen
-for your cluster is also reflected in the cluster overview on the right-hand
+for your cluster is also reflected in the cluster overview in the right-hand
 panel.
 
 .. NOTE::
@@ -116,7 +116,7 @@ hour and month in the blue bar at the bottom of the screen.
 Set up your account
 -------------------
 
-At the bottom of the deployment screen, you can configure your account settings.
+At the bottom of the deployment screen you can configure your account settings.
 Since you have already created an organization, it does not need to be set
 here. However, you can now define a project that the cluster can be deployed
 in, as well as the cluster name. You also determine the database username and
@@ -158,8 +158,8 @@ the box at the bottom.
 AWS/Azure
 ---------
 
-The other payment option is to use AWS or Azure marketplace subscription.
-Simply choose the one you'd like to use and you will be brought to
+The other payment option is to use an AWS or Azure marketplace subscription.
+Simply choose the one you'd like to use and you will be forwarded to
 the respective marketplace page where you can confirm the subscription.
 
 .. image:: ../_assets/img/payment-method-marketplaces.png
@@ -171,8 +171,7 @@ The payment and billing information you have submitted will be saved in the
 Billing tab of the Organization overview screen in the CrateDB Cloud Console
 (i.e., the fifth tab from the left on the same screen you arrived at).
 
-You can, at any time, check your current accumulated bill at the bottom left of
-the CrateDB Cloud Console screen:
+Your current accumulated bill is shown in the billing meter in the bottom left of the CrateDB Cloud Console screen:
 
 .. image:: ../_assets/img/cloud-billing-meter.png
    :alt: Cloud Console billing meter
