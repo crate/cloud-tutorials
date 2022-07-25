@@ -5,14 +5,15 @@
 Deploy a cluster directly
 =========================
 
-In this tutorial, we will provide a step by step guide to deploying a cluster
+In this tutorial, we will provide a step-by-step guide to deploying a cluster
 from scratch. Our recommended procedure assumes you have completed the
 :ref:`signup process <sign-up>` and have created an organization (either
 through AzureAD setup or through the Amazon Cognito signup process). The
 simplest way to then deploy a cluster quickly is to subscribe to CrateDB Cloud
 using your credit card. Here we will explain how to do so, from the initial
 subscribing to the deployment itself. Our payment processing and billing are
-powered by `Stripe`_.
+powered by `Stripe`_. It is also possible to use your AWS or Azure subscription
+as a payment.
 
 .. rubric:: Table of contents
 
@@ -61,7 +62,7 @@ accordingly in the middle panel that shows the node specification.
 Each subscription plan comes with a preconfigured compute value per node. The
 compute capacity of your cluster can be scaled horizontally by adding nodes. To
 do this, use the slider under the 'Cluster scale' panel. This overview shows
-the current CPU and RAM values of your cluster, which is simply the compute
+the current CPU and RAM values of your cluster, which are simply the compute
 values of the plan you have chosen multiplied by the number of nodes.
 
 CrateDB Cloud separates storage configuration from compute configuration. You
@@ -72,7 +73,7 @@ for your cluster is also reflected in the cluster overview in the right-hand
 panel.
 
 .. NOTE::
-    The storage capacity of a cluster cannot currently be changed in the
+    The storage capacity of a cluster cannot currently be lowered in the
     CrateDB Cloud Console once it has been deployed.
 
 Shared-resources clusters (CR0)
@@ -80,7 +81,7 @@ Shared-resources clusters (CR0)
 
 The Shared-resource clusters are a special category of clusters that allow
 better utilisation of resources. These clusters share compute and storage
-resources with other clusters in this category. Because of this they offer more
+resources with other clusters in this category. Because of this, they offer more
 cost-effective solution for smaller teams and experimental deployments of
 low-traffic applications. They are limited to one node with 2 CPUs, 2 GiB of
 memory and 4 GiB of storage.
@@ -96,7 +97,7 @@ cluster can be configured by using the slider on the right.
 Each of these choices will affect the price of the cluster. It is also possible
 that a subscription plan or a number of nodes is eligible for a promotion,
 making it either discounted or free. You can always find the total price per
-hour and per month in the blue bar at the bottom of the screen.
+hour and month in the blue bar at the bottom of the screen.
 
 .. image:: ../_assets/img/stripe-price.png
    :alt: Total price information bar
@@ -135,20 +136,42 @@ Provide billing information
 ===========================
 
 Finally, you will be taken to a new screen where you can fill out your billing
-information. Our payment processing is supported by `Stripe`_. At the bottom
-right you can find the cards accepted by Crate.io. When you have filled out the
-necessary information, click *Deploy* below it to deploy your cluster. Do not
-forget to accept financial authorization by ticking the box at the bottom.
+information. Our credit card payment processing is supported by `Stripe`_. If
+you have an existing AWS or Azure subscription, you can also pay using that.
+You can choose the payment method right after you configure your cluster and
+click **Next**.
+
+.. image:: ../_assets/img/payment-method.png
+   :alt: Payment method screen
+
+Credit card
+-----------
+
+You can find the cards accepted by Crate.io at the bottom right part of the screen.
+When you have filled out the necessary information, click *Deploy* below it to
+deploy your cluster. Do not forget to accept financial authorization by ticking
+the box at the bottom.
 
 .. image:: ../_assets/img/stripe-billing.png
    :alt: Billing information screen
+
+AWS/Azure
+---------
+
+The other payment option is to use an AWS or Azure marketplace subscription.
+Simply choose the one you'd like to use and you will be forwarded to
+the respective marketplace page where you can confirm the subscription.
+
+.. image:: ../_assets/img/payment-method-marketplaces.png
+   :alt: Billing information screen
+
+---
 
 The payment and billing information you have submitted will be saved in the
 Billing tab of the Organization overview screen in the CrateDB Cloud Console
 (i.e., the fifth tab from the left on the same screen you arrived at).
 
-You can at any time check your current accumulated bill at the bottom left of
-the CrateDB Cloud Console screen:
+Your current accumulated bill is shown in the billing meter in the bottom left of the CrateDB Cloud Console screen:
 
 .. image:: ../_assets/img/cloud-billing-meter.png
    :alt: Cloud Console billing meter
@@ -181,8 +204,6 @@ Thank you for choosing CrateDB Cloud!
 
 
 .. _Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
-.. _reference on subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
 .. _region: https://crate.io/docs/cloud/reference/en/latest/glossary.html#region
-.. _scaling guide: https://crate.io/docs/cloud/howtos/en/latest/scale-cluster.html
 .. _Stripe: https://stripe.com
 .. _subscription plan: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
