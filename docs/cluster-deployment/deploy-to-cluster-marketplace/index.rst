@@ -15,8 +15,8 @@ the CrateDB Cloud Console.
 
 To proceed with either tutorial, choose the cloud provider that suits your
 needs and follow the steps in the relevant section of the tutorial. Then, in
-either case, follow the process outlined for configuring your cluster through
-the CrateDB Cloud Console wizard.
+either case, you will be refered back to the CrateDB Cloud Console to finish
+the deployment of your cluster.
 
 .. rubric:: Table of contents
 

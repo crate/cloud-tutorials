@@ -15,4 +15,3 @@ and finally the deployment of your cluster.
    :maxdepth: 1
 
    signup-azure
-   configure-azure
