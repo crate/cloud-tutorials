@@ -16,4 +16,3 @@ deployment of your cluster.
    :maxdepth: 1
 
    signup-aws
-   configure-aws

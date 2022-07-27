@@ -78,19 +78,6 @@ once more. After confirmation, our Sales team will get in touch with you to
 configure your plan according to your specific needs. If you plan to purchase
 large volumes, please contact `Sales`_ first to negotiate a private offer.
 
-
-.. _signup-aws-to-cluster-next:
-
-Next steps
-==========
-
-Proceeding with the AWS Marketplace subscription will take you to the CrateDB
-Cloud Console. The next steps are to deploy a cluster, select the subscription
-plan, and to finish the CrateDB Cloud Console wizard, all of which is described
-in the :ref:`next part <configure-aws-to-cluster>` of this tutorial. This will
-allow the full functioning of your cluster.
-
-
 .. _CrateDB Cloud Contract landing page: https://aws.amazon.com/marketplace/pp/B08KHK34RK
 .. _Marketplace page: https://portal.aws.amazon.com/billing/signup
 .. _Sales: sales@crate.io

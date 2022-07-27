@@ -85,17 +85,6 @@ cluster will not be active and nothing will be billed.
 In either case, you will be referred to the CrateDB Cloud Console for further
 configuration.
 
-
-.. _signup-azure-to-cluster-next:
-
-Next steps
-==========
-
-The next steps are to configure your cluster in the CrateDB Cloud Console
-wizard and, finally, to deploy your cluster. This will be explained in the
-:ref:`next section of the tutorial <configure-azure-to-cluster>`.
-
-
 .. _Azure documentation on resource groups: https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal
 .. _Azure documentation on tags: https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources
 .. _Azure Marketplace: https://azuremarketplace.microsoft.com/en-us/marketplace/apps/crate.cratedbcloud?tab=Overview
