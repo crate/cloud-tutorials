@@ -36,7 +36,7 @@ in the tutorials below.
     sign-up
     cluster-deployment/index
     promo
-    edge
+    edge/index
 
 
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
