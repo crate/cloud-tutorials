@@ -4,8 +4,8 @@ Managed Kubernetes options
 ==========================
 
 In this section, we provide more specific installation instructions for some
-managed Kubernetes providers, such as `Azure AKS`_, `Amazon EKS`_, and `Digital
-Ocean`_.
+managed Kubernetes providers, such as `Azure AKS`_, `Amazon EKS`_, `Digital
+Ocean`_ and `Google Cloud Platform`_.
 
 .. NOTE::
     These guides are provided as example scenarios only. Other managed
@@ -312,8 +312,8 @@ the custom region when it is available. Follow the :ref:`steps described above
 <edge-config>` to proceed. At the end of the process, you should have a working
 CrateDB Edge install on Digital Ocean managed Kubernetes.
 
-Google Cloud
-------------
+Google Cloud Platform
+---------------------
 
 Below is a full walkthrough of how to get CrateDB Edge up and running on
 Google Cloud. The steps are merely examples of a process validated by us; other
