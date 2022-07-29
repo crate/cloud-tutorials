@@ -60,6 +60,11 @@ Cloud console. From here, you can follow the :ref:`usual deployment procedure
 <cluster-deployment-stripe>` use your new AWS subscription for the billing in
 the CrateDB Cloud console.
 
+.. NOTE::
+
+   When using AWS marketplace, it can take up to 10 minutes for the
+   subscription to be confirmed and usable in CrateDB Cloud console.
+
 
 .. _signup-aws-contract:
 
