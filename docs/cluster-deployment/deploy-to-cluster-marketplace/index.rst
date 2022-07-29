@@ -7,21 +7,15 @@ Deploy a cluster via the Marketplace offers
 Here you can find the tutorials for subscribing to CrateDB Cloud via one of the
 two supported Marketplace SaaS offers.
 
-Each tutorial is structured as follows. First, it covers the signup through the
-platforms of the respective cloud provider. Via either route you then end up at
-the CrateDB Cloud Console wizard, where you can configure the essentials: your
-organization, project, and cluster. Finally, this process gains you access to
-the CrateDB Cloud Console.
-
-To proceed with either tutorial, choose the cloud provider that suits your
-needs and follow the steps in the relevant section of the tutorial. Then, in
-either case, you will be refered back to the CrateDB Cloud Console to finish
-the deployment of your cluster.
+The process is very straightforward, you only need to subscribe to the CrateDB
+Cloud product on the relevant marketplace, and you can deploy your cluster in
+CrateDB Cloud console. This way, your bill can be managed in your preferred
+marketplace, instead of directly in Cloud console.
 
 .. rubric:: Table of contents
 
 .. toctree::
    :maxdepth: 1
 
-   deploy-to-cluster-aws/index
-   deploy-to-cluster-azure/index
+   deploy-to-cluster-aws/subscribe-aws
+   deploy-to-cluster-azure/subscribe-azure
