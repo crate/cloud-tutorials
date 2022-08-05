@@ -1,15 +1,8 @@
 .. _promo:
 
-==========================
-Free trials and promotions
-==========================
-
-Crate.io regularly offers promotions, consisting of either free or discounted
-offers on CrateDB Cloud database-as-a-service products. Promotions can involve
-discounts of up to 100% on any dimensions of the product: for example, there
-can be promotions on specific `subscription plans`_ or on `scale units`_ (the
-number of nodes in a cluster) within a plan. Promotions may last indefinitely
-or for limited periods of time.
+=========================
+Free trial and promotions
+=========================
 
 In this guide, we explain step by step how to make use of such promotions, as
 well as when payment information will be required. While we hope the process is
@@ -59,7 +52,7 @@ deployed within this organization. When you arrive for the first time at the
 CrateDB Console Organization overview, you should be prompted to create an
 organization.
 
-.. image:: _assets/img/free-trial-organization.png
+.. image:: ../_assets/img/free-trial-organization.png
    :alt: Create an organization
 
 Enter the desired name for the organization in the field and click *Create
@@ -86,7 +79,7 @@ process and create and organization as described above. Then, once arrived once
 more at the Dashboard tab of the Organization overview screen, click on the
 *Deploy cluster* button.
 
-.. image:: _assets/img/free-trial-overview.png
+.. image:: ../_assets/img/free-trial-overview.png
    :alt: Deploy a cluster
 
 This will take you to the cluster deployment screen. All the steps required for
@@ -98,7 +91,7 @@ steps: region selection, cluster configuration, and account settings.
     To identify a promotional offer where a discount is available, look for the
     % icon under the cluster scale panel.
 
-.. image:: _assets/img/free-trial-icon.png
+.. image:: ../_assets/img/free-trial-icon.png
    :alt: Promotional icon
    :scale: 50%
 
@@ -108,7 +101,7 @@ Region selection
 
 First, select a `region`_. Your cluster will be deployed in this region.
 
-.. image:: _assets/img/free-trial-regions.png
+.. image:: ../_assets/img/free-trial-regions.png
    :alt: Region selection
 
 .. NOTE::
@@ -129,7 +122,7 @@ Finally, on the right the cluster scale overview shows the total values for the
 cluster. The cluster scale panel also allows you to increase the number of
 nodes you want in your cluster.
 
-.. image:: _assets/img/free-trial-config.png
+.. image:: ../_assets/img/free-trial-config.png
    :alt: Cluster configuration panels
 
 To sum up: the configuration of the cluster depends on the hardware values per
@@ -142,7 +135,7 @@ Each of these choices will affect the price of the cluster. You can always find
 the total price per hour and per month in the blue bar at the bottom of the
 screen.
 
-.. image:: _assets/img/free-trial-price.png
+.. image:: ../_assets/img/free-trial-price.png
    :alt: Total price information bar
    :scale: 50%
 
@@ -156,7 +149,7 @@ here. However, you can now define a project that the cluster can be deployed
 in, as well as the cluster name. You also determine the database username and
 password that you can use to access the cluster `Admin UI`_ later on.
 
-.. image:: _assets/img/free-trial-settings.png
+.. image:: ../_assets/img/free-trial-settings.png
    :alt: Account settings menu
 
 Note that the cluster name has certain validation requirements: it may contain
@@ -174,7 +167,7 @@ out your billing information. Our payment processing is supported by `Stripe`_.
 At the bottom right you can find the cards accepted by Crate.io. When you have
 filled out the necessary information, click *Deploy* below it.
 
-.. image:: _assets/img/free-trial-billing.png
+.. image:: ../_assets/img/free-trial-billing.png
    :alt: Billing information screen
 
 The payment and billing information you have submitted will be saved in the
@@ -183,7 +176,7 @@ Billing tab of the Organization Overview page in the CrateDB Cloud Console.
 You can at any time check your current accumulated bill at the bottom left of
 the CrateDB Cloud Console screen:
 
-.. image:: _assets/img/cloud-billing-meter.png
+.. image:: ../_assets/img/cloud-billing-meter.png
    :alt: Cloud Console billing meter
 
 
