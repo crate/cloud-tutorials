@@ -40,7 +40,7 @@ Organization overview, where you will see that you have $200 of available
 credit. You can also see when the credit expires. Free credit is valid for 30
 days after organization creation.
 
-.. image:: ../_assets/img/org-overview-free-credit.png
+.. image:: ../_assets/img/cloud-org-overview-free-credit.png
    :alt: Free credit allocated
 
 Now you can follow the 

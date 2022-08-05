@@ -22,7 +22,7 @@ credit on any CrateDB Cloud development plan you choose.
    :maxdepth: 1
 
    promo
-   free-trial
+   free-trial-budget
 
 .. _scale units: https://crate.io/docs/cloud/reference/en/latest/glossary.html#scale-unit
 .. _subscription plans: https://crate.io/docs/cloud/reference/en/latest/subscription-plans.html
