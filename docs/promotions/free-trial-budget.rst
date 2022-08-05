@@ -5,7 +5,7 @@ Free trial budget
 =================
 
 This section explains our Free trial budget mechanism. This feature gives the
-user $200 of free credit to any new organization they create.
+user $200 in free credit that can be used for any cluster configuration.
 
 .. rubric:: Table of contents
 
@@ -27,7 +27,7 @@ sign up.  You can follow the process described in the
 Create an organization
 ======================
 
-To get the credit, simple create a new organization. For the detailed
+To get the credit, simply create a new organization. For the detailed
 instructions, see 
 :ref:`Create a new organization how-to <cloud-howtos:create-org>`.
 

@@ -11,10 +11,8 @@ can be promotions on specific `subscription plans`_ or on `scale units`_ (the
 number of nodes in a cluster) within a plan. Promotions may last indefinitely
 or for limited periods of time.
 
-Another promotional mechanism that should be useful for testing purposes or for
-users new to CrateDB Cloud is our Free trial budget system. This provides you
-with a free credit whenever you create a new organization. You can spend this
-credit on any CrateDB Cloud development plan you choose.
+CrateDB Cloud also offers new users $200 in free credits upon signup. This
+credit can be spent on any cluster configuration.
 
 .. rubric:: Table of contents
 
