@@ -17,7 +17,7 @@ user $200 in free credit that can be used for any cluster configuration.
 Sign up
 =======
 
-As with other promotions, to be eligible for free credit, the first step is to
+To be eligible for free credit, the first step is to
 sign up.  You can follow the process described in the 
 :ref:`signup tutorial <sign-up>` to do so.
 
@@ -35,10 +35,10 @@ instructions, see
    :alt: Create an organization
 
 Enter the desired name for the organization in the field and click *Create
-organization*. Once this is done, you will be returned to the CrateDB Console
-Organization overview, where you will see that you have $200 of available
-credit. You can also see when the credit expires. Free credit is valid for 30
-days after organization creation.
+organization*. Once this is done, you will be returned to the Organization
+overview, where you will see that you have $200 of available credit. You can
+also see when the credit expires. Free credit is valid for 30 days after
+organization creation.
 
 .. image:: ../_assets/img/cloud-org-overview-free-credit.png
    :alt: Free credit allocated
