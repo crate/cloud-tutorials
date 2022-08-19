@@ -35,7 +35,7 @@ in the tutorials below.
 
     sign-up
     cluster-deployment/index
-    promotions/index
+    promotions/free-trial-budget
     edge/index
 
 
