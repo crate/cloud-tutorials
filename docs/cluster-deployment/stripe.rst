@@ -94,24 +94,13 @@ hardware values per node are determined by the choice of subscription plan. The
 storage capacity is set in the dropdown menu. The number of nodes in the
 cluster can be configured by using the slider on the right.
 
-Each of these choices will affect the price of the cluster. It is also possible
-that a subscription plan or a number of nodes is eligible for a promotion,
-making it either discounted or free. You can always find the total price per
-hour and month in the blue bar at the bottom of the screen.
+Each of these choices will affect the price of the cluster. You can always
+find the total price per hour and month in the blue bar at the bottom of the
+screen.
 
 .. image:: ../_assets/img/stripe-price.png
    :alt: Total price information bar
    :scale: 50%
-
-.. TIP::
-    To identify a promotional offer where a discount is available, look for the
-    % icon under the cluster scale panel. For more information about
-    promotions, see :ref:`our documentation on promoted clusters <promo>`.
-
-    .. image:: ../_assets/img/stripe-icon.png
-       :alt: Promotional icon
-       :scale: 50%
-
 
 Set up your account
 -------------------
