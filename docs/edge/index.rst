@@ -24,8 +24,11 @@ end-to-end walkthrough of the process and prerequisites.
 
 In these tutorials, we first introduce the signup and configuration process for
 a local Kubernetes installation. Next, we explain the process end-to-end for
-using AKS and EKS services. Finally, we outline the installation method for
+using AKS and EKS services. After that, we outline the installation method for
 some lightweight Kubernetes distributions, like K3s and Microk8s.
+
+We also introduce a way to monitor you CrateDB Edge cluster in a
+visualization tool Grafana coupled with Loki and Prometheus.
 
 .. rubric:: Table of contents
 
@@ -35,5 +38,6 @@ some lightweight Kubernetes distributions, like K3s and Microk8s.
    introduction
    managed-kubernetes
    self-hosted-edge
+   monitoring
 
 .. _announce CrateDB Edge: https://crate.io/a/announcing-cratedb-edge/
