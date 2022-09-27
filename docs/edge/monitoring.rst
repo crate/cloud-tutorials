@@ -4,7 +4,7 @@ Monitor CrateDB Edge
 ====================
 
 This tutorial introduces ways to set up monitoring of your CrateDB Edge cluster.
-Visualization tool `Grafana`_ is used together with `Prometheus`_ and `Loki`_
+The visualization tool `Grafana`_ is used together with `Prometheus`_ and `Loki`_
 to monitor the cluster performance and browse logs, respectively.
 
 .. rubric:: Table of contents
