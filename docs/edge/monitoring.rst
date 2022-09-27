@@ -3,7 +3,7 @@
 Monitor CrateDB Edge
 ====================
 
-This tutorial introduces ways to set up monitoring of your CrateDB Edge cluster.
+This tutorial introduces a way to set up monitoring of your CrateDB Edge cluster.
 The visualization tool `Grafana`_ is used together with `Prometheus`_ and `Loki`_
 to monitor the cluster performance and browse logs, respectively.
 
@@ -153,7 +153,7 @@ Adding the Prometheus data source
 ---------------------------------
 
 At this point, you should be able to access the Grafana UI. After logging in, it
-is necessary to add a new data source Prometheus. To add a data source, choose
+is necessary to add Prometheus as a data source, by navigating to
 the ``Configuration -> Data sources`` in the left-hand menu:
 
 .. image:: ../_assets/img/edge-monitoring-grafana-menu.png
@@ -200,7 +200,7 @@ Both of these ``.json`` files need to be imported:
 Cluster monitoring dashboard
 ----------------------------
 
-This dashboard utilizes metrics provided by Prometheus. It monitors following
+This dashboard utilizes metrics provided by Prometheus. It monitors the following
 metrics:
 
 - Number of running clusters

@@ -27,7 +27,7 @@ a local Kubernetes installation. Next, we explain the process end-to-end for
 using AKS and EKS services. After that, we outline the installation method for
 some lightweight Kubernetes distributions, like K3s and Microk8s.
 
-We also introduce a way to monitor you CrateDB Edge cluster in a
+We also introduce a way to monitor your CrateDB Edge cluster in the
 visualization tool Grafana coupled with Loki and Prometheus.
 
 .. rubric:: Table of contents
