@@ -19,7 +19,7 @@ Prerequisites
 
 - The CrateDB Edge installation script requires Helm to be present in the system.
 - For a deployment with Grafana, Loki, and Prometheus, we recommend at
-  least 5 CPUs and 5 GiB of memory per node for acceptable performance.
+  least 5 CPUs and 5 GiB of memory per CrateDB node for acceptable performance.
 
 .. _edge-monitoring-deployment:
 
@@ -32,8 +32,8 @@ or on your local environment, if you choose the :ref:`self-hosted
 
 .. _edge-monitoring-grafana-install:
 
-Grafana Install
----------------
+Install Grafana and Loki
+------------------------
 
 The first important step comes after the successful installation of CrateDB into your
 chosen system. Right after you get the following console prompt:
@@ -65,6 +65,12 @@ After successful installation, you will get the following output:
 
   ✓ Installed.
   Loki and Grafana successfully installed.
+
+.. NOTE::
+
+    If you already have a CrateDB Edge cluster deployed and didn't choose to
+    install Grafana and Loki initially, you can rerun the install script to get
+    them when needed.
 
 .. _edge-monitoring-accessing-grafana:
 
@@ -116,9 +122,8 @@ issuing the command, we use the "Web preview" to see Grafana UI on port 3000.
 
 .. NOTE::
 
-    Depending on your cloud provider, it is possible that port 3000 will
-    already be occupied in your system. If that's the case, you will see
-    following response:
+    Depending on your environment, it is possible that port 3000 will
+    already be occupied. If that's the case, you will see following response:
 
     .. code-block:: console
 
@@ -127,25 +132,13 @@ issuing the command, we use the "Web preview" to see Grafana UI on port 3000.
       Error listen tcp6 [::1]:3000: bind: cannot assign requested address]
       error: unable to listen on any of the requested ports: [{3000 3000}
 
-    When that happens, inspect occupied ports by issuing:
+    When that happens, reissue the port-forwarding command with a different
+    port. E.g.
 
     .. code-block:: console
 
-      sudo netstat -tulpn | grep LISTEN
+      kubectl --namespace crate-loki port-forward $POD_NAME 3001
 
-    You may get a response like:
-
-    .. code-block:: console
-
-      tcp  2  0  127.0.0.1:3000  0.0.0.0:*  LISTEN  667/kubectl
-
-    If it's a service you don't currently need, kill the process with:
-
-    .. code-block:: console
-
-      kill -9 667
-
-    After that, reissue the port-forwarding commands.
 
 .. _edge-monitoring-prometheus-datasource:
 
