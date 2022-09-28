@@ -17,7 +17,7 @@ to monitor the cluster performance and browse logs, respectively.
 Prerequisites
 -------------
 
-- The CrateDB Edge installation script requires Helm to be present in the system.
+- The CrateDB Edge installation script requires Helm 3 to be present in the system.
 - For a deployment with Grafana, Loki, and Prometheus, we recommend at
   least 5 CPUs and 5 GiB of memory per CrateDB node for acceptable performance.
 
