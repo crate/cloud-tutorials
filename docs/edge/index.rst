@@ -27,6 +27,9 @@ a local Kubernetes installation. Next, we explain the process end-to-end for
 using AKS and EKS services. After that, we outline the installation method for
 some lightweight Kubernetes distributions, like K3s and Microk8s.
 
+Then, we explain how to set up a custom backup location, so you can keep full
+ownership of your data backups.
+
 We also introduce a way to monitor your CrateDB Edge cluster in the
 visualization tool Grafana coupled with Loki and Prometheus.
 
@@ -38,6 +41,7 @@ visualization tool Grafana coupled with Loki and Prometheus.
    introduction
    managed-kubernetes
    self-hosted-edge
+   custom-backup
    monitoring
 
 .. _announce CrateDB Edge: https://crate.io/a/announcing-cratedb-edge/
