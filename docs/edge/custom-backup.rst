@@ -27,8 +27,8 @@ Prerequisites
 Configuration
 -------------
 
-If you're using the Amazon S3 bucket, you will need the Acess Key ID and the
-Secret Access Key of the user that has access to a bucket that you want to
+If you're using an Amazon S3 bucket, you will need the Access Key ID and the
+Secret Access Key of the user that has access to the bucket that you want to
 backup your data to.
 
 If you're using non-Amazon S3 storage, you will also need to specify an
