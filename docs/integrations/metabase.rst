@@ -49,8 +49,8 @@ Database configuration is relatively simple, these are the necessary fields:
 
 .. NOTE::
 
-    If you choose to use Metabase with a Cloud cluster, also select the "Use
-    a secure connection (SSL)" option.
+    Make sure you also select "Use a secure connection (SSL)" option, unless
+    your cluster is not configured for SSL.
 
 .. image:: ../_assets/img/metabase-database-configuration.png
    :alt: Configure new database
