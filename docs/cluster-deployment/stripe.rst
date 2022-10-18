@@ -148,8 +148,9 @@ AWS/Azure
 ---------
 
 The other payment option is to use an AWS or Azure marketplace subscription.
-Simply choose the one you'd like to use and you will be forwarded to
-the respective marketplace page where you can confirm the subscription.
+Simply choose the one you'd like to use and you will see a prompt that
+will forward you to the respective marketplace page where you can confirm the
+subscription.
 
 .. image:: ../_assets/img/payment-method-marketplaces.png
    :alt: Billing information screen
