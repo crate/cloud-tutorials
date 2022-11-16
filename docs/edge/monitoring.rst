@@ -26,6 +26,9 @@ Prerequisites
 Cluster Deployment
 ------------------
 
+The first step is to sign up in the `Cloud Console`_ if you haven't done so
+yet. After that, you can deploy your cluster.
+
 Deployment steps will depend on your :ref:`cloud provider <edge-providers>`,
 or on your local environment, if you choose the :ref:`self-hosted
 <edge-self-hosted>` variant of CrateDB Edge.
@@ -234,7 +237,10 @@ needs. Because of that, we encourage you to play around with these provided
 dashboards and also visit documentation `for Loki`_ `and Prometheus`_ in
 Grafana which will help you to build dashboards best suited for your needs.
 
+If this looks interesting to you, go to `Cloud Console`_ and give it a try!
+
 .. _and Prometheus: https://grafana.com/docs/grafana/latest/datasources/prometheus/
+.. _Cloud Console: https://console.cratedb.cloud/?utm_campaign=2022-Q3-WS-Developer-Motion&utm_source=docs
 .. _Cluster performance dashboard: https://raw.githubusercontent.com/crate/cloud-tutorials/master/docs/_extra/cratedb-edge-cluster-dashboard.json
 .. _for Loki: https://grafana.com/docs/loki/latest/
 .. _Grafana: https://grafana.com/
