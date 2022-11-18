@@ -21,7 +21,7 @@ First, you will need a running cluster. You can use Metabase with both
 <edge>`.
 
 To use Metabase, you must have an existing data set in your CrateDB cluster.
-Feel free to use the sample dataset  available in the Cloud Console or
+Feel free to use the sample dataset available in the `Cloud Console`_ or
 import your own data similarly to how it's done :ref:`in this how-to
 <cloud-howtos:import-data>`.
 
@@ -103,5 +103,9 @@ interactive dashboards, automated reporting, and more.
 If you'd like to see how the other questions were configured, feel free to
 check out our `video tutorial`_ on this topic.
 
+If this integration could benefit you, feel free to head to `Cloud Console`_
+and get started!
+
+.. _Cloud Console: https://console.cratedb.cloud/?utm_campaign=2022-Q3-WS-Developer-Motion&utm_source=docs
 .. _Metabase: https://www.metabase.com/
 .. _video tutorial: https://www.youtube.com/watch?v=veuR_76njCo
