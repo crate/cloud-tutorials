@@ -7,13 +7,14 @@ Deploy a cluster directly
 
 In this tutorial, we will provide a step-by-step guide to deploying a cluster
 from scratch. Our recommended procedure assumes you have completed the
-:ref:`signup process <sign-up>` and have created an organization (either
-through AzureAD setup or through the Amazon Cognito signup process). The
-simplest way to then deploy a cluster quickly is to subscribe to CrateDB Cloud
-using your credit card. Here we will explain how to do so, from the initial
-subscribing to the deployment itself. Our payment processing and billing are
-powered by `Stripe`_. It is also possible to use your AWS or Azure 
-subscription as a payment. To follow these steps, go to the `Cloud Console`_.
+:ref:`signup process <sign-up>`. If you're a first-time user, new organization
+was created for you as a part of the login process. If not, you will need to
+create one manually to proceed. The simplest way to then deploy a cluster
+quickly is to subscribe to CrateDB Cloud using your credit card. Here we will
+explain how to do so, from the initial subscribing to the deployment itself.
+Our payment processing and billing are powered by `Stripe`_. It is also
+possible to use your AWS or Azure subscription as a payment. To follow these
+steps, go to the `Cloud Console`_.
 
 .. rubric:: Table of contents
 
