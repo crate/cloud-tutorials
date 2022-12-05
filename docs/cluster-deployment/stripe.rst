@@ -7,7 +7,7 @@ Deploy a cluster directly
 
 In this tutorial, we will provide a step-by-step guide to deploying a cluster
 from scratch. Our recommended procedure assumes you have completed the
-:ref:`signup process <sign-up>`. If you're a first-time user, new organization
+:ref:`signup process <sign-up>`. If you're a first-time user, a new organization
 was created for you as a part of the login process. If not, you will need to
 create one manually to proceed. The simplest way to then deploy a cluster
 quickly is to subscribe to CrateDB Cloud using your credit card. Here we will
