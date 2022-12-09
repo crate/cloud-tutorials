@@ -221,24 +221,22 @@ well as the number of nodes you want in your cluster.
 .. image:: ../_assets/img/cloud-edge-config.png
    :alt: Cluster configuration panels for CrateDB Edge
 
-On the right the cluster scale overview shows the total hardware values for the
-cluster. This is simply the number of nodes you have chosen, multiplied by the
-values per node you have defined.
+On the right the cluster scale overview shows the total hardware values for
+the cluster. This is simply the number of nodes you have chosen, multiplied by
+the values per node you have defined.
 
-At the bottom of the deployment screen you can configure your account settings.
-Since you have already created an organization, it does not need to be set
-here. However, you can now define a project that the cluster can be deployed
-in, as well as the cluster name. You also determine the database username and
-password that you can use to access the cluster `Admin UI`_ later on.
+At the bottom of the deployment screen you can configure your account
+settings. Since you have already created an organization, it does not need to
+be set here.
 
 .. image:: ../_assets/img/cloud-edge-settings.png
    :alt: Account settings menu
 
 Note that the cluster name has certain validation requirements: it may contain
 only numbers, letters, and the dash symbol -. It must begin with a letter and
-end with a letter or a number, and must be at least three characters long. This
-is because the cluster name is used to generate your access URL for the Admin
-UI, thus it needs to be "URL safe".
+end with a letter or a number, and must be at least three characters long.
+This is because the cluster name is used to generate your access URL for the
+Admin UI, thus it needs to be "URL safe".
 
 You can also define the backup location of your CrateDB Edge cluster. You
 have the option of either using the default backup location for CrateDB Cloud,
@@ -258,9 +256,9 @@ Billing
 
 Finally, you will be taken to a new screen where you can fill out your billing
 information. Our payment processing is supported by `Stripe`_. At the bottom
-right you can find the cards accepted by Crate.io. When you have filled out the
-necessary information, click *Deploy* below it to deploy your cluster. Do not
-forget to accept financial authorization by ticking the box at the bottom.
+right you can find the cards accepted by Crate.io. When you have filled out
+the necessary information, click *Deploy* below it to deploy your cluster. Do
+not forget to accept financial authorization by ticking the box at the bottom.
 
 .. image:: ../_assets/img/stripe-billing.png
    :alt: Billing information screen
@@ -301,12 +299,12 @@ Use a cloud provider region
 
 Aside from creating your own custom region, it is also possible to use CrateDB
 Edge in combination with an existing cloud provider. To deploy a cluster in
-this way, follow the initial steps described above until you have :ref:`created
-an organization <edge-create-org>`. Then, go to the Regions tab and instead of
-creating a custom region, choose a cloud provider from the fields provided and
-click *Deploy cluster*. You will be referred to the subscription plan screen.
-Select your desired plan and proceed to the :ref:`configuration wizard
-<edge-config>` as described above.
+this way, follow the initial steps described above until you 
+have :ref:`created an organization <edge-create-org>`. Then, go to the Regions
+tab and instead of creating a custom region, choose a cloud provider from the
+fields provided and click *Deploy cluster*. You will be referred to the
+subscription plan screen. Select your desired plan and proceed to 
+the :ref:`configuration wizard <edge-config>` as described above.
 
 
 .. _edge-delete-region:
@@ -314,9 +312,10 @@ Select your desired plan and proceed to the :ref:`configuration wizard
 Delete a custom region
 ----------------------
 
-In order to delete a custom region, click the trashcan icon at the bottom right
-of the custom region panel. A confirmation dialog will appear warning that
-deletion of a custom region disables access to CrateDB Cloud for that region.
+In order to delete a custom region, click the trashcan icon at the bottom
+right of the custom region panel. A confirmation dialog will appear warning
+that deletion of a custom region disables access to CrateDB Cloud for that
+region.
 
 Deleting a custom region does not delete the resources inside that region. To
 also delete the resources inside the region, run the script provided in the

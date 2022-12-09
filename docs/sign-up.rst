@@ -7,9 +7,10 @@ Sign up
 Before you can start using :ref:`CrateDB Cloud <index>`, you must first sign up
 for a user account.
 
-As a CrateDB Cloud user, you can create and manage organizations and projects.
-As an organization administrator, you can also manage other CrateDB Cloud users
-as well as launch CrateDB Cloud clusters and other CrateDB Cloud products.
+As a CrateDB Cloud user, you can create and manage organizations.
+As an organization administrator, you can also manage other CrateDB Cloud
+users as well as launch CrateDB Cloud clusters and other CrateDB Cloud
+products.
 
 We currently support four signup methods: using an account at Github, Google
 or Microsoft, and making a separate username and password supported by Amazon
@@ -21,10 +22,10 @@ Consequently, the signup screen will look as follows:
    :alt: CrateDB Cloud signup screen
 
 If you intend to subscribe and deploy a cluster using a credit card - our
-recommended procedure - any of these signup methods will work. When coming from
-the Software as a Service (SaaS) marketplaces, however, restrictions apply.
-Only the *Microsoft* option allows you to deploy clusters on CrateDB Cloud
-when coming from the Microsoft Azure Marketplace. Similarly, for cluster
+recommended procedure - any of these signup methods will work. When coming
+from the Software as a Service (SaaS) marketplaces, however, restrictions
+apply. Only the *Microsoft* option allows you to deploy clusters on CrateDB
+Cloud when coming from the Microsoft Azure Marketplace. Similarly, for cluster
 deployment through our other cloud provider, AWS, you should use the Amazon
 Cognito signup service. The Cognito authentication service is indicated in the
 UI as *Username & Password*. Both signup processes are described below.
