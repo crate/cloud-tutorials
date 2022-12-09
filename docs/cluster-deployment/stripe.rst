@@ -109,10 +109,7 @@ Set up your account
 
 At the bottom of the deployment screen you can configure your account  
 settings. Since you have already created an organization, it does not need to
-be set here. However, you can now define a project that the cluster can be
-deployed in, as well as the cluster name. You also determine the database
-username and password that you can use to access the cluster `Admin UI`_ later
-on.
+be set here.
 
 .. image:: ../_assets/img/stripe-settings.png
    :alt: Account settings menu
