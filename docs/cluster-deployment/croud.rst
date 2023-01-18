@@ -10,9 +10,9 @@ from scratch using our CLI application - `Croud`_. Our recommended procedure
 assumes you have completed the :ref:`signup process <sign-up>`. The simplest
 way to then deploy a cluster is to subscribe to CrateDB Cloud using your
 credit card. For the purposes of this tutorial, it is assumed that you have
-already created subscription in the UI. Currently, it is not possible to create
-new subscription using Croud. Our payment processing and billing are powered by
-Stripe. It is also possible to subscribe using Azure and AWS.
+already created subscription in the UI. Currently, it is not possible to 
+create new subscription using Croud. Our payment processing and billing are
+powered by Stripe. It is also possible to subscribe using Azure and AWS.
 
 This tutorial also assumes that you have Croud installed in your
 system. If not, follow the Croud `Getting started`_ section.
@@ -62,6 +62,19 @@ After successfully logging in, you will see this prompt in your browser:
     You have successfully logged into CrateDB Cloud!
     This window can be closed.
 
+Create organization
+===================
+
+The first step of deployment is creating an organization which will contain
+your cluster. If you've registered recently, or didn't delete the organization
+that was created automatically, you can skip thi step:
+
+.. code-block:: console
+
+    sh$ croud organizations create --name samplecroudorganization
+
+This will create an organization called "samplecroudorganization".
+
 Create a project
 ================
 
@@ -74,8 +87,7 @@ To create a new project execute this command:
 
     sh$ croud projects create --name sampleproject
 
-This will create a new project named `sampleproject`. Check out full
-`documentation of projects in Croud`_.
+This will create a new project named `sampleproject`.
 
 Deploy a cluster
 ================
@@ -141,6 +153,25 @@ Example
     Complete documentation on clusters in Croud, including all the deployment
     arguments, can be found `here`_.
 
+Deploying a cluster with specific version
+-----------------------------------------
+
+You may want to deploy a cluster with a different than latest version. You can
+do this using ``--version`` parameter. Historical `Stable`_ and `Testing`_ or
+Nightly builds are all public and available to any user. To use the
+Nightly/Testing channels, you must use the ``--channel`` parameter.
+
+.. code-block:: console
+
+   sh$ croud clusters deploy --product-name cr1 --tier default --cluster-name my-crate-cluster --project-id 3ac44505-1d6e-419c-ad23-5d0d572915ba --version 5.2.0 --username admin --password "as6da9ddasfaad7i902jcv780dmcba" --subscription-id 3a35974f-5319-47fb-9a1f-ab85dca75c86 --channel testing
+
+This command deploys a cluster with `5.2.0` version, which is in a testing
+channel at the time of writing. Alternatively, you can deploy a cluster with
+older than latest version, like this:
+
+.. code-block:: console
+
+   sh$ croud clusters deploy --product-name cr1 --tier default --cluster-name my-crate-cluster --project-id f76d96aa-f1a7-46aa-a89b-8cdd2b3cef15 --version 4.8.0 --username admin --password "as6da9ddasfaad7i902jcv780dmcba" --subscription-id 3a35974f-5319-47fb-9a1f-ab85dca75c86
 
 Scale a cluster
 ===============
@@ -199,8 +230,8 @@ Required arguments:
     The CrateDB cluster ID to use.
 
 ``--disk-size-gb``
-    New size of attached disks (in GiB). This parameter sets the storage to the
-    size specified in parameter. **It is not possible to reduce storage.**
+    New size of attached disks (in GiB). This parameter sets the storage to 
+    the size specified in parameter. **It is not possible to reduce storage.**
 
 Example:
 
@@ -227,8 +258,8 @@ Example:
    +--------------------------------------+------------------------+------------------------------------+
 
 .. warning::
-    When increasing storage size of a cluster, it is temporarily stopped, while
-    the operation finishes.
+    When increasing storage size of a cluster, it is temporarily stopped, 
+    while the operation finishes.
 
 .. note::
     For all available arguments for the scaling command, see the 
@@ -248,6 +279,10 @@ Example:
 
 .. _Croud: https://pypi.org/project/croud/
 
+.. _Stable: https://hub.docker.com/_/crate/tags
+
 .. _use UI: https://console.cratedb.cloud
+
+.. _Testing: https://hub.docker.com/r/crate/crate/tags
 
 
