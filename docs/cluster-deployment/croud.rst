@@ -154,7 +154,7 @@ Example
     arguments, can be found `here`_.
 
 Deploying a cluster with a specific version
------------------------------------------
+-------------------------------------------
 
 You may want to deploy a cluster with a version other than the latest. You can
 do this using the ``--version`` parameter. Historical `Stable`_ and `Testing`_ or
