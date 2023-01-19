@@ -153,11 +153,11 @@ Example
     Complete documentation on clusters in Croud, including all the deployment
     arguments, can be found `here`_.
 
-Deploying a cluster with specific version
+Deploying a cluster with a specific version
 -----------------------------------------
 
-You may want to deploy a cluster with a different than latest version. You can
-do this using ``--version`` parameter. Historical `Stable`_ and `Testing`_ or
+You may want to deploy a cluster with a version other than the latest. You can
+do this using the ``--version`` parameter. Historical `Stable`_ and `Testing`_ or
 Nightly builds are all public and available to any user. To use the
 Nightly/Testing channels, you must use the ``--channel`` parameter.
 
@@ -165,9 +165,9 @@ Nightly/Testing channels, you must use the ``--channel`` parameter.
 
    sh$ croud clusters deploy --product-name cr1 --tier default --cluster-name my-crate-cluster --project-id 3ac44505-1d6e-419c-ad23-5d0d572915ba --version 5.2.0 --username admin --password "as6da9ddasfaad7i902jcv780dmcba" --subscription-id 3a35974f-5319-47fb-9a1f-ab85dca75c86 --channel testing
 
-This command deploys a cluster with `5.2.0` version, which is in a testing
+This command deploys a `5.2.0` version cluster, which is in the testing
 channel at the time of writing. Alternatively, you can deploy a cluster with
-older than latest version, like this:
+older version, like this:
 
 .. code-block:: console
 
