@@ -166,7 +166,7 @@ Nightly/Testing channels, you must use the ``--channel`` parameter.
 This command deploys a `5.2.0` version cluster, which is in the testing
 channel at the time of writing. 
 
-Alternatively, you can deploy a cluster with older version, like this:
+Alternatively, you can deploy a cluster with an older version, like this:
 
 .. code-block:: console
 
