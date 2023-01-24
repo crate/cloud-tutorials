@@ -1,134 +1,101 @@
 .. _cluster-deployment-stripe:
 
-
 =========================
 Deploy a cluster directly
 =========================
 
 In this tutorial, we will provide a step-by-step guide to deploying a cluster
-from scratch. Our recommended procedure assumes you have completed the
-:ref:`signup process <sign-up>`. If you're a first-time user, a new organization
-will have been created for you as a part of the login process. If not, you will need to
-create one manually to proceed. The simplest way to then deploy a cluster
-quickly is to subscribe to CrateDB Cloud using your credit card. Here we will
-explain how to do so, from the initial subscribing to the deployment itself.
-Our payment processing and billing are powered by `Stripe`_. It is also
-possible to use your AWS or Azure subscription as a payment. To follow these
-steps, go to the `Cloud Console`_.
+from scratch. It is assumed you have completed the
+:ref:`signup process <sign-up>`. If you're a first-time user, a new 
+organization will have been created for you as a part of the signup process.
+If not, you will need to create one manually to proceed. The simplest way to
+then deploy a cluster quickly is to subscribe to CrateDB Cloud using your
+credit card. Our payment processing and billing are powered 
+by `Stripe`_. It is also possible to use your AWS or Azure subscription as a
+payment. To follow these steps, go to the `Cloud Console`_.
 
 .. rubric:: Table of contents
 
 .. contents::
    :local:
 
-
 Deploy cluster
 ==============
 
-When you have finished the signup process mentioned above, you will arrive at
-the CrateDB Cloud Console. The screen will show the Organization overview:
+When you have finished the signup process, you will arrive to the CrateDB 
+Cloud Console. The screen will show the Clusters overview:
 
 .. image:: ../_assets/img/stripe-console.png
-   :alt: CrateDB Cloud Console Organization overview
+   :alt: CrateDB Cloud Console Clusters overview
 
-From here, click the blue *Deploy new cluster* button. This will take you to
-the cluster deployment screen. This screen consists of three steps: region
-selection, cluster configuration, and account settings.
+From here, click the blue *Deploy cluster* button to get to the cluster
+deployment screen. Here you can configure the name, region, compute, storage,
+and the number of deployed nodes.
 
+.. image:: ../_assets/img/deployment-config.png
+   :alt: CrateDB Cloud Console Deployment Configuration
 
-Select region
--------------
+Region
+------
 
-First, select a `region`_. Your cluster will be deployed in this region.
+First, after naming your cluster, select a `region`_ where your cluster should
+be deployed. Currently, we offer AWS and Azure regions. If you'd like to 
+request a new region, there is a form present. Simply click the "Request a new
+region" link, and the form will appear:
 
-.. image:: ../_assets/img/stripe-regions.png
-   :alt: Region selection
+.. image:: ../_assets/img/deployment-region-request.png
+   :alt: CrateDB Cloud Console Deployment New Region Request
 
-.. NOTE::
-    Your choice of region may affect the price of the cluster. Refer to the
-    price total indicated at the bottom right of the screen.
+If you are deploying an :ref:`Edge <edge>` cluster, you can choose your
+custom region by clicking the "Add a custom edge region" link.
 
+Compute
+-------
 
-Configure cluster
------------------
-
-Next, go through the cluster configuration process. On the left-hand side, you
-can choose a `subscription plan`_. As you select each subscription plan, you
-will see that the values for CPU, RAM, and (minimum) storage per node change
-accordingly in the middle panel that shows the node specification.
-
-.. image:: ../_assets/img/stripe-config.png
-   :alt: Cluster configuration
-
-Each subscription plan comes with a preconfigured compute value per node. The
-compute capacity of your cluster can be scaled horizontally by adding nodes. 
-To do this, use the slider under the 'Cluster scale' panel. This overview  
-shows the current CPU and RAM values of your cluster, which are simply the
-compute values of the plan you have chosen multiplied by the number of nodes.
-
-CrateDB Cloud separates storage configuration from compute configuration. You
-can separately configure the desired storage for your cluster by using the
-dropdown menu under 'Storage' in the 'Node specification' panel. The range of
-eligible storage sizes varies by subscription plan. The storage you have  
-chosen for your cluster is also reflected in the cluster overview in the
-right-hand
-panel.
-
-.. NOTE::
-    The storage capacity of a cluster cannot currently be lowered in the
-    CrateDB Cloud Console once it has been deployed.
+In the Compute section, you should choose a `subscription plan`_ that suits
+your needs and use case. Plans consist of a per-node CPU and RAM allocation.
 
 Shared-resources clusters (CR0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Shared-resource clusters are a special category of clusters that allow
-better utilisation of resources. These clusters share compute and storage
+better utilization of resources. These clusters share compute and storage
 resources with other clusters in this category. Because of this, they offer
 more cost-effective solution for smaller teams and experimental deployments of
 low-traffic applications. They are limited to one node with 2 CPUs, 2 GiB of
-memory and 4 GiB of storage.
+memory, and 4 GiB of storage.
+
+Storage
+-------
+
+You can choose, with the exception of CR0, how much storage space you need for
+your cluster.
+
+.. NOTE::
+    The storage capacity of a cluster cannot currently be lowered in the
+    CrateDB Cloud Console once it has been deployed.
+
+Number of nodes
+---------------
+
+The number of nodes serves as a horizontal scaling of your CrateDB Cloud
+cluster.
 
 ---
 
-To sum up: the configuration of the cluster depends on the hardware values per
-node, the storage selected, and the number of nodes in the cluster. The
-hardware values per node are determined by the choice of subscription plan. 
-The storage capacity is set in the dropdown menu. The number of nodes in the
-cluster can be configured by using the slider on the right.
-
-Each of these choices will affect the price of the cluster. You can always
-find the total price per hour and month in the blue bar at the bottom of the
-screen.
-
-.. image:: ../_assets/img/stripe-price.png
-   :alt: Total price information bar
-   :scale: 50%
-
-Set up your account
--------------------
-
-At the bottom of the deployment screen you can configure your account  
-settings. Since you have already created an organization, it does not need to
-be set here.
-
-.. image:: ../_assets/img/stripe-settings.png
-   :alt: Account settings menu
-
-Note that the cluster name has certain validation requirements: it may contain
-only numbers, letters, and the dash symbol -. It must begin with a letter and
-end with a letter or a number, and must be at least three characters long.
-
-Click *Next* at the bottom right to proceed.
-
+To sum up: the configuration of the cluster consists of the hardware per-node
+values (CPU, RAM, storage), and the number of nodes in the cluster.
+The hardware values are determined by choice of subscription plan. Each of
+these choices will affect the price of the cluster. You can always find the
+total price per hour and month on the right side of the deployment screen.
 
 Provide billing information
 ===========================
 
-Finally, you will be taken to a new screen where you can fill out your billing
-information. Our credit card payment processing is supported by `Stripe`_. If
-you have an existing AWS or Azure subscription, you can also pay using that.
-You can choose the payment method right after you configure your cluster and
-click **Next**.
+Next comes a payment method screen. Our credit card payment processing is
+supported by `Stripe`_. If you have an existing AWS or Azure subscription, you
+can also pay using that. You can choose the payment method right after you 
+configure your cluster and click **Next**.
 
 .. image:: ../_assets/img/payment-method.png
    :alt: Payment method screen
@@ -137,8 +104,8 @@ Credit card
 -----------
 
 You can find the cards accepted by Crate.io at the bottom right part of the 
-screen. When you have filled out the necessary information, click *Deploy*
-below it to deploy your cluster. Do not forget to accept financial
+screen. When you have filled out the necessary information, click *Deploy
+Cluster* below it to deploy your cluster. Do not forget to accept financial
 authorization by ticking the box at the bottom.
 
 .. image:: ../_assets/img/stripe-billing.png
@@ -148,7 +115,7 @@ AWS/Azure
 ---------
 
 The other payment option is to use an AWS or Azure marketplace subscription.
-Simply choose the one you'd like to use and you will see a prompt that
+Simply choose the one you'd like to use, and you will see a prompt that
 will forward you to the respective marketplace page where you can confirm the
 subscription.
 
@@ -158,41 +125,16 @@ subscription.
 ---
 
 The payment and billing information you have submitted will be saved in the
-Billing tab of the Organization overview screen in the CrateDB Cloud Console
-(i.e., the fifth tab from the left on the same screen you arrived at).
+Billing and Payment method pages, visible in the menu on the left side of the
+console.
 
 Your current accumulated bill is shown in the billing meter in the bottom left
-of the CrateDB Cloud Console screen:
-
-.. image:: ../_assets/img/cloud-billing-meter.png
-   :alt: Cloud Console billing meter
-
+of the CrateDB Cloud Console screen.
 
 Finish
 ======
 
-You will now be returned to the CrateDB Cloud Console, but this time to the
-Cluster overview page. A popup menu will remind you of the username and
-password you selected for connecting to the cluster. Make sure you copy this
-information to a safe place (e.g., a password manager), as it will not be
-retrievable past this point.
-
-As the spinning wheel icon in the left-hand menu indicates, the cluster is now
-being set up according to your specifications. Simply wait for it to finish;
-no further action is needed.
-
-When the cluster is up and running, you can connect to it with the CrateDB
-AdminUI, where you can input queries and view additional metrics. To do so, go
-to the cluster overview page of the cluster you just created and click on  
-*Open Admin UI*. You can log in with the database username and password you
-defined in the account settings stage.
-
-.. image:: ../_assets/img/stripe-adminui.png
-   :alt: Cluster administration button
-   :scale: 50%
-
-Thank you for choosing CrateDB Cloud!
-
+Your cluster should now be ready to use!
 
 .. _Admin UI: https://crate.io/docs/crate/admin-ui/en/latest/console.html
 .. _Cloud Console: https://console.cratedb.cloud/?utm_campaign=2022-Q3-WS-Developer-Motion&utm_source=docs

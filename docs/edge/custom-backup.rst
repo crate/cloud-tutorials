@@ -37,8 +37,7 @@ endpoint URL of the storage.
 .. image:: ../_assets/img/custom-backup-config.png
    :alt: Custom backup location configuration
 
-After you have put in your details, click "Test connection" at the bottom of
-the page. When the connection is verified, you can deploy the cluster.
+After you have put in your details, you can deploy the cluster.
 
 Your cluster will now automatically backup to your storage every hour. You can
 also make a manual backup with `COPY TO statement`_.
