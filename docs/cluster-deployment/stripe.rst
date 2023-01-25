@@ -39,9 +39,9 @@ Region
 ------
 
 First, after naming your cluster, select a `region`_ where your cluster should
-be deployed. Currently, we offer AWS and Azure regions. If you'd like to 
-request a new region, there is a form present. Simply click the "Request a new
-region" link, and the form will appear:
+be deployed. Currently, we offer AWS and Azure regions. If there is a region 
+that you would like to see but we don't currently offer, you can let us know 
+by clicking the "Request new region" button and filling out the form.
 
 .. image:: ../_assets/img/deployment-region-request.png
    :alt: CrateDB Cloud Console Deployment New Region Request
@@ -60,7 +60,7 @@ Shared-resources clusters (CR0)
 
 The Shared-resource clusters are a special category of clusters that allow
 better utilization of resources. These clusters share compute and storage
-resources with other clusters in this category. Because of this, they offer
+resources with other clusters in this category. Because of this, they offer a
 more cost-effective solution for smaller teams and experimental deployments of
 low-traffic applications. They are limited to one node with 2 CPUs, 2 GiB of
 memory, and 4 GiB of storage.
