@@ -26,7 +26,7 @@ the process described in the  :ref:`signup tutorial <sign-up>` to do so.
 Create an organization
 ======================
 
-To get the credit, simply create a organization. For the detailed
+To get the credit, simply create an organization. For the detailed
 instructions, see  :ref:`Create a new organization how-to
 <cloud-howtos:create-org>`.
 

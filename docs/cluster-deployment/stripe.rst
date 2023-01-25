@@ -22,7 +22,7 @@ payment. To follow these steps, go to the `Cloud Console`_.
 Deploy cluster
 ==============
 
-When you have finished the signup process, you will arrive to the CrateDB 
+When you have finished the signup process, you will arrive at the CrateDB
 Cloud Console. The screen will show the Clusters overview:
 
 .. image:: ../_assets/img/stripe-console.png
@@ -78,7 +78,7 @@ your cluster.
 Number of nodes
 ---------------
 
-The number of nodes serves as a horizontal scaling of your CrateDB Cloud
+The number of nodes represents the horizontal scaling of your CrateDB Cloud
 cluster.
 
 ---
@@ -93,7 +93,7 @@ Provide billing information
 ===========================
 
 Next comes a payment method screen. Our credit card payment processing is
-supported by `Stripe`_. If you have an existing AWS or Azure subscription, you
+powered by `Stripe`_. If you have an existing AWS or Azure subscription, you
 can also pay using that. You can choose the payment method right after you 
 configure your cluster and click **Next**.
 
@@ -105,7 +105,7 @@ Credit card
 
 You can find the cards accepted by Crate.io at the bottom right part of the 
 screen. When you have filled out the necessary information, click *Deploy
-Cluster* below it to deploy your cluster. Do not forget to accept financial
+Cluster* below it to deploy your cluster. Do not forget to accept the financial
 authorization by ticking the box at the bottom.
 
 .. image:: ../_assets/img/stripe-billing.png

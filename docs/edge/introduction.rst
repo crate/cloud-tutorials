@@ -213,7 +213,7 @@ Configuration
 '''''''''''''
 
 Next, go through the cluster configuration process. You will see that a
-cluster can now be deployed to you custom region. You can move directly to the
+cluster can now be deployed to your custom region. You can move directly to the
 cluster configuration. Configure your desired hardware values for CPU,
 RAM, storage, and number of nodes.
 
