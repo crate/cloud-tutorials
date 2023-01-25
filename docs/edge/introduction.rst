@@ -100,8 +100,8 @@ When you first log in to the CrateDB Cloud Console after having created an
 appropriate account, you will arrive at the Organization overview page. Here
 you will be prompted to create an organization.
 
-.. image:: ../_assets/img/cloud-create-org.png
-   :alt: CrateDB Console organization creation screen
+.. image:: ../_assets/img/free-trial-organization.png
+   :alt: Create an organization
 
 Fill out the name of the organization and click the *Create organization*
 button. After a short moment, the organization will be created and you can
@@ -212,11 +212,10 @@ Configure the cluster
 Configuration
 '''''''''''''
 
-Next, go through the cluster configuration process. You will see your custom
-Edge region is selected, so no region selection is necessary. You can move
-directly to the cluster configuration. You can configure your desired hardware
-values for CPU, RAM, and storage per node manually in the panel provided, as
-well as the number of nodes you want in your cluster.
+Next, go through the cluster configuration process. You will see that a
+cluster can now be deployed to your custom region. You can move directly to the
+cluster configuration. Configure your desired hardware values for CPU,
+RAM, storage, and number of nodes.
 
 .. image:: ../_assets/img/cloud-edge-config.png
    :alt: Cluster configuration panels for CrateDB Edge
@@ -224,19 +223,6 @@ well as the number of nodes you want in your cluster.
 On the right the cluster scale overview shows the total hardware values for
 the cluster. This is simply the number of nodes you have chosen, multiplied by
 the values per node you have defined.
-
-At the bottom of the deployment screen you can configure your account
-settings. Since you have already created an organization, it does not need to
-be set here.
-
-.. image:: ../_assets/img/cloud-edge-settings.png
-   :alt: Account settings menu
-
-Note that the cluster name has certain validation requirements: it may contain
-only numbers, letters, and the dash symbol -. It must begin with a letter and
-end with a letter or a number, and must be at least three characters long.
-This is because the cluster name is used to generate your access URL for the
-Admin UI, thus it needs to be "URL safe".
 
 You can also define the backup location of your CrateDB Edge cluster. You
 have the option of either using the default backup location for CrateDB Cloud,
@@ -248,31 +234,8 @@ connection to your backup location can be established. Keep in mind that you
 cannot proceed with a custom backup location unless the connection is
 functional.
 
-Click *Next* at the bottom right to proceed.
-
-
-Billing
-'''''''
-
-Finally, you will be taken to a new screen where you can fill out your billing
-information. Our payment processing is supported by `Stripe`_. At the bottom
-right you can find the cards accepted by Crate.io. When you have filled out
-the necessary information, click *Deploy* below it to deploy your cluster. Do
-not forget to accept financial authorization by ticking the box at the bottom.
-
-.. image:: ../_assets/img/stripe-billing.png
-   :alt: Billing information screen
-
-You can view the payment and billing information you have submitted in the
-Billing tab of the Organization overview screen in the CrateDB Cloud Console
-(i.e., the fifth tab from the left on the same screen you arrived at).
-
-You can at any time check your current accumulated bill at the bottom left of
-the CrateDB Cloud Console screen:
-
-.. image:: ../_assets/img/cloud-billing-meter.png
-   :alt: Cloud Console billing meter
-
+That's it. As you're using your own equipment in this case, no need to provide
+the billing details.
 
 Finish up
 ---------

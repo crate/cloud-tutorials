@@ -4,8 +4,8 @@
 Free trial budget
 =================
 
-This section explains our Free trial budget mechanism. This feature gives the
-user $200 in free credit that can be used for any cluster configuration.
+This section explains our Free trial budget mechanism. This feature gives $65
+to any new user. These credits can be used on any cluster configuration.
 
 .. rubric:: Table of contents
 
@@ -17,9 +17,8 @@ user $200 in free credit that can be used for any cluster configuration.
 Sign up
 =======
 
-To be eligible for free credit, the first step is to
-sign up.  You can follow the process described in the 
-:ref:`signup tutorial <sign-up>` to do so.
+To be eligible for free credit, the first step is to sign up.  You can follow
+the process described in the  :ref:`signup tutorial <sign-up>` to do so.
 
 
 .. _free-trial-budget-org:
@@ -27,21 +26,18 @@ sign up.  You can follow the process described in the
 Create an organization
 ======================
 
-To get the credit, simply create a new organization. For the detailed
-instructions, see 
-:ref:`Create a new organization how-to <cloud-howtos:create-org>`.
+To get the credit, simply create an organization. For the detailed
+instructions, see  :ref:`Create a new organization how-to
+<cloud-howtos:create-org>`.
+
+Enter the desired name for the organization in the field and click *Create
+organization*. Once this is done, you will be returned to the Clusters
+overview, where you will see that you have $65 of available credit. You can
+also see when the credits expire. Free credit is valid for 30 days after
+organization creation.
 
 .. image:: ../_assets/img/free-trial-organization.png
    :alt: Create an organization
-
-Enter the desired name for the organization in the field and click *Create
-organization*. Once this is done, you will be returned to the Organization
-overview, where you will see that you have $200 of available credit. You can
-also see when the credit expires. Free credit is valid for 30 days after
-organization creation.
-
-.. image:: ../_assets/img/cloud-org-overview-free-credit.png
-   :alt: Free credit allocated
 
 Now you can follow the 
 :ref:`Cluster deployment tutorial <cluster-deployment-stripe>` and get you
