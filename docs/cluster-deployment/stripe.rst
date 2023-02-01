@@ -52,23 +52,13 @@ custom region by clicking the "Add a custom edge region" link.
 Compute
 -------
 
-In the Compute section, you should choose a `subscription plan`_ that suits
+In the Compute section, you can choose a `subscription plan`_ that suits
 your needs and use case. Plans consist of a per-node CPU and RAM allocation.
-
-Shared-resources clusters (CR0)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The Shared-resource clusters are a special category of clusters that allow
-better utilization of resources. These clusters share compute and storage
-resources with other clusters in this category. Because of this, they offer a
-more cost-effective solution for smaller teams and experimental deployments of
-low-traffic applications. They are limited to one node with 2 CPUs, 2 GiB of
-memory, and 4 GiB of storage.
 
 Storage
 -------
 
-You can choose, with the exception of CR0, how much storage space you need for
+For the CR1-4 plans, you can choose how much storage space you need for
 your cluster.
 
 .. NOTE::
