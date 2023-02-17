@@ -202,6 +202,24 @@ custom Edge region. Go to the Regions tab of the Organization overview to find
 your custom region and deploy your cluster from there. This will take you to
 the cluster configuration screen.
 
+.. _edge-upgrade:
+
+Upgrade the Edge Region
+-----------------------
+
+Components of a deployed Edge Region are not updated automatically. Because of
+this, users should update their Edge Regions regularly to continue getting new
+features, bugfixes, and security updates.
+
+If your region is outdated, you will see a *Upgrade this Edge region* button
+next to your region:
+
+.. image:: ../_assets/img/edge-region-upgrade.png
+   :alt: CrateDB Console regions screen
+
+Clicking it will show you a command that updates your Edge Region. Paste the
+command into the environment where your Edge cluster is deployed to 
+upgrade it.
 
 .. _edge-config:
 
