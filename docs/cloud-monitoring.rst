@@ -3,7 +3,7 @@
 Cloud Monitoring
 ================
 
-This tutorial shows a way to monitor your CrateDB Cloud clusters using the
+This tutorial demonstrates how you can monitor your CrateDB Cloud
 CrateDB Cloud API.
 
 The visualization tool `Grafana`_ is used with `Prometheus`_ to
@@ -103,7 +103,7 @@ Grafana
 -------
 
 Grafana doesn't need any special configuration. You can run it either in a
-Docker container or as a local installation, it doesn't matter in this use
+Docker container or as a local installation, it doesn't matter for this use
 case. Follow the `Grafana documentation`_ and use your preferred method.
 
 By default, Grafana is exposed on port ``3000``. Go to
