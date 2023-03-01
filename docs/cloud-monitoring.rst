@@ -3,8 +3,8 @@
 Cloud Monitoring
 ================
 
-This tutorial demonstrates how you can monitor your CrateDB Cloud
-CrateDB Cloud API.
+This tutorial demonstrates how you can monitor your CrateDB Cloud cluster
+using API metrics.
 
 The visualization tool `Grafana`_ is used with `Prometheus`_ to
 scrape the API endpoints for the relevant metrics and visualize them. The
