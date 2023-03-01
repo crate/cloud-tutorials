@@ -38,6 +38,7 @@ in the tutorials below.
     promotions/free-trial-budget
     integrations/index
     edge/index
+    cloud-monitoring
 
 
 .. _CrateDB Cloud: https://crate.io/products/cratedb-cloud/
