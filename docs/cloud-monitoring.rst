@@ -88,7 +88,7 @@ command to create a Prometheus instance:
   docker run -d --name prometheus -v /Users/crate/prometheus.yml:/etc/prometheus/prometheus.yml -p 9090:9090 prom/prometheus
 
 This will start the Prometheus instance exposed on port ``9090``. You can verify 
-it's running correctly by visiting http://localhost:9090/. 
+it's running correctly by visiting ``http://localhost:9090/``. 
 On the ``Status -> Targets`` page in the top menu, you should see the
 following:
 
@@ -107,14 +107,14 @@ Docker container or as a local installation, it doesn't matter in this use
 case. Follow the `Grafana documentation`_ and use your preferred method.
 
 By default, Grafana is exposed on port ``3000``. Go to
-http://localhost:3000/ to access it.
+``http://localhost:3000/`` to access it.
 
 Data source
 '''''''''''
 
 Now you can add Prometheus as a data source in Grafana under ``Configuration
--> Data sources``. Choose Prometheus, use http://localhost:9090/ as a URL, and
-leave the rest on default:
+-> Data sources``. Choose Prometheus, use ``http://localhost:9090/`` as the
+URL, and leave the rest on default:
 
 .. image:: /_assets/img/cloud-monitoring-prometheus-datasource.png
    :alt: Prometheus data source
