@@ -4,10 +4,10 @@ Cloud Monitoring
 ================
 
 This tutorial demonstrates how you can monitor your CrateDB Cloud cluster
-using API metrics.
+using the exposed Prometheus metrics.
 
 The visualization tool `Grafana`_ is used with `Prometheus`_ to
-scrape the API endpoints for the relevant metrics and visualize them. The
+scrape the API endpoint that exposes metrics and visualize them. The
 returned metrics are a sum of all the clusters in the specified organization.
 
 .. rubric:: Table of contents
@@ -77,7 +77,7 @@ the Settings page in the CrateDB Cloud Console:
 .. image:: /_assets/img/cloud-monitoring-org-id.png
    :alt: Organization ID
 
-API Key and Secret can be generated in your `account page`_ in the CrateDB
+An API Key and Secret can be generated in your `account page`_ in the CrateDB
 Cloud Console.
 
 Once you have added your Organization ID and API credentials, execute the following
@@ -114,7 +114,7 @@ Data source
 
 Now you can add Prometheus as a data source in Grafana under ``Configuration
 -> Data sources``. Choose Prometheus, use ``http://localhost:9090/`` as the
-URL, and leave the rest on default:
+URL, and leave the rest as default:
 
 .. image:: /_assets/img/cloud-monitoring-prometheus-datasource.png
    :alt: Prometheus data source
