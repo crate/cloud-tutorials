@@ -4,7 +4,7 @@ Cloud Monitoring
 ================
 
 This tutorial demonstrates how you can monitor your CrateDB Cloud cluster
-using the exposed Prometheus metrics.
+using the exposed Prometheus metrics endpoint.
 
 The visualization tool `Grafana`_ is used with `Prometheus`_ to
 scrape the API endpoint that exposes metrics and visualize them. The
@@ -85,7 +85,7 @@ command to create a Prometheus instance:
 
 .. code-block:: console
 
-  docker run -d --name prometheus -v /Users/crate/prometheus.yml:/etc/prometheus/prometheus.yml -p 9090:9090 prom/prometheus
+  docker run -d --name prometheus -v /path/to/prometheus.yml:/etc/prometheus/prometheus.yml -p 9090:9090 prom/prometheus
 
 This will start the Prometheus instance exposed on port ``9090``. You can verify 
 it's running correctly by visiting ``http://localhost:9090/``. 
@@ -98,6 +98,71 @@ following:
 There should be an endpoint with your Organization ID with state ``UP``. This
 means that Prometheus is able to connect to the API and is scraping the
 available metrics.
+
+Available Metrics
+-----------------
+
+Most metric semantics are self-explanatory. This list is not exhaustive,
+and new metrics can be added at any point in the future. All metrics are per node.
+
+
+.. list-table::
+   :widths: 35 15 50
+   :align: left
+   :header-rows: 1
+
+   * - Metric
+     - Type
+     - Description
+   * - container_cpu_usage_seconds_total
+     - Counter
+     - CrateDB CPU usage, in seconds.
+   * - container_fs_reads_bytes_total
+     - Counter
+     - Number of bytes read per disk
+   * - container_fs_writes_bytes_total
+     - Counter
+     - Number of bytes written per disk
+   * - container_memory_usage_bytes
+     - Gauge
+     - Memory usage
+   * - container_network_receive_bytes_total
+     - Counter
+     - Network ingress traffic
+   * - container_network_transmit_bytes_total
+     - Counter
+     - Network egress traffic
+   * - crate_circuitbreakers
+     - Gauge
+     - Circuit breaker stats for crate per breaker
+   * - crate_cluster_state_version
+     - Gauge
+     - Info about the cluster's state
+   * - crate_connections
+     - Gauge
+     - Number of connections per protocol
+   * - crate_node
+     - Gauge
+     - Shard statistics
+   * - crate_query_failed_count
+     - Counter
+     - Number of failed queries per type (i.e. Insert/Select/Update/...)
+   * - crate_query_sum_of_durations_millis
+     - Counter
+     - Sum of the durations of all queries per query type
+   * - crate_query_total_count
+     - Counter
+     - Total number of queries per type
+   * - crate_ready
+     - Gauge
+     - An indicator if this CrateDB node is up-and-running
+   * - crate_threadpools
+     - Gauge
+     - Thread pool statistics, per pool
+   * - jvm_*
+     - Gauge
+     - Various JVM statistics
+
 
 Grafana
 -------
@@ -113,11 +178,15 @@ Data source
 '''''''''''
 
 Now you can add Prometheus as a data source in Grafana under ``Configuration
--> Data sources``. Choose Prometheus, use ``http://localhost:9090/`` as the
+-> Data sources``. Choose Prometheus, then use ``http://localhost:9090/`` as the
 URL, and leave the rest as default:
 
 .. image:: /_assets/img/cloud-monitoring-prometheus-datasource.png
    :alt: Prometheus data source
+
+.. NOTE::
+    If you run both Prometheus and Grafana as Docker containers, you might need to
+    create a new network and add both containers to it.
 
 Dashboard
 ---------
