@@ -22,8 +22,7 @@ First, you will need a running cluster. You can use Metabase with both
 
 To use Metabase, you must have an existing data set in your CrateDB cluster.
 Feel free to use the sample dataset available in the `Cloud Console`_ or
-import your own data similarly to how it's done :ref:`in this how-to
-<cloud-howtos:import-data>`.
+import your own data similarly to how it's done `in this how-to`_ .
 
 .. _integration-metabase-config:
 
@@ -109,3 +108,4 @@ and get started!
 .. _Cloud Console: https://console.cratedb.cloud/?utm_campaign=2022-Q3-WS-Developer-Motion&utm_source=docs
 .. _Metabase: https://www.metabase.com/
 .. _video tutorial: https://www.youtube.com/watch?v=veuR_76njCo
+.. _in this how-to: https://community.crate.io/t/importing-data-to-cratedb-cloud-clusters/1467
